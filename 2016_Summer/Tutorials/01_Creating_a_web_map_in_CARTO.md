@@ -69,9 +69,7 @@ We will be using one dataset for this map:
 * Now click again on the `STYLE` tab. Go to the bottom of the panel, and toggle `CARTOCSS` on. This should turn the background of your map black, which signals that we can manually input color codes for the automatically-generated buckets. Here, we will fine tune our symbology to make our breaks cleaner.
 * This is my CartoCSS code (note that your colors might be different and feel free to choose your own breaks):
 
-`
-
-
+```
 /** choropleth visualization */
 
 #mnmappluto{
@@ -102,5 +100,5 @@ We will be using one dataset for this map:
 #mnmappluto [ yearbuilt <= 1800] {
    polygon-fill: #005824;
 }
-`
+```
 
