@@ -66,39 +66,14 @@ We will be using one dataset for this map:
 
 ![Popup](https://github.com/emilyfuhrman/datavis_design/blob/master/2016_Summer/Tutorials/Images/01_Creating_a_web_map_in_CARTO/07_Popup.png)
 
-* Now click again on the `STYLE` tab. Go to the bottom of the panel, and toggle `CARTOCSS` on. This should turn the background of your map black, which signals that we can manually input color codes for the automatically-generated buckets. Here, we will fine tune our symbology to make our breaks cleaner.
-* This is my CartoCSS code (note that your colors might be different and feel free to choose your own breaks):
+* Now click again on the `STYLE` tab. Go to the bottom of the panel, and toggle `CARTOCSS` on. This should turn the background of your map black, which signals that we can manually input color codes for the automatically-generated buckets, if you like. The colors are in HEX form. If you want different HEX codes you can always go to [Adobe Kuler](https://color.adobe.com/) or to [ColorBrewer](http://colorbrewer2.org/) and pick colors from there.
+* Remember once you've changed the CartoCSS to click on `APPLY`.
+* Finally, click on the `LEGEND` tab to customize the legend of your map.
+* Add a title to your legend and, if necessary, change the labels and the colors.
+* Once all of this is done, click the back arrow at the top of the panel to return to the initial ma view. Click the `Basemap` section at the bottom (set to `Positron` by default) and select a basemap that you like. However, note that certain basemaps work only at specific zoom levels, so choose one that allows you to zoom to a good level without loosing resolution.
+* Now, for the final stage click on the `SHARE` button at the bottom right-hand corner of the panel, and then click on `PUBLISH` to create your map. 
+* Your map is set by default to `PRIVATE`, but you can click the orange tag to enable anyone with a link to view it. 
+* In the `PUBLISH` tab, copy the link to view your map. Open it in a new browser tab.
 
-```
-/** choropleth visualization */
-
-#mnmappluto{
-  polygon-fill: #005824;
-  polygon-opacity: 1;
-  line-color: #000000;
-  line-width: 0.1;
-  line-opacity: 0.5;
-}
-#mnmappluto [ yearbuilt <= 2040] {
-   polygon-fill: #EDF8FB;
-}
-#mnmappluto [ yearbuilt <= 1990] {
-   polygon-fill: #D7FAF4;
-}
-#mnmappluto [ yearbuilt <= 1960] {
-   polygon-fill: #CCECE6;
-}
-#mnmappluto [ yearbuilt <= 1935] {
-   polygon-fill: #66C2A4;
-}
-#mnmappluto [ yearbuilt <= 1910] {
-   polygon-fill: #41AE76;
-}
-#mnmappluto [ yearbuilt <= 1900] {
-   polygon-fill: #238B45;
-}
-#mnmappluto [ yearbuilt <= 1800] {
-   polygon-fill: #005824;
-}
-```
+![Published](https://github.com/emilyfuhrman/datavis_design/blob/master/2016_Summer/Tutorials/Images/01_Creating_a_web_map_in_CARTO/08_Published.png)
 
