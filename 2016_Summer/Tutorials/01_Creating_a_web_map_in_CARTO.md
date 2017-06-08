@@ -15,3 +15,15 @@ We will be using one dataset for this map:
 * Once you've downloaded the data and created your CARTO account, log in into CARTO. You will land on your 'dashboard'.
 
 ![Dashboard](https://github.com/emilyfuhrman/datavis_design/blob/master/2016_Summer/Tutorials/Images/01_Creating_a_web_map_in_CARTO/01_Dashboard.png)
+
+* Click on `NEW MAP`. This will take you to your datasets.
+* Here, you need to upload the PLUTO dataset, so click on `Connect dataset`.
+* Here, you can browse for your files or you can just drag and drop them. The important thing to keep in mind when uploading shapefiles is that they need to be zipped. Fortunately, when you downloaded the PLUTO dataset from Bytes of the Big Apple it came in zipped, so you already have it in the right format. However, if for some reason you don't have your shapefiles zipped, you need to compress them into a single archive. Remember that shapefiles are actually made up of multiple files (4, 5 or 6 usually), so you need to make sure these are all included in your zip file.
+* Interestingly enough, if you uploaded the zip file that was directly downloaded from Bytes of the Big Apple, you actually uploaded two shapefiles: 'mnmappluto' which is the actual PLUTO file for Manhattan, and 'mn_dcp_mappinglot' which is a secondary file that comes with the PLUTO file.
+* CARTO may have redirected you to your `Maps` section after uploading the file. Go up to the top of the page and locate the `Maps` dropdown next to your username. Click `Datasets` instead.
+* Click on the 'mnmappluto_1' file to see it's content:
+
+![Dashboard](https://github.com/emilyfuhrman/datavis_design/blob/master/2016_Summer/Tutorials/Images/01_Creating_a_web_map_in_CARTO/02_Datasets.png)
+
+![Dashboard](https://github.com/emilyfuhrman/datavis_design/blob/master/2016_Summer/Tutorials/Images/01_Creating_a_web_map_in_CARTO/03_Data.png)
+
