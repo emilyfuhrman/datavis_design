@@ -77,3 +77,14 @@ We will be using one dataset for this map:
 
 ![Published](https://github.com/emilyfuhrman/datavis_design/blob/master/2016_Summer/Tutorials/Images/01_Creating_a_web_map_in_CARTO/08_Published.png)
 
+#### Final customization of your map
+* Once you've visualized your data you can do the final customization.
+* If you click the menu next to the title in the left panel, you can edit the metadata of your map (title, description, and tags).
+* With the `Map Options` section in the left panel, the icon right below the pencil icon, you can customize the elements that you want to show in your map, such as `SEARCH BOX`, `LEGENDS`, etc.
+* Once you are done with this, click on `SHARE` at the bottom right-hand corner of the page to get the different sharing options. Click `UPDATE` to capture your most recent changes, and select from the following:
+  * `Get the link` will give you the link to the map in CartoDB.
+  * `Embed it` will give you the code to create an `iframe` and embed your map in a website.
+* For this tutorial you will only need the basic CartoDB link.
+* Here's how my final map looks using the link:
+
+![Final](https://github.com/emilyfuhrman/datavis_design/blob/master/2016_Summer/Tutorials/Images/01_Creating_a_web_map_in_CARTO/09_Final.png)
