@@ -42,15 +42,15 @@ We will be using one dataset for this map:
 #### Symbolizing your map
 
 * To get to the styling panel for your map, click the `mnmappluto_1` box in the left hand panel.
-* The view should now center on the `Style` tab, the third in five tabs on the panel. 
+* The view should now center on the `STYLE` tab, the third in five tabs on the panel. 
 
-![Styling panel](https://github.com/emilyfuhrman/datavis_design/blob/master/2016_Summer/Tutorials/Images/01_Creating_a_web_map_in_CARTO/05_styling_panel.png)
+![Styling panel](https://github.com/emilyfuhrman/datavis_design/blob/master/2016_Summer/Tutorials/Images/01_Creating_a_web_map_in_CARTO/05_Styling_Panel.png)
 
-* While the `Style` tab is focused on the look and feel of your map, the additonal tabs provide more advanced interactive functionality
- * The first one, `Data`, allows you to add dynamic widgets to your map based on attributes in the dataset.
- * The second one, `Analysis`, allows for more powerful geographic analysis (joins, sampling, filtering, etc.) to drive your visualization.
- * The fourth one, `Popup`, enables you to customize the popup that appears when a user hovers over or clicks on your map.
- * The fifth one, `Legend`, allows you to customize the legend on your map.
+* While the `STYLE` tab is focused on the look and feel of your map, the additonal tabs provide more advanced interactive functionality
+ * The first one, `DATA`, allows you to add dynamic widgets to your map based on attributes in the dataset.
+ * The second one, `ANALYSIS`, allows for more powerful geographic analysis (joins, sampling, filtering, etc.) to drive your visualization.
+ * The fourth one, `POP-UP`, enables you to customize the popup that appears when a user hovers over or clicks on your map.
+ * The fifth one, `LEGEND`, allows you to customize the legend on your map.
 * We are going to symbolize this data based on the year each building was built. To symbolize your dataset based on the `yearbuilt` field, click on the `fill` row, select the `BY VALUE` tab.
 * Search for `yearbuilt`. This should open up a number of different coloring schemes. (I encourage you to explore different symbology methods here. Some could be interesting for this dataset, while others may not work as well.)
 * Click the `Buckets` row, and change the number of buckets to `7`. 
@@ -59,4 +59,13 @@ We will be using one dataset for this map:
 * You can also change the transparency of your colors, the stroke, the stroke weight and the transparency of the stroke.
 * Finally, you could choose a `Blending` operation, which is basically how your layer's color or brightness would interact with the color or brightness of the layer below; and you could also add some Label Text but that will not be necessary for this map.
 
-![Choropleth](https://github.com/emilyfuhrman/datavis_design/blob/master/2016_Summer/Tutorials/Images/01_Creating_a_web_map_in_CARTO/06_choropleth.png)
+![Choropleth](https://github.com/emilyfuhrman/datavis_design/blob/master/2016_Summer/Tutorials/Images/01_Creating_a_web_map_in_CARTO/06_Choropleth.png)
+
+* Now click on the `POP-UP` tab.
+* Here, select a style, and turn on the `yearbuilt` option. You will see now that when you click on a lot the popup window will contain the yearbuilt data.
+
+![Popup](https://github.com/emilyfuhrman/datavis_design/blob/master/2016_Summer/Tutorials/Images/01_Creating_a_web_map_in_CARTO/07_Popup.png)
+
+* Now click again on the `STYLE` tab. Go to the bottom of the panel, and toggle `CARTOCSS` on. This should turn the background of your map black, which signals that we can manually input color codes for the automatically-generated buckets. Here, we will fine tune our symbology to make our breaks cleaner.
+* This is my CartoCSS code (note that your colors might be different and feel free to choose your own breaks):
+
