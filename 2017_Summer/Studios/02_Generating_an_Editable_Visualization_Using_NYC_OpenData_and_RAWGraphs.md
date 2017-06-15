@@ -79,6 +79,8 @@ We will be using one dataset for this map:
 
 ![311 Filter](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/10_Bar_Chart.png)
 
+* Here, you may change the colors of the bars, the dimensions of the chart, and the type of color scale you use. Once you are done, you may download the chart as an `SVG` file for further customization in a vector graphics editor, such as [Adobe Illustrator](http://www.adobe.com/products/illustrator.html) or [Inkscape](https://inkscape.org/en/). (You also have the option to download the chart as a `PNG` image or `JSON` data model.)
+
 
 
 
