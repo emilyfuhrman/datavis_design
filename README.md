@@ -7,6 +7,7 @@ This repository is for studio materials associated with the ***Data Visualizatio
 
 #### [Studios](https://github.com/emilyfuhrman/datavis_design/tree/master/2017_Summer/Studios)
 * [Creating a Web Map in CARTO](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/01_Creating_a_web_map_in_CARTO.md)
+* [Generating a Visualization Using NYC OpenData and RAWGraphs](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/01_Creating_a_web_map_in_CARTO.md)
 
 ## Resources
 
@@ -21,4 +22,4 @@ This repository is for studio materials associated with the ***Data Visualizatio
 * [Inkscape](https://inkscape.org/en/)
 
 #### Data
-* [NYC Open Data](https://opendata.cityofnewyork.us/)
+* [NYC OpenData](https://opendata.cityofnewyork.us/)
