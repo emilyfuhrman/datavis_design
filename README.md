@@ -1,7 +1,7 @@
 # datavis_design
 This repository is for studio materials associated with the ***Data Visualization &amp; Design*** course at Columbia University.
 
-![Graph](https://github.com/emilyfuhrman/datavis_design/blob/master/Images/graph.png)
+![Diagram](https://github.com/emilyfuhrman/datavis_design/blob/master/Images/node_link.png)
 
 ## Course links
 
