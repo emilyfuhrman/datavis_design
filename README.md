@@ -19,3 +19,6 @@ This repository is for studio materials associated with the ***Data Visualizatio
 
 #### Design
 * [Inkscape](https://inkscape.org/en/)
+
+#### Data
+* [NYC Open Data](https://opendata.cityofnewyork.us/)
