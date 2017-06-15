@@ -11,7 +11,7 @@ We will be using one dataset for this map:
 ### Generating an editable, vector-based visualization
 #### Downloading 311 Data from the NYC OpenData portal
 
-* Navigate to the [NYC OpenData portal](https://opendata.cityofnewyork.us/)
+* Navigate to the [NYC OpenData portal](https://opendata.cityofnewyork.us/).
 
 ![NYC OpenData](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/01_NYC_OpenData_Home.png)
 
@@ -56,6 +56,18 @@ We will be using one dataset for this map:
 * Your dataset should now look something like this:
 
 ![311 Filter](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/06_Excel.png)
+
+#### Visualizing 311 data using RAWGraphs
+
+* Navigate to the [RAWGraphs app](http://app.rawgraphs.io/). 
+
+![311 Filter](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/07_RAWGraphs_Home.png)
+
+* Here, you can copy/paste data directly into the text area, upload a file, connect to a URL (including public APIs), or try some of the samples that RAWGraphs already has prepared. Click the `Upload a file` option, and select your trimmed CSV. Hopefully, you will see the following success message:
+
+![311 Filter](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/08_RAWGraphs_Success.png)
+
+
 
 
 
