@@ -55,17 +55,29 @@ We will be using one dataset for this map:
 	* `Longitude`
 * Your dataset should now look something like this:
 
-![311 Filter](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/06_Excel.png)
+![Excel](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/06_Excel.png)
 
 #### Visualizing 311 data using RAWGraphs
 
 * Navigate to the [RAWGraphs app](http://app.rawgraphs.io/). 
 
-![311 Filter](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/07_RAWGraphs_Home.png)
+![RAWGraphs Home](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/07_RAWGraphs_Home.png)
 
-* Here, you can copy/paste data directly into the text area, upload a file, connect to a URL (including public APIs), or try some of the samples that RAWGraphs already has prepared. Click the `Upload a file` option, and select your trimmed CSV. Hopefully, you will see the following success message:
+* Here, you can copy/paste data directly into the text area, upload a file, connect to a URL (including public APIs), or try some of the samples that RAWGraphs already has prepared. Click the `Upload a file` option, and select your trimmed CSV. Within a moment or two, you should see the following success message:
 
-![311 Filter](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/08_RAWGraphs_Success.png)
+![RAWGraphs Success](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/08_RAWGraphs_Success.png)
+
+* Below your uploaded data is a selection of different visualization methods. Explore any option you like. For the purposes of this studio, we will explore three different options: the `Bar Chart`, the `Sunburst`, and the `Cluster Dendrogram`.
+
+##### Bar Chart
+
+* Select the `Bar chart` tile from the list of visualization options below. In the `Map Your Dimensions` section, drag the `Agency` bar to the `X Axis` tile. This will set the `Agency` column in the Excel sheet as a categorical x-axis. The `Agency` value represents the agency responsible for resolving each 311 complaint.
+
+![311 Filter](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/09_Bar_Chart_Setup.png)
+
+* A bar chart appears below. Its y-axis measures the number of records associated with each agency. 
+
+![311 Filter](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/10_Bar_Chart.png)
 
 
 
