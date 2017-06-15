@@ -3,5 +3,14 @@ This repository is for resources and tutorials associated with the ***Data Visua
 
 ### Resources
 
-##### Mapping
-* [carto.com](CARTO)
+#### Data visualization
+##### Static
+* [RAWGraphs](http://app.rawgraphs.io/)
+* [Free Chart Maker](https://venngage.com/blog/beam/)
+
+#### Mapping
+##### Interactive
+* [CARTO](carto.com)
+
+#### Design
+* [Inkscape](https://inkscape.org/en/)
