@@ -1,7 +1,7 @@
 # datavis_design
 This repository is for studio materials associated with the ***Data Visualization &amp; Design*** course at Columbia University.
 
-![Hexbin](https://github.com/emilyfuhrman/datavis_design/blob/master/Images/background.png)
+![Hexbin](https://github.com/emilyfuhrman/datavis_design/blob/master/Images/header.png)
 
 ## Course links
 
