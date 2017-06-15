@@ -3,7 +3,7 @@ This repository is for studio materials associated with the ***Data Visualizatio
 
 ## Class links
 
-[#### Studios](https://github.com/emilyfuhrman/datavis_design/tree/master/2017_Summer/Studios)
+#### [Summer 2017](https://github.com/emilyfuhrman/datavis_design/tree/master/2017_Summer/)
 
 ## Resources
 
