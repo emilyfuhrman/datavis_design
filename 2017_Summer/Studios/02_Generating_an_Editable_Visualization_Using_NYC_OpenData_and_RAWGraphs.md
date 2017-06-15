@@ -13,7 +13,7 @@ We will be using one dataset for this map:
 
 * Navigate to the [NYC OpenData portal](https://opendata.cityofnewyork.us/)
 
-![NYC OpenData](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02_Generating_an_Editable_Visualization_Using_NYC_OpenData_and_RAWGraphs/01_NYC_Open_Data.png)
+![NYC OpenData](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02_Generating_an_Editable_Visualization_Using_NYC_OpenData_and_RAWGraphs/01_NYC_OpenData.png)
 
 * Click on the `Data` tab. Here you can explore different datasets by category, by popularity, or by recency. 
 * Today we will be working with the NYC 311 dataset. 311 is the complaint hotline for New York City, and the available dataset records every call made to 311 since 2010. Type `311` in the search bar, and hit `Enter`. 
