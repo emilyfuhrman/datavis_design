@@ -1,6 +1,6 @@
 ## Studio 02 - Generating an Editable Visualization Using NYC OpenData and RAWGraphs
 
-This studio details the process of generating an editable, vector-based visualization using [NYC OpenData](https://opendata.cityofnewyork.us/) and [RAWGraphs](http://rawgraphs.io/). RAWGraphs an open source framework developed by [DensityDesign Research Lab](http://www.densitydesign.org/).
+This studio details the process of generating an editable, vector-based visualization using [NYC OpenData](https://opendata.cityofnewyork.us/) and [RAWGraphs](http://rawgraphs.io/). RAWGraphs is an open source framework developed by [DensityDesign Research Lab](http://www.densitydesign.org/).
 
 ### Datasets
 
