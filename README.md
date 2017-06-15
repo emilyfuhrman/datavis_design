@@ -1,6 +1,9 @@
 # datavis_design
 This repository is for studio materials associated with the ***Data Visualization &amp; Design*** course at Columbia University.
 
+![Binary trees](https://github.com/emilyfuhrman/datavis_design/blob/master/Images/binary_trees.png)
+binary_trees.png
+
 ## Course links
 
 #### [Studios](https://github.com/emilyfuhrman/datavis_design/tree/master/2017_Summer/Studios)
