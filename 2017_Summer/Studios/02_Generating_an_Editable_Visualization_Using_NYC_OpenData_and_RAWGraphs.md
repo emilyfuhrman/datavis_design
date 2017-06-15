@@ -21,7 +21,7 @@ We will be using one dataset for this map:
 
 ![311 Main](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/02_311_Main.png)
 
-* Here, you can see a great deal of information about this dataset: its attributes, its size, the frequency with which it is updated, its format. Scroll down to the `Table Preview` section to get a picture of what the data looks like in tabular format.
+* [Here](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9), you can see a great deal of information about this dataset: its attributes, its size, the frequency with which it is updated, its format. Scroll down to the `Table Preview` section to get a picture of what the data looks like in tabular format.
 
 ![311 Preview](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/03_311_Preview.png)
 
@@ -73,35 +73,44 @@ We will be using one dataset for this map:
 
 * Select the `Bar chart` tile from the list of visualization options below. In the `Map Your Dimensions` section, drag the `Agency` bar to the `X Axis` tile. This will set the `Agency` column in the Excel sheet as a categorical x-axis. The `Agency` value represents the agency responsible for resolving each 311 complaint.
 
-![311 Filter](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/09_Bar_Chart_Setup.png)
+![Bar Chart Setup](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/09_Bar_Chart_Setup.png)
 
 * A bar chart appears below. Its y-axis measures the number of records associated with each agency. 
 
-![311 Filter](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/10_Bar_Chart.png)
+![Bar Chart](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/10_Bar_Chart.png)
 
 * Here, you may change the colors of the bars, the dimensions of the chart, and the type of color scale you use. Once you are done, you may download the chart as an `SVG` file for further customization in a vector graphics editor, such as [Adobe Illustrator](http://www.adobe.com/products/illustrator.html) or [Inkscape](https://inkscape.org/en/). (You also have the option to download the chart as a `PNG` image or `JSON` data model.)
 
+##### Sunburst
 
+* Bar charts are nice, but a number of resources already offer more powerful means of making them. Let's try something a little harder to replicate elsewhere. Go back up to the `Choose a Chart` section, and select `Sunburst`. This is a radial, hierarchical visualization that may help to visualize the relative statuses of different complaints in different parts of the city.
+* Drag `Borough` to the `Hierarchy` section. New York City has five boroughs: Brooklyn, Queens, The Bronx, Manhattan, and Staten Island. All of these should appear in a large ring, with an additional `Unspecified` value for rows unassigned to a specific borough. (For a cleaner sunburst, filtering this value out should happen in Excel, not in the browser.) If your ring is too large, change the `Diameter` value on the left.
 
+![Sunburst Setup](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/11_Sunburst_Setup.png)
 
+* Now, drag `Status` to the same `Hierarchy` panel, under `Borough`. `Status` is the status of the 311 request: whether it is `Open`, `Closed`, `Assigned`, etc. 
+* In addition, drag `Status` to the `Color` panel, to help us better see what's going on.
 
+![Sunburst](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/12_Sunburst.png)
 
+* The color automation here gets a little confusing, because the scheme also applies to the inner rings. However, with a bit of editing, we can make this look cleaner. After downloading this graphic as an `SVG` file and cleaning it up a little in Illustrator, here's what my sunburst looks like:
 
+![Sunburst Edit](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/13_Sunburst_Edit.png)
 
+##### Cluster Dendrogram
 
+* Finally, we can explore a cluster dendrogram to quickly see the types of complaints associated with different agencies in the city. Select `Cluster Dendrogram` from the chart options. 
+* Drag the `Agency` row to the `Hierarchy` tile.
+* Drag the `Complaint Type` row to the same tile, right under `Agency`. 
 
+![Cluster Dendrogram Setup](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/14_Cluster_Dendrogram_Setup.png)
 
+* Below, you will see a very crunched dendrogram.
 
+![Cluster Dendrogram Crunched](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/15_Cluster_Dendrogram_Crunched.png)
 
+* Adjust the height to about `2500`. It should become a lot more readable.
 
+![Dendrogram Large](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/16_Dendrogram_Large.png) 
 
-
-
-
-
-
-
-
-
-
-
+Of course, these are only a few exploratory graphics. To end up with more polished results, filter and transform your data beforehand to prepare it for the type of graphic you have in mind. 
