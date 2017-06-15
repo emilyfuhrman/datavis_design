@@ -4,6 +4,7 @@ This repository is for studio materials associated with the ***Data Visualizatio
 ## [Summer 2017](https://github.com/emilyfuhrman/datavis_design/tree/master/2017_Summer/)
 
 #### [Studios](https://github.com/emilyfuhrman/datavis_design/tree/master/2017_Summer/Studios)
+* [Creating a Web Map in CARTO](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/01_Creating_a_web_map_in_CARTO.md)
 
 ## Resources
 
