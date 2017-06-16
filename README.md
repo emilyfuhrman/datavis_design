@@ -20,7 +20,7 @@ This repository is for studio materials associated with the ***Data Visualizatio
 
 #### Design
 * [Inkscape](https://inkscape.org/en/)
-* *Color*
+* **Color**
   * [ColorBrewer](http://colorbrewer2.org/)
   * [Google Material Design Palette](https://material.io/guidelines/style/color.html#color-color-palette)
   * [Google Material Design Color Tool](https://material.io/color/#!/?view.left=0&view.right=0)
