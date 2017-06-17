@@ -1,5 +1,5 @@
 # datavis_design
-This repository is for studio materials associated with the ***Data Visualization &amp; Design*** course at Columbia University.
+This repository is for studio materials associated with the ***Data Visualization &amp; Design*** course at Columbia University.<br/><br/>
 
 ![Diagram](https://github.com/emilyfuhrman/datavis_design/blob/master/Images/node_link.png)
 
@@ -19,7 +19,12 @@ This repository is for studio materials associated with the ***Data Visualizatio
 * [CARTO](carto.com)
 
 #### Design
-* [Inkscape](https://inkscape.org/en/)
+* **Software**
+  * [Inkscape](https://inkscape.org/en/)
+* **Color**
+  * [ColorBrewer](http://colorbrewer2.org/)
+  * [Google Material Design Palette](https://material.io/guidelines/style/color.html#color-color-palette)
+  * [Google Material Design Color Tool](https://material.io/color/#!/?view.left=0&view.right=0)
 
 #### Data
 * [NYC OpenData](https://opendata.cityofnewyork.us/)

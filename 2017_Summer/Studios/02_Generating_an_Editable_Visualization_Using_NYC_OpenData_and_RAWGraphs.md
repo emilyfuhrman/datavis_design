@@ -1,6 +1,6 @@
 ## Studio 02 - Generating an Editable Visualization Using NYC OpenData and RAWGraphs
 
-This studio details the process of generating an editable, vector-based visualization using [NYC OpenData](https://opendata.cityofnewyork.us/) and [RAWGraphs](http://rawgraphs.io/). RAWGraphs an open source framework developed by [DensityDesign Research Lab](http://www.densitydesign.org/).
+This studio details the process of generating an editable, vector-based visualization using [NYC OpenData](https://opendata.cityofnewyork.us/) and [RAWGraphs](http://rawgraphs.io/). RAWGraphs is an open source framework developed by [DensityDesign Research Lab](http://www.densitydesign.org/).
 
 ### Datasets
 
@@ -32,7 +32,7 @@ We will be using one dataset for this map:
 * On the right side of the page, you will see a `Filter` panel, with the `Filter` sub-section automatically selected. We will be using this section to isolate only complaints from the past week, to make the size of the dataset more manageable.
 * Click the `Unique Key` field. This opens a menu containing all of the column headers in the dataset. 
 * Select `Created Date`.
-* Click the `is` dropdown menu. Select `is between`. Two fields, one for a start value and one for an end value, should automatically appear below.
+* Click the `is` dropdown menu, and select `is between`. Two fields, one for a start value and one for an end value, should automatically appear below.
 * Click the first field to open a calendar picker. Navigate to and select June 11th, 2017.
 * Click the second field to open a second calendar picker. Today's date should automatically be selected. Keep today's date.
 * Once you click out of this view, the dataset on the left should update to contain only the rows to which the filters apply.
