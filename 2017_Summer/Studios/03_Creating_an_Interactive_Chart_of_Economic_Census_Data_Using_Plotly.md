@@ -1,6 +1,6 @@
-## Studio 03 - Creating an Interactive Chart of Economic Census Data Using Plot.ly
+## Studio 03 - Creating an Interactive Chart of Economic Census Data Using Plotly
 
-This studio walks through the process of creating an interactive chart in [Plot.ly](https://plot.ly/) using Economic Census data. Plot.ly is a visualization platform with libraries adapted to JavaScript, Python, R, and MATLAB. More recently, it supports the quick creation of web-based interactive graphs without using code. 
+This studio walks through the process of creating an interactive chart in [Plotly](https://plot.ly/) using Economic Census data. Plotly is a visualization platform with libraries adapted to JavaScript, Python, R, and MATLAB. More recently, it supports the quick creation of web-based interactive graphs without using code. 
 
 ### Datasets
 
@@ -66,23 +66,23 @@ We will be using one dataset for this map:
 
 ![Pivot Table Filtered](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/11_Pivot_Table_Filtered.png)
 
-* We will be downloading this data as a CSV. In order to ensure that Plot.ly can read it, we need to add a header row. Select the whole top row of the table, navigate to the `Insert` menu, and select `Row above`.
+* We will be downloading this data as a CSV. In order to ensure that Plotly can read it, we need to add a header row. Select the whole top row of the table, navigate to the `Insert` menu, and select `Row above`.
 
 ![Insert Row Above](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/12_Insert_Row_Above.png)
 
 * Name the first row in column `A` `State`.
 * Name the first row in column `B` `Avg. Salary`.
-* Now, select `File > Download as... > Comma-separated values`. This will download the current tab as a CSV, which we can import into Plot.ly.
+* Now, select `File > Download as... > Comma-separated values`. This will download the current tab as a CSV, which we can import into Plotly.
 
-#### Visualizing transformed data in Plot.ly
+#### Visualizing transformed data in Plotly
 
-* We will use Plot.ly's web-based interface to visualize this data. Navigate to [Plot.ly](https://plot.ly/), and select `Make a Chart`. You do not need a Plot.ly account for this studio, but you may make one if you are interested in privately publishing your chart.
+* We will use Plotly's web-based interface to visualize this data. Navigate to [Plotly](https://plot.ly/), and select `Make a Chart`. You do not need a Plotly account for this studio, but you may make one if you are interested in privately publishing your chart.
 
-![Plot.ly Home](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/13_Plotly_Home.png)
+![Plotly Home](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/13_Plotly_Home.png)
 
-* You will be taken to the Plot.ly Graph Maker.
+* You will be taken to the Plotly Graph Maker.
 
-![Plot.ly Graph Maker](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/14_Plotly_Graph_Maker.png)
+![Plotly Graph Maker](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/14_Plotly_Graph_Maker.png)
 
 * At the top of the page, hit the `Import` button. 
 * Select the `Upload` tab.
@@ -95,37 +95,24 @@ We will be using one dataset for this map:
 
 ![Plot State](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/16_Plot_State.png)
 
-* Of course, the fact that this data is unsorted makes it difficult to read the chart. Helpfully, Plot.ly enables you to sort columns directly. Go to the top spreadsheet section of the window, find the `Avg. Salary` column, and select `Sort ascending`. The chart below should immediately reflect this.
+* Of course, the fact that this data is unsorted makes it difficult to read the chart. Helpfully, Plotly enables you to sort columns directly. Go to the top spreadsheet section of the window, find the `Avg. Salary` column, and select `Sort ascending`. The chart below should immediately reflect this.
 
 ![State and Salary Sorted](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/17_State_Salary_Sorted.png)
 
+* You may notice that not all state names actually appear on the y-axis. Plotly automatically hides intermediary values, which works well for continuous numerical scales, if less well for categorical scales. In order to make all of the state names show, open the `Style` section in the left hand panel. 
+* Click `Layout`.
+* In the `Size` row, navigate to `Custom`.
+* Increase the `Fixed Height` value to 1000.
 
+![Increase Height](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/18_Increase_Height.png)
 
+* Now, drag the y-axis down a bit so all of the state names appear in the space available. 
 
+![Increased Height Drag](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/19_Increased_Height_Drag.png)
 
+* You may use the `Style` panel to edit the title, margins, colors, and hover interaction of your chart. You can also drag the different axes to arrive at the range you want. Without an account, you should be able to download your chart to a range of different image formats. 
+* You need a (free) Plotly account to save and publish your chart publicly. Here is what my final styled (looong) chart looks like, from the link provided:
 
+![Final Chart](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/20_Final_Chart.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* From here I can export the chart to different data formats, or simply host it so that others can interact with it. 
