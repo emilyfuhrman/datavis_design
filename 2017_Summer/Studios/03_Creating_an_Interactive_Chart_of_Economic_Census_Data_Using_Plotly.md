@@ -47,6 +47,58 @@ We will be using one dataset for this map:
 
 ![Blank Pivot Table](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/08_Blank_Pivot_Table.png)
 
+* Navigate to the `Report Editor` panel on the right. 
+* In the `Rows` section, click `Add field`. 
+* From the open menu, select `GEO.display.label`. All of the state names in the CSV should appear in the leftmost column.
+* Now, in the `Values` section, click `Add field`. 
+* Navigate to the bottom of the list and select the `SALARY` option.
+* The default summarization for this section is `SUM`. However, we want the mean salary for each state. Open up the `Summarize by:` dropdown, and select `AVERAGE`. 
+
+![Pivot Table in Progress](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/09_Pivot_Table_in_Progress.png)
+
+* You will notice we have a number of errors in the `SALARY` column, which are due to missing payroll or employee values in the original CSV. To filter these out, go to the `Filter` section in the same right panel, and click `Add field`. 
+* Select `SALARY`.
+* The `Show:` menu is currently set to `All items`. Open the dropdown, and uncheck `(Blanks)` and `#VALUE!`. 
+
+![Pivot Table Filter](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/10_Pivot_Table_Filter.png)
+
+* Hit `OK`. The values should now look properly calculated.
+
+![Pivot Table Filtered](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/11_Pivot_Table_Filtered.png)
+
+* We will be downloading this data as a CSV. In order to ensure that Plot.ly can read it, we need to add a header row. Select the whole top row of the table, navigate to the `Insert` menu, and select `Row above`.
+
+![Insert Row Above](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/12_Insert_Row_Above.png)
+
+* Name the first row in column `A` `State`.
+* Name the first row in column `B` `Avg. Salary`.
+* Now, select `File > Download as... > Comma-separated values`. This will download the current tab as a CSV, which we can import into Plot.ly.
+
+#### Visualizing transformed data in Plot.ly
+
+* We will use Plot.ly's web-based interface to visualize this data. Navigate to [Plot.ly](https://plot.ly/), and select `Make a Chart`. You do not need a Plot.ly account for this studio, but you may make one if you are interested in privately publishing your chart.
+
+![Plot.ly Home](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/13_Plotly_Home.png)
+
+* You will be taken to the Plot.ly Graph Maker.
+
+![Plot.ly Graph Maker](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/14_Plotly_Graph_Maker.png)
+
+* At the top of the page, hit the `Import` button. 
+* Select the `Upload` tab.
+* Choose the CSV you downloaded from the Google Sheets pivot table tab. Once the import is complete, the data will appear in a new tab at the top of the page.
+* To plot the data we imported, first find the `X` row in the small panel to the left of the blank chart. Select `Avg. Salary` from the dropdown.
+
+![Plot.ly Graph Maker](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/15_Plot_Average_Salary.png)
+
+* Now, find the `Y` row, and select `State`. You should get an unsorted scatterplot of state and average salary values.
+
+![Plot.ly Graph Maker](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/16_Plot_State.png)
+
+
+
+
+
 
 
 
