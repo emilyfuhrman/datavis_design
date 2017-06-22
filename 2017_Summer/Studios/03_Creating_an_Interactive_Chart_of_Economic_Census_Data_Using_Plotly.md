@@ -89,11 +89,17 @@ We will be using one dataset for this map:
 * Choose the CSV you downloaded from the Google Sheets pivot table tab. Once the import is complete, the data will appear in a new tab at the top of the page.
 * To plot the data we imported, first find the `X` row in the small panel to the left of the blank chart. Select `Avg. Salary` from the dropdown.
 
-![Plot.ly Graph Maker](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/15_Plot_Average_Salary.png)
+![Plot Average Salary](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/15_Plot_Average_Salary.png)
 
 * Now, find the `Y` row, and select `State`. You should get an unsorted scatterplot of state and average salary values.
 
-![Plot.ly Graph Maker](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/16_Plot_State.png)
+![Plot State](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/16_Plot_State.png)
+
+* Of course, the fact that this data is unsorted makes it difficult to read the chart. Helpfully, Plot.ly enables you to sort columns directly. Go to the top spreadsheet section of the window, find the `Avg. Salary` column, and select `Sort ascending`. The chart below should immediately reflect this.
+
+![State and Salary Sorted](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/17_State_Salary_Sorted.png)
+
+
 
 
 
