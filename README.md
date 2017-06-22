@@ -10,20 +10,20 @@ This repository is for studio materials associated with the ***Data Visualizatio
 
 ## Resources
 
-### Visualization
+#### Visualization
 * [RAWGraphs](http://app.rawgraphs.io/)
 * [Plot.ly](https://plot.ly/)
 
-### Mapping
+#### Mapping
 * [CARTO](carto.com)
 
-### Design
-* #### Software
+#### Design
+* **Software**
   * [Inkscape](https://inkscape.org/en/)
-* #### Color
+* **Color**
   * [ColorBrewer](http://colorbrewer2.org/)
   * [Chroma.js Color Scale Helper](https://gka.github.io/palettes/)
   * [Google Material Design](https://material.io/guidelines/style/color.html#color-color-palette)
 
-### Data
+#### Data
 * [NYC OpenData](https://opendata.cityofnewyork.us/)
