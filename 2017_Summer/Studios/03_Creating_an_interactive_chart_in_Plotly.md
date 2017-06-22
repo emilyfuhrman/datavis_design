@@ -11,7 +11,7 @@ We will be using one dataset for this map:
 ### Creating an interactive chart using transformed data
 #### Transforming raw data using Google Sheets
 
-* Download the CSV file posted [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/03/economicCensus_2002-2012.csv) link.
+* Download the CSV file posted [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/03/economicCensus_2002-2012.csv).
 * Open up [Google Sheets](https://docs.google.com/spreadsheets) and log in with your credentials.
 * Once you have logged in, start a new blank spreadsheet. You should now see a blank grid, named `Untitled Spreadsheet`. 
 
@@ -44,6 +44,8 @@ We will be using one dataset for this map:
 ![Pivot Table Menu](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/07_Pivot_Table_Menu.png)
 
 * You should now see a new tab open, automatically titled `Pivot Table 1`. 
+
+![Blank Pivot Table](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/03/08_Blank_Pivot_Table.png)
 
 
 
