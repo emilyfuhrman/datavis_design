@@ -5,7 +5,7 @@ This repository is for studio materials associated with the ***Data Visualizatio
 
 ## Studios
 * [Creating a Web Map in CARTO](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/01_Creating_a_web_map_in_CARTO.md)
-* [Generating an Editable Visualization Using NYC OpenData and RAWGraphs](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/02_Generating_an_editable_visualization_using_NYC_OpenData_and_RAWGraphs.md)
+* [Generating an Editable Visualization with RAWGraphs](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/02_Generating_an_editable_visualization_with_RAWGraphs.md)
 * [Creating an Interactive Chart in Plot.ly](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/03_Creating_an_interactive_chart_in_Plotly.md)
 
 ## Resources
