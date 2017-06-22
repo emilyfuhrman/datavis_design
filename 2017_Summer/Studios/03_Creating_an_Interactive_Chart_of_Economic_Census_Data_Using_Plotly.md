@@ -1,4 +1,4 @@
-## Studio 03 - Creating an Interactive Chart in Plot.ly with Economic Census Data
+## Studio 03 - Creating an Interactive Chart of Economic Census Data Using Plot.ly
 
 This studio walks through the process of creating an interactive chart in [Plot.ly](https://plot.ly/) using Economic Census data. Plot.ly is a visualization platform with libraries adapted to JavaScript, Python, R, and MATLAB. More recently, it supports the quick creation of web-based interactive graphs without using code. 
 
@@ -8,7 +8,7 @@ We will be using one dataset for this map:
 
 * Economic Census data - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/03/economicCensus_2002-2012.csv)
 
-### Creating an interactive chart using transformed data
+### Creating an interactive chart
 #### Transforming raw data using Google Sheets
 
 * Download the CSV file posted [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/03/economicCensus_2002-2012.csv).

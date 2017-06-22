@@ -1,4 +1,4 @@
-## Studio 01 - Creating a web map in CARTO of Building Age in Manhattan
+## Studio 01 - Creating a Web Map of Building Age in Manhattan Using CARTO
 
 *This is a studio that builds upon [this](https://github.com/juanfrans-courses/mapping_arch_hum/blob/master/Fall_2017/Tutorials/07_Creating_Webmaps_Part_01.md) tutorial, originally created by Juan Francisco Saldarriaga (jfs2118@columbia.edu) for the [Mapping for Architecture, Urbanism and the Humanities](https://github.com/juanfrans-courses/mapping_arch_hum) class at Columbia University*.
 
