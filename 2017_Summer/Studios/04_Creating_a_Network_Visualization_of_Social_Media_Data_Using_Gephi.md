@@ -119,6 +119,47 @@ Gephi's requirements for importing data are relatively simple. Given the current
 
 ### Creating a complex social network graph
 
+For this section, we will be creating a much more complex network from a random sampling of Twitter "following" relationships. It will require working with two separate datasets that we import one after another.
+
+* Download data from both [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/04/02_Twitter_Edges.csv) and [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/04/02_Twitter_Nodes.csv). You will notice that one has `Edges` in the file extension, while one has `Nodes`.
+* First, let's open up each dataset in a text editor to get a better idea of what each one includes.
+
+![Raw CSV](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/19_Raw_CSV.png)
+
+* We can see that `02_Twitter_Edges.csv` has `Source` and `Target` IDs, in a similar format to the data we just worked with. `02_Twitter_Nodes.csv` goes into a bit more depth. It includes each of the IDs that appear in the edges file, but includes additional attributes associated with each of them that will give us more visualization options once the data is imported. 
+* Open up a new project in Gephi. 
+* As before, to import your updated CSV, go to `File > Import spreadsheet...`.
+* We will import `02_Twitter_Nodes.csv` first. Select it for import.
+* Set the `Seperator:` menu to `Semicolon`.
+* Set the `As table:` menu to `Nodes table`.
+* Set the `Charset:` menu to `UTF-8`.
+* Hit `Next >`.
+* At the bottom of this pane, check the `Force nodes to be created as new ones` box.
+* Click `Finish`.
+
+![Imported Nodes](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/20_Imported_Nodes.png)
+
+* If everything went smoothly, you should see a square of new nodes, automatically positioned. Once more, select `File > Import spreadsheet...` for the `02_Twitter_Edges.csv` file.
+
+![Import Edges](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/21_Import_Edges.png)
+
+* Set the `Seperator:` menu to `Semicolon`.
+* This time, set the `As table:` menu to `Edges table`.
+* Set the `Charset:` menu to `UTF-8`.
+* Hit `Next >`.
+* Here, *uncheck* `Create missing nodes`. We have a separate nodes file, and do not need this option selected.
+* Click `Finish`. You should now see a dense, unreadable brick.
+
+![All Imported](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/22_All_Imported.png)
+
+* We can now begin exploring this data. 
+
+
+
+
+
+
+
 
 
 
