@@ -34,6 +34,31 @@ Gephi's requirements for importing data are relatively simple. Given the current
 
 ![Changed Columns](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/04_Changed_Columns.png)
 
+* These are the only things we need to change. Now, select `File > Download as... > Comma-separated values`. This will download the current tab as a CSV, which we can import into Gephi.
+
+#### Visualizing data using Gephi
+
+* Make sure you have downloaded and installed [Gephi](https://gephi.org/users/download/). Once the software is set up, go ahead and open a new blank project. The first thing you should see is a blank `Overview` tab. 
+
+![Gephi Default](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/05_Gephi_Default.png)
+
+* To import your updated CSV, go to `File > Import spreadsheet...`. 
+* The window that pops up will require you to locate the file. Browse your desktop to select the CSV. Once you have selected the CSV, the dialog should look something like this:
+
+![Spreadsheet Import](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/06_Spreadsheet_Import.png)
+
+* Set the `Seperator:` menu to `Comma`. 
+* Set the `As table:` menu to `Edges table`.
+* Set the `Charset:` menu to `UTF-8`.
+* Click `Next >`.
+* Double check the data types under each menu. If everything looks okay, click `Finish`. A tangled initial graph should appear on your screen.
+
+![Initial Graph](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/07_Initial_Graph.png)
+
+
+
+
+
 
 
 
