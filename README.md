@@ -19,6 +19,12 @@ This repository is for studio materials associated with the ***Data Visualizatio
 #### Mapping
 * [CARTO](carto.com)
 
+#### Data
+* **Sources**
+* [NYC OpenData](https://opendata.cityofnewyork.us/)
+* **Manipulation &amp; Formatting**
+* [Stanford DataWrangler](http://vis.stanford.edu/wrangler/app/)
+
 #### Design
 * **Software**
   * [Inkscape](https://inkscape.org/en/)
@@ -26,6 +32,3 @@ This repository is for studio materials associated with the ***Data Visualizatio
   * [ColorBrewer](http://colorbrewer2.org/)
   * [Chroma.js Color Scale Helper](https://gka.github.io/palettes/)
   * [Google Material Design](https://material.io/guidelines/style/color.html#color-color-palette)
-
-#### Data
-* [NYC OpenData](https://opendata.cityofnewyork.us/)
