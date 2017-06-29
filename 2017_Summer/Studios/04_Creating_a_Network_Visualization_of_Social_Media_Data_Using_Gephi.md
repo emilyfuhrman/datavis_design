@@ -88,6 +88,38 @@ Gephi's requirements for importing data are relatively simple. Given the current
 
 ![Network Size](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/13_Network_Size.png)
 
+* To begin to polish your visualization, navigate to the `Preview` tab. 
+* Hit `Refresh` at the bottom of the left panel to get the network to display. 
+* Play around with the numerous settings on the left to try out the different stylistic effects. 
+
+![Preview Styling](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/14_Preview_Styling.png)
+
+* One thing that this network could use is labels. In order to add them, we need to tweak our uploaded data. Navigate to the `Data Laboratory` tab.
+* Along the bottom panel of buttons, click `Copy data to other column`. 
+* Select `Id`.
+
+![Data Laboratory](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/15_Data_Laboratory.png)
+
+* In the `Copy to` dialog, select `Label`.
+* Hit `OK`. 
+* The `Label` column should now be populated with text from its corresponding value in the `Id` column. 
+
+![Label Copy](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/16_Label_Copy.png)
+
+* Now, navigate back to the `Preview` section. 
+* In the `Node Labels` section in the left panel, check `Show Labels`.
+* Hit `Refresh`. 
+
+![Labels](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/17_Labels.png)
+
+* The labels are proportionately sized, and may appear a bit cluttered. Try playing around with font settings to make them more readable.
+* Once you are satisfied with your network, navigate to the `Export` option at the bottom of the left panel. Save your file in the format of your choice.
+
+![Final](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/18_Final_01.png)
+
+### Creating a complex social network graph
+
+
 
 
 
