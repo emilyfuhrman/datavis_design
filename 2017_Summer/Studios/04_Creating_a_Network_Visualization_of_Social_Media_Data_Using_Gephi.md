@@ -20,3 +20,44 @@ Gephi's requirements for importing data are relatively simple. Given the current
 * Once you have logged in, start a new blank spreadsheet. You should now see a blank grid, named `Untitled Spreadsheet`. 
 
 ![Blank Google Sheet](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/01_Blank_Google_Sheet.png)
+
+* We are going to import the CSV containing the "Banks &amp; Banking" data. Go to `File > Import... > Upload`. Select the CSV from your desktop.
+
+![Import CSV](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/02_Import_CSV.png)
+
+* An `Import File` dialog will pop up. The default `Import action` should be `Replace spreadsheet`, while the default value for `Separator Character` should be `Detect automatically`. 
+* If these settings look correct, click `Import`. Your spreadsheet should now be populated with the data in the CSV.
+
+![Imported Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/03_Imported_Data.png)
+
+* To help guide the import process, we are going to change the `Name` column to `Source` and the `Bank` column to `Target`. This will let Gephi set both the banks and the bankers they are associated with as nodes, but will give the software a sense of directionality that sets banks as the central location to which bankers are associated.
+
+![Changed Columns](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/04_Changed_Columns.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
