@@ -191,7 +191,7 @@ For this section, we will be creating a much more complex network from a random 
 
 * Your image may look different than the editable network. Continue playing around with styles until you get a look and feel that you like. 
 * Before closing this project, let's run some quick statistical analysis to try and detect different communities within the data. In the *right* panel, click the `Statistics` tab.
-* In the `Modularity` row, hit `Run`. 
+* In the `Modularity` row, hit `Run`. [Modularity](https://github.com/gephi/gephi/wiki/Modularity) measures how well the network decomposes into modular communities.
 
 ![Modularity](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/29_Modularity.png)
 
