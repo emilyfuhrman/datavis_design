@@ -11,4 +11,12 @@ We will be using three datasets for these visualizations (one for the first netw
 * (Network 2) Twitter Connections (Nodes) - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/04/02_Twitter_Nodes.csv)
 
 ### Creating a basic network diagram
-#### --
+#### Preparing data for Gephi
+
+Gephi's requirements for importing data are relatively simple. Given the current format of this CSV file, we just need to change the names of a couple columns in order to streamline the upload process. This can be done using Excel, Google Sheets, or just a simple text editor. Here, we will walk through the process as it looks in Google Sheets. 
+
+* Download the CSV file posted [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/04/01_1902_Banks_and_Bankers.csv).
+* Open up [Google Sheets](https://docs.google.com/spreadsheets) and log in with your credentials.
+* Once you have logged in, start a new blank spreadsheet. You should now see a blank grid, named `Untitled Spreadsheet`. 
+
+![Blank Google Sheet](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/01_Blank_Google_Sheet.png)
