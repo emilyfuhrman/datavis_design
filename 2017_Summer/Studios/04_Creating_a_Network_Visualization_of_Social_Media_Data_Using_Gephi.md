@@ -152,7 +152,41 @@ For this section, we will be creating a much more complex network from a random 
 
 ![All Imported](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/22_All_Imported.png)
 
-* We can now begin exploring this data. 
+* We can now begin adjusting this visualization to make it more readable. In the `Appearance` panel, navigate to the `Nodes` tab.
+* Select the concentric circles icon to get to the size control panel. 
+* Select the `Ranking` sub-tab.
+* In the menu, select `Degree`.
+* Change the minimal and maximal values to `10` and `150`.
+* The `Spline...` menu allows you to control the size scaling between the smallest and largest nodes. Keeping it at its default settings is fine. Play around with the settings if you like.
+* Click `Apply`.
+
+![Size Applied](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/23_Size_Applied.png)
+
+* We still have a dense mass, but with some visible diameter changes in the nodes. As before, navigate back to the `Appearance` panel.
+* In the `Layout` section, this time select `Fruchterman Reingold`.
+* Hit `Run`. Slowly, the network should begin to animate. It will gradually arrive at a stable state, with visible clusters. Hit `Stop` when it gets to this point.
+
+![Fruchterman Reingold](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/24_Fruchterman_Reingold.png)
+
+* We can see a shape here, but it may not be as clear as it could be. Let's try instead `ForceAtlas 2`.
+
+![Force Atlas 2](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/25_Force_Atlas.png)
+
+* In the `Layout` panel, set `Scaling` to `10`.
+* Check `Prevent Overlap`.
+* Let the graph run until it has mostly reached a resting point. 
+* Adjust the colors of the nodes and links for readability. 
+
+![Converged](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/26_Converged.png)
+
+
+
+
+
+
+
+
+
 
 
 
