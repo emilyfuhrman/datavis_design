@@ -21,9 +21,9 @@ This repository is for studio materials associated with the ***Data Visualizatio
 
 #### Data
 * **Sources**
-* * [NYC OpenData](https://opendata.cityofnewyork.us/)
+	* [NYC OpenData](https://opendata.cityofnewyork.us/)
 * **Manipulation &amp; Formatting**
-* * [Stanford DataWrangler](http://vis.stanford.edu/wrangler/app/)
+	* [Stanford DataWrangler](http://vis.stanford.edu/wrangler/app/)
 
 #### Design
 * **Software**
