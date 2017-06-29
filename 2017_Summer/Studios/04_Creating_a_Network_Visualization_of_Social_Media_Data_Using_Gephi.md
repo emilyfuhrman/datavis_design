@@ -179,54 +179,32 @@ For this section, we will be creating a much more complex network from a random 
 
 ![Converged](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/26_Converged.png)
 
+* In the `Nodes` tab of the `Appearance` panel, navigate to the `Partition` sub-tab. Here, we can color the nodes based on the additional attributes supplied by `02_Twitter_Nodes.csv`. Try selecting the `Sex` attribute.
 
+![Colorized](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/27_Colorized.png)
 
+* You could also try coloring by "inward"-ness, as we did in the previous network diagram. This would be located under the `Ranking` sub-tab.
+* Adjust the coloring of the edges as needed.
+* Once you are ready, navigate to the `Preview` tab for final polish and image export.
 
+![Colorized](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/28_Preview.png)
 
+* Your image may look different than the editable network. Continue playing around with styles until you get a look and feel that you like. 
+* Before closing this project, let's run some quick statistical analysis to try and detect different communities within the data. In the *right* panel, click the `Statistics` tab.
+* In the `Modularity` row, hit `Run`. 
 
+![Modularity](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/29_Modularity.png)
 
+* Choose a resolution (between 0.1 and 2.0) and click `OK`.
+* Close the automatically-generated modularity report.
+* Now, navigate to the `Appearance` panel on the left, and select the `Nodes` tab.
+* Select the `Partition` sub-tab.
+* In the `Choose an attribute` menu, you will now see an option labeled `Modularity Class`. Select it.
+* Adjust the colors if you like, and click `Apply`.
+* In the `Preview` tab, you will now see a big rainbow network.
 
+![Preview Final](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/30_Preview.png)
 
+* In the `Preview Settings` panel, try adjusting the opacity of your lines, the border of your nodes, and so on. You should end up with something like this:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Final](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/31_Final.png)
