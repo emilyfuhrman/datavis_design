@@ -55,6 +55,43 @@ Gephi's requirements for importing data are relatively simple. Given the current
 
 ![Initial Graph](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/07_Initial_Graph.png)
 
+* The first thing we want to do is get a clearer picture of what this data looks like. We can control the organizing principle of the network by navigating to the `Layout` tab. (Read more about force-directed graph drawing [here](https://en.wikipedia.org/wiki/Force-directed_graph_drawing).) Under the `Choose a layout` menu, try selecting `Force Atlas`. Hit `Run`. 
+
+![Force Atlas](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/08_Force_Atlas.png)
+
+* This is interesting. We can clearly see some distinct clusters form around several nodes. Zoomed this far out, it is hard to see a pattern. Even zooming in, the network is rather dense. 
+
+![Force Atlas Dense](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/09_Force_Atlas_Dense.png)
+
+* Let's try something else. Go back to the `Choose a layout` menu and select `Fruchterman Reingold`. 
+
+![Fruchterman Reingold](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/10_Fruchterman_Reingold.png)
+
+* This gives us a significantly different result. The network expands to fill a circle, spreading out the nodes to make each one visible. It is less strong in emphasizing clusters, however. Instead, scroll to the very bottom of the menu and select `Yifan Hu`. 
+
+![Yifan Hu](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/11_Yifan_Hu.png)
+
+* This is more like it. We can clearly see the different clusters that form from the uploaded data, but do not lose sight of the individual nodes. Feel free to play around with other layouts and settle on one that you like. 
+* Play around with the values in the `Yifan Hu's properties` panel to get a distribution that looks right.
+* Now, let's add some styling to differentiate the nodes from one another. Go to the `Appearance` panel, and select the `Nodes` sub-tab. We will first use color to highlight the nodes that are more "inward" than the others. Remember, banks are nodes that have many nodes connected to them. Bankers are nodes that are (likely) connected to only one bank. In this case, banks are the nodes that will have more connections than banks, so they should appear more "inward". Make sure the palette icon at the top of the panel is selected.
+* Select the `Attribute` tab. 
+* In the `Choose an attribute` menu, select `In-Degree`. 
+* Hit `Apply`. This should color the more connected nodes in a saturated green, while the less connected nodes are a lighter green.
+ 
+![Network Color](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/12_Network_Color.png)
+
+* Click the colored patch to the right of the default gradient to play around with different gradients.
+* We will next adjust the size of the nodes to even more prominently highlight the difference between banks and bankers. In the `Appearance` panel, select the concentric circles icon. 
+* Select the `Attribute` tab. 
+* In the `Choose an attribute` menu, select `In-Degree`. This will size the circles according to the same measure of "inward"-ness. 
+* Play around with the min and max values to get a reasonable layout. I set mine to `10` and `30`.
+
+![Network Size](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/13_Network_Size.png)
+
+
+
+
+
 
 
 
