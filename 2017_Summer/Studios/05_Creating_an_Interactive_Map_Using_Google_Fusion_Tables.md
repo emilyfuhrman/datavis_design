@@ -2,7 +2,7 @@
 
 Fusion Tables is a modern data management web application that makes it easy to host, manage, collaborate on, visualize, and publish data tables online. In this studio, we will be uploading custom geographic data to Fusion Tables and creating an interactive map. 
 
-_**NOTE: This studio culminates in what is essentially a (faux) choropleth map of raw population counts. Normally, creating a map like this is considered bad practice, because visualizing raw counts in differently-sized areas using a continuous gradient encourages misleading visual comparisons between regions. Choropleth maps are used to represent values normalized by the geographic areas with which they are associated. For the purposes of this studio, which focuses on learning how Google Fusion Tables works, we will settle for a raw count map, if uneasily.**_
+_**NOTE: This studio culminates in what is essentially a (faux) choropleth map of raw population counts. Normally, creating a map like this is considered bad practice, because visualizing raw counts in differently-sized areas using a continuous gradient encourages misleading visual comparisons between regions. Choropleth maps are used to represent values normalized by the size of the geographic areas with which they are associated. For the purposes of this studio, which focuses on learning how Google Fusion Tables works, we will settle for a raw count map, if uneasily.**_
 
 ### Datasets
 
