@@ -38,14 +38,27 @@ We will be using two datasets for this map:
 
 ![Data Preview](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/05_Data_Preview.png)
 
-* Check to make sure the top text says `Column names are in row *1*`. 
+* Check to make sure the top text says `Column names are in row: 1`. 
 * If this looks good, click `Next »`.
 * Update the Table name to `CA Population`. Add any attribution data or change the description.
 
 ![Import Update](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/06_Import_Update.png)
 
 * Click `Finish`. The file will be added to Fusion Tables.
-* Now, we need to repeat the same steps to upload the `CA_Counties_POLYG.csv` dataset.
+
+![Loaded CSV](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/07_Loaded_CSV.png)
+
+* Now, we need to repeat the same steps to upload the `CA_Counties_POLYG.csv` dataset. Go to `File > Import more rows...`. 
+
+![New Table](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/08_New_Table.png)
+
+* A new table tab will open, with the same import window. Navigate to `CA_Counties_POLYG.csv` and open the file. 
+* Review the same default settings. Click `Next »`.
+* Review the preview of the data. If it looks good, click `Next »`.
+* If you like, change the title of the table, or add additional metadata. 
+* Once complete, click `Finish`. As before, the file will be added to the table. 
+
+![Imported Polygons](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/09_Imported_Polygons.png)
 
 #### Merging tables
 #### Configuring InfoWindow
