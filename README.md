@@ -21,9 +21,9 @@ This repository is for studio materials associated with the ***Data Visualizatio
 * [CARTO](carto.com)
 
 #### Data
-* **General Sources**
+* **General**
 	* [NYC OpenData](https://opendata.cityofnewyork.us/)
-* **Shapefiles &amp; Geographic**
+* **Geographic**
 	* [Natural Earth](http://www.naturalearthdata.com/downloads/)
 	* [PLUTO](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page)
 * **Manipulation &amp; Formatting**
