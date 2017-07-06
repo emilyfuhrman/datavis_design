@@ -12,7 +12,7 @@ We will be using two datasets for this map:
 ### Creating an interactive map
 #### Uploading data
 
-* Navigate to Google Drive using your *personal Gmail* account (LionMail does not currently support this).
+* Navigate to Google Drive using your **personal Gmail** account (LionMail does not currently support this).
 * Click `NEW`.
 * Navigate to `More > Connect more apps`
 
@@ -33,13 +33,13 @@ We will be using two datasets for this map:
 
 * With `From this computer` selected, browse to find the `CA_Population_County.csv` file. 
 * Check the default settings. `Seperator character` should be set to `Comma`, while `Character encoding` should be set to `UTF-8`.
-* If these look good, click `Next &raquo;`.
+* If these look good, click `Next »`.
 * You should now see a preview of the imported data, with two columns: one for `County`, and one for `Population`. 
 
 ![Data Preview](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/05_Data_Preview.png)
 
 * Check to make sure the top text says `Column names are in row *1*`. 
-* If this looks good, click `Next &raquo;`.
+* If this looks good, click `Next »`.
 * Update the Table name to `CA Population`. Add any attribution data or change the description.
 
 ![Import Update](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/06_Import_Update.png)
