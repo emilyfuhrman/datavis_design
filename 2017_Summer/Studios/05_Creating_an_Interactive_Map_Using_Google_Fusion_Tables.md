@@ -132,7 +132,26 @@ We will be using two datasets for this map:
 
 #### Updating permissions
 
+Now, we are ready to prepare the map for sharing and/or embedding outside of Fusion Tables. A more advanced way of embedding a Fusion Tables map into a web page involves using the Fusion Table layer in the Google Maps API. This requires some experience with JavaScript but has the advantage of allowing you to take advantage of all the features of the Google MAPs API. Perhaps for another day.
 
+* To begin the process of making our map public, click the `Share` button in the top right corner of the window.
+* Under the `Who has access` section, change the default privacy value to `On - Public on the web`.
+
+![Access Settings](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/20_Access_Settings.png)
+
+* Click `Save`.
+* Click `Done`.
+* To quickly grab the table ID for our records, navigate to `File > About this table`.
+* If you like, copy the code at the bottom of the dialog and paste it in a separate document.
+
+![About This Map](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/21_About_This_Map.png)
+
+* Now, we will access the map publicly. In the top menu, go to `Tools > Publish...`.
+* Two options appear. You may either: 
+* * Copy the link under `Send a link in email or IM` and paste into a new tab to load up the map.
+* * Copy the `Paste HTML to embed in a website` and paste into your own HTML document to render.
+
+![Published Map](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/22_Published_Map.png)
 
 #### Embedding map in a webpage
 
