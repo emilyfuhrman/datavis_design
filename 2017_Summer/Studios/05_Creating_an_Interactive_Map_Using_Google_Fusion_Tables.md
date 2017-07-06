@@ -14,7 +14,7 @@ We will be using two datasets for this map:
 
 * Navigate to Google Drive using your **personal Gmail** account (LionMail does not currently support this).
 * Click `NEW`.
-* Navigate to `More > Connect more apps`
+* Navigate to `More > Connect more apps`.
 
 ![Connect Fusion Tables](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/01_Connect_Fusion_Tables.png)
 
@@ -61,6 +61,26 @@ We will be using two datasets for this map:
 ![Imported Polygons](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/09_Imported_Polygons.png)
 
 #### Merging tables
+
+* Now that we have the two tables uploaded, select the tab containing `CA Population` data. We are going to merge this table with the table containing the county boundaries, in order to enable us to create a map that ties population values to geographic areas. Go to `File > Merge...`.
+* A window should pop up, prompting you to select a table from the two you have created. Select the `County Polygons` table.
+
+![Merge Prompt](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/10_Merge_Prompt.png)
+
+* Click `Next »`.
+* Select the columns you want to merge on. In this case, we are using `County` _(though when you can, try to merge tables using unique IDs)_. Make sure `County` matches on each of the tables. Merge works by looking for exact string matches in the selected columns and then linking matching rows together.
+
+![Column Matching](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/11_Column_Matching.png)
+
+* If everything looks good, click `Next »`.
+* Here, we are only interested in the columns `County`, `Population`, and `geometry`. These are the only values we need to draw the map. Go ahead and _uncheck_ `value`, `GEO_ID`, and `GEO_ID2`. 
+* Click `Merge`.
+* A `Merged table created` prompt should appear. Click `View table` to open the merged table in a new tab.
+
+![Merged Table](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/12_Merged_Table.png)
+
+* Here, we can see the columns we specified. Notice that the `geometry` column containing KML values is associated now with both a county name and a population value.
+
 #### Configuring InfoWindow
 #### Styling
 #### Updating permissions
