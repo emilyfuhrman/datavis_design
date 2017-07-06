@@ -7,10 +7,43 @@ Fusion Tables is a modern data management web application that makes it easy to 
 We will be using two datasets for this map:
 
 * Population data for counties in California - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/05/CA_Population_County.csv)
-* An ESRI Shapefile (first converted to KML (Google), then re-converted to CSV (Comma Separated Values)) with geographic coordinates for county polygons - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/04/CA_Counties_POLYG.csv)
+* An ESRI Shapefile (converted from Shapefile -> KML -> CSV) with geographic coordinates for county polygons - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/04/CA_Counties_POLYG.csv)
 
 ### Creating an interactive map
 #### Uploading data
+
+* Navigate to Google Drive using your *personal Gmail* account (LionMail does not currently support this).
+* Click `NEW`.
+* Navigate to `More > Connect more apps`
+
+![Connect Fusion Tables](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/01_Connect_Fusion_Tables.png)
+
+* Search for `Fusion Tables` in the search box.
+* When the matching result appears, click `CONNECT`. 
+
+![Connect App](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/02_Connect_App.png)
+
+* Now, when you navigate to the same menu, `Google Fusion Tables` should appear as an option. 
+
+![Fusion Tables Appears](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/03_Fusion_Tables_Appears.png)
+
+* Google will ask for some verification before directing you to the app. Eventually, you should land on a page that prompts you to import a new table.
+
+![Import New Table](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/04_Import_New_Table.png)
+
+* With `From this computer` selected, browse to find the `CA_Population_County.csv` file. 
+* Check the default settings. `Seperator character` should be set to `Comma`, while `Character encoding` should be set to `UTF-8`.
+* If these look good, click `Next &raquo;`.
+* You should now see a preview of the imported data, with two columns: one for `County`, and one for `Population`. 
+
+![Data Preview](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/05_Data_Preview.png)
+
+* Check to make sure the top text says `Column names are in row *1*`. 
+* If this looks good, click `Next &raquo;`.
+* Update the Table name to `CA Population`. Add any attribution data or change the description.
+
+![Import Update](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/04/06_Import_Update.png)
+
 #### Merging tables
 #### Configuring InfoWindow
 #### Styling
