@@ -113,4 +113,4 @@ We will be using one dataset for this map:
 
 ![Dendrogram Large](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/02/16_Dendrogram_Large.png) 
 
-Of course, these are only a few exploratory graphics. To end up with more polished results, filter and transform your data beforehand to prepare it for the type of graphic you have in mind. 
+Of course, these are only a few exploratory graphics. To end up with more polished results, filter and transform your data beforehand to prepare it for the type of graphic you have in mind.

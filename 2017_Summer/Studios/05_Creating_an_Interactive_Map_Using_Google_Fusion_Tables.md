@@ -155,14 +155,11 @@ Now, we are ready to prepare the map for sharing and/or embedding outside of Fus
 
 #### Embedding map in a webpage
 
+If you are interested in embedding your map in an existing webpage, [FusionTablesLayer Wizard](http://htmlpreview.github.io/?https://github.com/fusiontable-gallery/fusion-tables-api-samples/blob/master/FusionTablesLayerWizard/src/index.html) is a handy resource. 
 
+* To bring your map into the FusionTablesLayer Wizard workspace, go to `Tools > Publish` in your working map and copy the embed link.
+* Click `Add layer`. Your map should appear in the panel to the right.
 
+![FusionTablesLayer Wizard](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/23_FusionTablesLayer_Wizard.png)
 
-
-
-
-
-
-
-
-
+* Customize the dimensions, feature visibility, and saturation to your liking. Once complete, the HTML code in the `Your HTML` section at the bottom will enable you to paste the map into your own website.
