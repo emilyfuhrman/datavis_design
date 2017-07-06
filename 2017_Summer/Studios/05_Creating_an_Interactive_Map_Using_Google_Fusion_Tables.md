@@ -123,7 +123,17 @@ We will be using two datasets for this map:
 </div>
 ```
 
+![Info Window](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/18_Info_Window.png)
+
+* Click `Save`.
+* Click on one of the counties. The style of the info window content should be updated to a more readable format.
+
+![Info Window Styled](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/19_Info_Window_Styled.png)
+
 #### Updating permissions
+
+
+
 #### Embedding map in a webpage
 
 
