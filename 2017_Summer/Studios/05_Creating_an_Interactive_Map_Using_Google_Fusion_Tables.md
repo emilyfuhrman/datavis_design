@@ -79,9 +79,60 @@ We will be using two datasets for this map:
 
 ![Merged Table](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/12_Merged_Table.png)
 
-* Here, we can see the columns we specified. Notice that the `geometry` column containing KML values is associated now with both a county name and a population value.
+* Here, we can see the columns that we specified. Notice that the `geometry` column containing KML values is associated now with both a county name and a population value. We are ready to create a map from this data. Navigate to the `Map of geometry` tab to view the county geometry in a webmap.
 
-#### Configuring InfoWindow
+![Map of Geometry](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/13_Map_of_Geometry.png)
+
 #### Styling
+
+* We are going to style this map in order to create a visualization of the data. In the left panel, click `Change feature styles...`.
+* In the left column under `Polygons`, select `Fill color`.
+* Select the `Gradient` tab.
+* Select `Show a gradient`. 
+* In the dropdown menu next to `Column`, select `Population`.
+* In the text box next to `Through`, enter `90900`.
+
+![Feature Styles](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/14_Feature_Styles.png)
+
+* Select any colors you want using the dropdown menu.
+* Now, in the left column under `Polygons`, select `Border color`.
+* Change this color to white (`#FFFFFF`).
+
+![Border Color](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/15_Border_Color.png)
+
+* In the left column under `Legend`, select `Automatic legend`.
+* Check `Show polygon fill legend`.
+
+![Show Legend](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/16_Show_Legend.png)
+
+* When finished, click `Save`. The map will be updated in the new style.
+
+![Updated Map](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/05/17_Updated_Map.png)
+
+#### Configuring the info window
+
+* Now, we want to customize the content in the "info window" that pops up whenever we click on a county. In the left panel, select `Change info window...`.
+* A new dialog should appear, containing the HTML that generates the info window. Deselect all checkboxes except for the two next to `County` and `Population`. Notice how the HTML in the right panel is updated as you do this.
+* Select the `Custom` tab.
+* Update the HTML to the following:
+
+` ` `
+<div class=’googft-info-window’ style='font-size: 16px',’font-family: sans-serif’> <b>{County}</b><br>
+<b> Population:</b> {Population}
+</div>
+` ` `
+
 #### Updating permissions
 #### Embedding map in a webpage
+
+
+
+
+
+
+
+
+
+
+
+
