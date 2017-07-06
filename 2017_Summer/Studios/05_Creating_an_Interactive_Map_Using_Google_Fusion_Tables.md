@@ -116,11 +116,12 @@ We will be using two datasets for this map:
 * Select the `Custom` tab.
 * Update the HTML to the following:
 
-` ` `
-<div class=’googft-info-window’ style='font-size: 16px',’font-family: sans-serif’> <b>{County}</b><br>
-<b> Population:</b> {Population}
+```
+<div class=’googft-info-window’ style='font-size: 16px',’font-family: sans-serif’>
+	<b>{County}</b><br>
+	<b>Population:</b> {Population}
 </div>
-` ` `
+```
 
 #### Updating permissions
 #### Embedding map in a webpage
