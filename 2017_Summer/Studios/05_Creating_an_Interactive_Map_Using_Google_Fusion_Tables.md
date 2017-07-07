@@ -9,7 +9,7 @@ _**NOTE: This studio culminates in what is essentially a (faux) choropleth map o
 We will be using two datasets for this map:
 
 * Population data for counties in California - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/05/CA_Population_County.csv)
-* An ESRI Shapefile (converted from Shapefile -> KML -> CSV) with geographic coordinates for county polygons - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/04/CA_Counties_POLYG.csv)
+* An ESRI Shapefile (converted from Shapefile -> KML -> CSV) with geographic coordinates for county polygons - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/05/CA_Counties_POLYG.csv)
 
 ### Creating an interactive map
 #### Uploading data
