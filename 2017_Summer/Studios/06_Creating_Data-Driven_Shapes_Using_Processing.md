@@ -166,6 +166,32 @@ Success!
 
 #### Using data to draw shapes
 
+* Now, we can use this same loop to generate some shapes. We haven't incorporated Processing's graphic capabilities into our workflow just yet, but now we can start leveraging the window that pops up on `Run` to visualize the data in the spreadsheet. To begin, define the width and height you would like your window to be as the first line in the `setup()` function: `size(500,600);`. As you can see, my dimensions are set to 500px width and 600px height. 
+
+```
+Table my_table;
+
+void setup(){
+	
+  size(500,600);
+
+	my_table = loadTable("class_dataset.csv", "header");
+
+	for(TableRow current_row : my_table.rows()){
+
+		String current_uni = current_row.getString("UNI");
+    int current_number = current_row.getInt("random_number"); 
+
+    println(current_uni + ' ' + current_number); //**new code**
+
+	}
+
+}
+
+void draw(){
+}
+```
+
 
 
 
