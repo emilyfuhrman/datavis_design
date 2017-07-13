@@ -18,8 +18,8 @@ This repository is for studio materials associated with the ***Data Visualizatio
 
 ### Mapping
 * **No code**
-* [CARTO](carto.com)
-* [QGIS](http://www.qgis.org/en/site/)
+	* [CARTO](carto.com)
+	* [QGIS](http://www.qgis.org/en/site/)
 
 ### Data
 * **General**
