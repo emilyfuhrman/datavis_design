@@ -36,8 +36,9 @@ void setup(){
 
 void draw(){
 }
-
 ```
+
+...so your window looks something like this:
 
 ![Initialize Sketch](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/06/03_Initialize_Sketch.png)
 
@@ -51,8 +52,10 @@ void setup(){
 
 void draw(){
 }
-
 ```
+
+
+
 
 
 
