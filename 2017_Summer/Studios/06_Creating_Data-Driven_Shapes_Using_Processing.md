@@ -84,7 +84,6 @@ void setup(){
 
 	//**new code**
 	for(TableRow current_row : my_table.rows()){
-
 	}
 }
 
@@ -104,7 +103,6 @@ void setup(){
 	for(TableRow current_row : my_table.rows()){
 		
 		String current_uni = current_row.getString("UNI"); //**new code**
-
 	}
 }
 
@@ -124,7 +122,6 @@ void setup(){
 
 		String current_uni = current_row.getString("UNI");
 		int current_number = current_row.getInt("random_number"); //**new code**
-
 	}
 }
 
@@ -147,7 +144,6 @@ void setup(){
 		int current_number = current_row.getInt("random_number"); 
 
 		println(current_uni + ' ' + current_number); //**new code**
-
 	}
 }
 
@@ -179,7 +175,6 @@ void setup(){
 		int current_number = current_row.getInt("random_number"); 
 
 		println(current_uni + ' ' + current_number);
-
 	}
 }
 
@@ -209,7 +204,6 @@ void setup(){
 		println(current_uni + ' ' + current_number);
 
 		rect(0,100,current_number,current_number); //**new code**
-
 	}
 }
 
@@ -237,7 +231,6 @@ void setup(){
 		println(current_uni + ' ' + current_number);
     
 		rect(current_number,100,current_number,current_number); //**new code**
-
 	}
 }
 
@@ -271,7 +264,6 @@ void setup(){
     
 		fill(255,0,0,current_number); //**new code**
 		rect(current_number,100,current_number,current_number); 
-
 	}
 }
 
@@ -286,27 +278,3 @@ Now we're getting somewhere! To get to know Processing better, try to do the fol
 * Change the background of the sketch.
 
 Reference to all of Processing's capabilities are available [here](https://processing.org/reference/).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
