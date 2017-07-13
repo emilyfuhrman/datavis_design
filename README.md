@@ -19,18 +19,18 @@ This repository is for studio materials associated with the ***Data Visualizatio
 * [QGIS](http://www.qgis.org/en/site/)
 
 ### Data
-* **General**
+* **_General_**
 	* [NYC OpenData](https://opendata.cityofnewyork.us/)
-* **Geographic (Shapefiles)**
+* **_Geographic (Shapefiles)_**
 	* [Natural Earth](http://www.naturalearthdata.com/downloads/)
 	* [PLUTO](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page)
-* **Manipulation &amp; Formatting**
+* **_Manipulation &amp; Formatting_**
 	* [Stanford DataWrangler](http://vis.stanford.edu/wrangler/app/)
 
 ### Design
-* **Software**
+* **_Software_**
   * [Inkscape](https://inkscape.org/en/)
-* **Color**
+* **_Color_**
   * [ColorBrewer](http://colorbrewer2.org/)
   * [Chroma.js Color Scale Helper](https://gka.github.io/palettes/)
   * [Google Material Design](https://material.io/guidelines/style/color.html#color-color-palette)
