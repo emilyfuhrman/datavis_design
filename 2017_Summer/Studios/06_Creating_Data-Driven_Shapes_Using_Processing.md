@@ -162,7 +162,7 @@ Table my_table;
 
 void setup(){
 	
-  size(500,600); //**new code**
+	size(500,600); //**new code**
 
 	my_table = loadTable("class_dataset.csv", "header");
 
