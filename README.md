@@ -8,7 +8,7 @@ This repository is for studio materials associated with the ***Data Visualizatio
 
 ## Tools &amp; Links
 
-#### Visualization
+### Visualization
 * **_Code_**
 	* [Processing](https://processing.org/)
 * **_No code_**
@@ -16,10 +16,10 @@ This repository is for studio materials associated with the ***Data Visualizatio
 	* [Plotly](https://plot.ly/)
 	* [RAWGraphs](http://app.rawgraphs.io/)
 
-#### Mapping
+### Mapping
 * [CARTO](carto.com)
 
-#### Data
+### Data
 * **General**
 	* [NYC OpenData](https://opendata.cityofnewyork.us/)
 * **Geographic (Shapefiles)**
@@ -28,7 +28,7 @@ This repository is for studio materials associated with the ***Data Visualizatio
 * **Manipulation &amp; Formatting**
 	* [Stanford DataWrangler](http://vis.stanford.edu/wrangler/app/)
 
-#### Design
+### Design
 * **Software**
   * [Inkscape](https://inkscape.org/en/)
 * **Color**
