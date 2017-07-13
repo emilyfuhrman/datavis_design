@@ -16,9 +16,18 @@ We will be using a class-generated dataset for our sketch:
 
 ![Download CSV](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/06/01_Download_CSV.png)
 
+* Rename the dataset to something simple, like `class_dataset.csv`.
+
 #### Importing data into Processing
 
 * Open up a new sketch in Processing. 
+* Save the sketch with a familiar name (mine will be called `sketch_studio`) in a folder you can access.
+* Navigate to the sketch folder. Inside it, you should see a file with the extension `.pde`, which is exactly the same name as the parent folder. (Here, I see `sketch_studio.pde`).
+* In the parent folder, create a new folder. Name it `data`. Make sure the `d` is lowercase, as this enables Processing to know that it can access data from here. 
+* Inside the `data` folder, put the CSV you downloaded from Google Sheets. Your structure should look something like this:
+
+![Folder Structure](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/06/02_Folder_Structure.png)
+
 * To initialize the sketch, create two functions: 
 
 ```
@@ -32,4 +41,26 @@ void draw(){
 
 ```
 
-![Initialize Sketch](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/06/02_Initialize_Sketch.png)
+![Initialize Sketch](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/06/03_Initialize_Sketch.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
