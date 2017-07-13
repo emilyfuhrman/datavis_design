@@ -9,9 +9,9 @@ This repository is for studio materials associated with the ***Data Visualizatio
 ## Tools &amp; Links
 
 #### Visualization
-* **Code**
+* **_Code_**
 	* [Processing](https://processing.org/)
-* **No code**
+* **_No code_**
 	* [Gephi](https://gephi.org/)
 	* [Plotly](https://plot.ly/)
 	* [RAWGraphs](http://app.rawgraphs.io/)
