@@ -9,10 +9,12 @@ This repository is for studio materials associated with the ***Data Visualizatio
 ## Tools &amp; Links
 
 #### Visualization
-* [Gephi](https://gephi.org/)
-* [Plotly](https://plot.ly/)
-* [RAWGraphs](http://app.rawgraphs.io/)
-* [Processing](https://processing.org/)
+* **Code**
+	* [Processing](https://processing.org/)
+* **No code**
+	* [Gephi](https://gephi.org/)
+	* [Plotly](https://plot.ly/)
+	* [RAWGraphs](http://app.rawgraphs.io/)
 
 #### Mapping
 * [CARTO](carto.com)
