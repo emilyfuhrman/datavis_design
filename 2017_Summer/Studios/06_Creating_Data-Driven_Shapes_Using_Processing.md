@@ -45,7 +45,7 @@ void draw(){
 * Today, all of our code will be living in the `setup()` function. The first thing we want to do is initialize the `Table` object, which is native to Processing. (More information [here](https://processing.org/reference/Table.html).) As the reference page explains, the `Table` object stores data in columns and rows, much like the structure of a traditional spreadsheet. To work with a table in a sketch, you can either create a table from scratch or import an external file. In this studio, we will be importing the file we collaboratively populated in class. To initialize the table object, type `Table my_table;` above both of your functions. The string `Table` defines a new variable of the type `Table`. The string `my_table` defines the name of the new `Table`. Your code should now look something like this:
 
 ```
-Table my_table;
+Table my_table; //new code
 
 void setup(){
 }
@@ -61,6 +61,7 @@ Table my_table;
 
 void setup(){
 	
+	//new code
 	my_table = loadTable("class_dataset.csv", "header");
 
 }
@@ -69,7 +70,28 @@ void draw(){
 }
 ```
 
-* To test that everything is working properly, click the `Run` button. If your table is imported correctly, no errors will show up in the console.
+* To quickly test that everything is working properly, click the `Run` button. If your table is imported correctly, no errors will show up in the console.
+
+#### Printing values in the console
+
+* The Processing console is a flexible place to test whether everything is working behind the scenes. Beyond just throwing errors, we can use the console to confirm that the values we have tried to import look the way they should. Let's start by creating a `for loop` using the Processing syntax, which will cycle through every row in the values we have assigned to the `Table` object called `my_table`.
+
+```
+Table my_table;
+
+void setup(){
+	
+	my_table = loadTable("class_dataset.csv", "header");
+
+	//new code
+	for(TableRow row : table.rows()){
+	}
+
+}
+
+void draw(){
+}
+```
 
 #### Using data to draw shapes
 
