@@ -125,7 +125,7 @@ void setup(){
 	for(TableRow current_row : my_table.rows()){
 
 		String current_uni = current_row.getString("UNI");
-    int current_number = current_row.getInt("random_number"); //**new code**
+		int current_number = current_row.getInt("random_number"); //**new code**
 
 	}
 
@@ -147,9 +147,9 @@ void setup(){
 	for(TableRow current_row : my_table.rows()){
 
 		String current_uni = current_row.getString("UNI");
-    int current_number = current_row.getInt("random_number"); 
+		int current_number = current_row.getInt("random_number"); 
 
-    println(current_uni + ' ' + current_number); //**new code**
+		println(current_uni + ' ' + current_number); //**new code**
 
 	}
 
@@ -173,16 +173,16 @@ Table my_table;
 
 void setup(){
 	
-  size(500,600);
+  size(500,600); //**new code**
 
 	my_table = loadTable("class_dataset.csv", "header");
 
 	for(TableRow current_row : my_table.rows()){
 
 		String current_uni = current_row.getString("UNI");
-    int current_number = current_row.getInt("random_number"); 
+		int current_number = current_row.getInt("random_number"); 
 
-    println(current_uni + ' ' + current_number); //**new code**
+		println(current_uni + ' ' + current_number);
 
 	}
 
