@@ -3,4 +3,5 @@ This repository is for studio materials associated with the ***Data Visualizatio
 
 ![Diagram](https://github.com/emilyfuhrman/datavis_design/blob/master/Images/node_link.png)
 
-## [2017_Summer](https://github.com/emilyfuhrman/datavis_design/tree/master/2017_Summer)
+## Sections
+* [2017_Summer](https://github.com/emilyfuhrman/datavis_design/tree/master/2017_Summer)

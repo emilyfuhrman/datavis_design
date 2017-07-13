@@ -1,4 +1,5 @@
-# 2017_Summer
+# Course resources
+***Data Visualization &amp; Design***, Summer 2017.<br/><br/>
 
 ## Studios
 * [Creating a Web Map of Building Age in Manhattan Using CARTO](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/01_Creating_a_Web_Map_of_Building_Age_in_Manhattan_Using_CARTO.md)
