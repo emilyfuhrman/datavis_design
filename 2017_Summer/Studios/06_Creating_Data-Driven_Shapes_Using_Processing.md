@@ -14,4 +14,4 @@ We will be using a class-generated dataset for our sketch:
 * In class, navigate to the row in the spreadsheet that contains your UNI and enter a random **integer** in the `random_number` column. For the purposes of this Github walkthrough, I will assume this column to be populated.
 * Once the column is populated, go to `File > Download as > Comma-separated values (.csv, current sheet)`. The current spreadsheet tab should download with a `.csv` extension.
 
-![Download Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/06/01_Download_Data.png)
+![Download CSV](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/06/01_Download_CSV.png)
