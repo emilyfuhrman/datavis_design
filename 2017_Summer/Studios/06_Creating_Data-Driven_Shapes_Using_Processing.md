@@ -54,6 +54,24 @@ void draw(){
 }
 ```
 
+The string `Table` defines a new variable of the type `Table`. The string `my_table` defines the name of the new `Table`.
+* Now, we want to tell our sketch to import the CSV from the `data` folder we defined. To do this, we will navigate back into the `setup()` function and define `my_table` as the CSV file in its imported form. We will use the `loadTable` function, which is also native to Processing.
+
+```
+Table my_table;
+
+void setup(){
+	
+	my_table = loadTable("class_dataset.csv", "header");
+
+}
+
+void draw(){
+}
+```
+
+As you can see, the first argument that the `loadTable` function takes is the name of the CSV file. (There's no reason to name the `data` folder, because Processing is already looking there.) The second optional argument tells the `loadTable` function that we are importing a CSV with a header row.
+* To test this, click the `Run` button. If your table is imported correctly, no errors will show up in the console.
 
 
 
