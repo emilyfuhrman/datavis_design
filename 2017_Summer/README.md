@@ -9,7 +9,7 @@
 * [Creating an Interactive Map Using Google Fusion Tables](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/05_Creating_an_Interactive_Map_Using_Google_Fusion_Tables.md)
 * [Creating Data-Driven Shapes Using Processing](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/06_Creating_Data-Driven_Shapes_Using_Processing.md)
 
-## Resources
+## Tools &amp; Links
 
 #### Visualization
 * [Gephi](https://gephi.org/)
