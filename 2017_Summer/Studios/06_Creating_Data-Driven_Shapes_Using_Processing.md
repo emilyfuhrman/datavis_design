@@ -188,7 +188,7 @@ Table my_table;
 
 void setup(){
 	
-  size(500,600);
+	size(500,600);
 
 	my_table = loadTable("class_dataset.csv", "header");
 
@@ -214,7 +214,7 @@ Table my_table;
 
 void setup(){
 	
-  size(500,600);
+	size(500,600);
 
 	my_table = loadTable("class_dataset.csv", "header");
 
@@ -245,7 +245,7 @@ Table my_table;
 
 void setup(){
 	
-  size(500,600);
+	size(500,600);
 
 	my_table = loadTable("class_dataset.csv", "header");
 
