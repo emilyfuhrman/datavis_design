@@ -268,6 +268,6 @@ Now we're getting somewhere! To get to know Processing better, try to do the fol
 * Line up the squares based on the value in the `ID` column, so that they are evenly spaced.
 * Change the border color of the squares.
 * Use circles instead of squares.
-* Change the background of the sketch.
+* Change the background color of the sketch.
 
 Reference to all of Processing's capabilities are available [here](https://processing.org/reference/).
