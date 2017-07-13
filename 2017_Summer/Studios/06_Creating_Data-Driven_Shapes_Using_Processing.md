@@ -14,7 +14,7 @@ We will be using a class-generated dataset for our sketch:
 * In class, navigate to the row in the spreadsheet that contains your UNI and enter a random **integer** in the `random_number` column. For the purposes of this Github walkthrough, I will assume this column to be populated.
 * Once the column is populated, go to `File > Download as > Comma-separated values (.csv, current sheet)`. The current spreadsheet tab should download with a `.csv` extension.
 
-![Download CSV](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/06/01_Download_CSV.png)
+![Download CSV](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/06/01_Download_As_CSV.png)
 
 * Rename the dataset to something simple, like `class_dataset.csv`.
 
@@ -192,6 +192,98 @@ void draw(){
 }
 ```
 
+* Now, click `Run`. The window that pops up should size to your new dimensions. 
+* Based on what we know of drawing shapes, let's try to use the `current_number` value to size some circles. Inside of the loop, below the `println` command, try drawing a square for every row that changes size based on the value of the number. 
+
+![Stacked Rectangles](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/06/05_Stacked_Rectangles.png)
+
+```
+Table my_table;
+
+void setup(){
+	
+  size(500,600);
+
+	my_table = loadTable("class_dataset.csv", "header");
+
+	for(TableRow current_row : my_table.rows()){
+
+		String current_uni = current_row.getString("UNI");
+		int current_number = current_row.getInt("random_number"); 
+
+		println(current_uni + ' ' + current_number);
+
+		rect(0,100,current_number,current_number); //**new code**
+
+	}
+
+}
+
+void draw(){
+}
+```
+* For every row in the loop, the code above accesses the variables we saved earlier and draws a new rectangle. It uses the `current_number` integer to set the width and height of the square. Something showed up. We have squares of different sizes. But these appear to all be stacked on top of one another. Let's try to space them out by adjusting the x-value of the rectangle using the same variable. 
+
+![Slightly Spaced](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/06/06_Slightly_Spaced.png)
+
+```
+Table my_table;
+
+void setup(){
+	
+  size(500,600);
+
+	my_table = loadTable("class_dataset.csv", "header");
+
+	for(TableRow current_row : my_table.rows()){
+
+		String current_uni = current_row.getString("UNI");
+		int current_number = current_row.getInt("random_number"); 
+
+		println(current_uni + ' ' + current_number);
+    
+		rect(current_number,100,current_number,current_number); //**new code**
+
+	}
+
+}
+
+void draw(){
+}
+```
+
+* That did something! But not enough. Try playing around with the parameters to get something like this instead:
+
+![Spaced More](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/06/07_Spaced_More.png)
+
+* Maybe size is not the best parameter to use here. Instead, maybe we can use opacity. To set the fill of a shape, we use the `fill` command, and feed it an `RGBA` value. Right before your `rect` line, add this command: `fill(255,0,0,current_number);`. This will set the fill value to red, and change its opacity based on the integer instead. 
+
+```
+Table my_table;
+
+void setup(){
+	
+  size(500,600);
+
+	my_table = loadTable("class_dataset.csv", "header");
+
+	for(TableRow current_row : my_table.rows()){
+
+		String current_uni = current_row.getString("UNI");
+		int current_number = current_row.getInt("random_number"); 
+
+		println(current_uni + ' ' + current_number);
+    
+    fill(255,0,0,current_number); //**new code**
+		rect(current_number,100,current_number,current_number); 
+
+	}
+
+}
+
+void draw(){
+}
+```
 
 
 
