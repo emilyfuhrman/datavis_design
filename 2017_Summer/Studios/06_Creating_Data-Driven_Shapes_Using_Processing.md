@@ -86,7 +86,6 @@ void setup(){
 	for(TableRow current_row : my_table.rows()){
 
 	}
-
 }
 
 void draw(){
@@ -107,7 +106,6 @@ void setup(){
 		String current_uni = current_row.getString("UNI"); //**new code**
 
 	}
-
 }
 
 void draw(){
@@ -128,7 +126,6 @@ void setup(){
 		int current_number = current_row.getInt("random_number"); //**new code**
 
 	}
-
 }
 
 void draw(){
@@ -152,7 +149,6 @@ void setup(){
 		println(current_uni + ' ' + current_number); //**new code**
 
 	}
-
 }
 
 void draw(){
@@ -185,7 +181,6 @@ void setup(){
 		println(current_uni + ' ' + current_number);
 
 	}
-
 }
 
 void draw(){
@@ -216,7 +211,6 @@ void setup(){
 		rect(0,100,current_number,current_number); //**new code**
 
 	}
-
 }
 
 void draw(){
@@ -245,7 +239,6 @@ void setup(){
 		rect(current_number,100,current_number,current_number); //**new code**
 
 	}
-
 }
 
 void draw(){
@@ -280,13 +273,11 @@ void setup(){
 		rect(current_number,100,current_number,current_number); 
 
 	}
-
 }
 
 void draw(){
 }
 ```
-
 Now we're getting somewhere! To get to know Processing better, try to do the following:
 
 * Line up the squares based on the value in the `ID` column, so that they are evenly spaced.
