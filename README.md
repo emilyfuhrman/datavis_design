@@ -6,18 +6,20 @@ This repository is for studio materials associated with the ***Data Visualizatio
 ## Sections
 * [2017_Summer](https://github.com/emilyfuhrman/datavis_design/tree/master/2017_Summer)
 
-## Tools &amp; Links
+## Tools
 
 ### Visualization
-* **_Code_**
+* **Code**
 	* [Processing](https://processing.org/)
-* **_No code_**
+* **No code**
 	* [Gephi](https://gephi.org/)
 	* [Plotly](https://plot.ly/)
 	* [RAWGraphs](http://app.rawgraphs.io/)
 
 ### Mapping
+* **No code**
 * [CARTO](carto.com)
+* [QGIS](http://www.qgis.org/en/site/)
 
 ### Data
 * **General**
