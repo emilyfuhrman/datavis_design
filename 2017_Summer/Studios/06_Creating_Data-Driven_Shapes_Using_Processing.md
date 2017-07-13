@@ -28,20 +28,32 @@ We will be using a class-generated dataset for our sketch:
 
 ![Folder Structure](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/06/02_Folder_Structure.png)
 
-* To initialize the sketch, create two functions: 
+* Now, navigate to the main window of the open sketch. To initialize the sketch, create two functions: 
 
 ```
 void setup(){
-
 }
 
 void draw(){
-	
 }
 
 ```
 
 ![Initialize Sketch](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/06/03_Initialize_Sketch.png)
+
+* Today, all of our code will be living in the `setup()` function. The first thing we want to do is initialize the `Table` object, which is native to Processing. (More information [here](https://processing.org/reference/Table.html).) As the reference page explains, the `Table` object stores data in columns and rows, much like the structure of a traditional spreadsheet. To work with a table in a sketch, you can either create a table from scratch or import an external file. In this studio, we will be importing the file we collaboratively populated in class. To initialize the table object, type `Table my_table;` above both of your functions. Your code should now look something like this:
+
+```
+Table my_table;
+
+void setup(){
+}
+
+void draw(){
+}
+
+```
+
 
 
 
