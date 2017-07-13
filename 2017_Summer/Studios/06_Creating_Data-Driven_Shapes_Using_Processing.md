@@ -224,7 +224,7 @@ void draw(){
 ```
 * For every row in the loop, the code above accesses the variables we saved earlier and draws a new rectangle. It uses the `current_number` integer to set the width and height of the square. Something showed up. We have squares of different sizes. But these appear to all be stacked on top of one another. Let's try to space them out by adjusting the x-value of the rectangle using the same variable. 
 
-![Slightly Spaced](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/06/06_Slightly_Spaced.png)
+![Spaced Slightly](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/06/06_Spaced_Slightly.png)
 
 ```
 Table my_table;
@@ -258,6 +258,8 @@ void draw(){
 
 * Maybe size is not the best parameter to use here. Instead, maybe we can use opacity. To set the fill of a shape, we use the `fill` command, and feed it an `RGBA` value. Right before your `rect` line, add this command: `fill(255,0,0,current_number);`. This will set the fill value to red, and change its opacity based on the integer instead. 
 
+![Colored Squares](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/06/08_Colored_Squares.png)
+
 ```
 Table my_table;
 
@@ -274,7 +276,7 @@ void setup(){
 
 		println(current_uni + ' ' + current_number);
     
-    fill(255,0,0,current_number); //**new code**
+		fill(255,0,0,current_number); //**new code**
 		rect(current_number,100,current_number,current_number); 
 
 	}
@@ -284,6 +286,15 @@ void setup(){
 void draw(){
 }
 ```
+
+Now we're getting somewhere! To get to know Processing better, try to do the following:
+
+* Line up the squares based on the value in the `ID` column, so that they are evenly spaced.
+* Change the border color of the squares.
+* Use circles instead of squares.
+* Change the background of the sketch.
+
+Reference to all of Processing's capabilities are available [here](https://processing.org/reference/).
 
 
 
