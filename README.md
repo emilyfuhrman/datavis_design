@@ -9,17 +9,14 @@ This repository is for studio materials associated with the ***Data Visualizatio
 ## Tools
 
 ### Visualization
-* **Code**
-	* [Processing](https://processing.org/)
-* **No code**
-	* [Gephi](https://gephi.org/)
-	* [Plotly](https://plot.ly/)
-	* [RAWGraphs](http://app.rawgraphs.io/)
+* [Processing](https://processing.org/)
+* [Gephi](https://gephi.org/)
+* [Plotly](https://plot.ly/)
+* [RAWGraphs](http://app.rawgraphs.io/)
 
 ### Mapping
-* **No code**
-	* [CARTO](carto.com)
-	* [QGIS](http://www.qgis.org/en/site/)
+* [CARTO](carto.com)
+* [QGIS](http://www.qgis.org/en/site/)
 
 ### Data
 * **General**
