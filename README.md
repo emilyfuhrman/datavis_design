@@ -4,19 +4,17 @@ This repository is for materials associated with the ***Data Visualization &amp;
 ## Sections
 * [2017_Summer](https://github.com/emilyfuhrman/datavis_design/tree/master/2017_Summer)
 
-## Tools
-
-### Visualization
+## Visualization resources
 * [Processing](https://processing.org/)
 * [Gephi](https://gephi.org/)
 * [Plotly](https://plot.ly/)
 * [RAWGraphs](http://app.rawgraphs.io/)
 
-### Mapping
+## Mapping resources
 * [CARTO](carto.com)
 * [QGIS](http://www.qgis.org/en/site/)
 
-### Data
+## Data resources
 * **_General_**
 	* [NYC OpenData](https://opendata.cityofnewyork.us/)
 * **_Geographic (Shapefiles)_**
@@ -25,7 +23,7 @@ This repository is for materials associated with the ***Data Visualization &amp;
 * **_Manipulation &amp; Formatting_**
 	* [Stanford DataWrangler](http://vis.stanford.edu/wrangler/app/)
 
-### Design
+## Design resources
 * **_Software_**
   * [Inkscape](https://inkscape.org/en/)
 * **_Color_**
