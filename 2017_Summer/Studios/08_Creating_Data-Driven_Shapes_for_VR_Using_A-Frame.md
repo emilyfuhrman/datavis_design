@@ -11,6 +11,11 @@ We will be using [Glitch](https://glitch.com/) in this studio to facilitate the 
 
 ### A-Frame basics
 
+* Like other graphics systems we have encountered, A-Frame (built on top of the JavaScript library [three.js](https://threejs.org/), which is itself a 3-D library that makes [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) much more user-friendly, if still complicated) comes with a series of primitive shapes that are easy to generate and manipulate. Since A-Frame's shapes are 3-dimensional, they include a [torus](https://aframe.io/docs/0.6.0/primitives/a-torus.html), [box](https://aframe.io/docs/0.6.0/primitives/a-box.html), [cylinder](https://aframe.io/docs/0.6.0/primitives/a-cylinder.html), [cone](https://aframe.io/docs/0.6.0/primitives/a-cone.html), and [sphere](https://aframe.io/docs/0.6.0/primitives/a-sphere.html), to name a few.
+* **A-Frame can be developed entirely in HTML, without using code.** This is pretty cool! (Though to actually visualize data in this medium usually requires code.)
+* Since A-Frame leverages 3-D rendering capabilities, it introduces a number of new concepts that apply to 3-dimensional scenes (such as the [camera](https://aframe.io/docs/0.6.0/components/camera.html), and [light](https://aframe.io/docs/0.6.0/components/light.html)). While these feature are necessary to understand if you want to build complex VR experiences, the best way to grow accustomed to them is through practice and experience. 
+* Aside from some new syntax, the most we will have to worry about today is the addition of the z-axis, which controls how "far away" the things we draw appear from us on the screen. 
+
 ### Getting started
 
 * Navigate to the "Getting started" project. Your window should look something like this:
