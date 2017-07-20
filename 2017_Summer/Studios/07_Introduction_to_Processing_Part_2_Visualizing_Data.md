@@ -187,3 +187,5 @@ Our final version does give us a more comprehensive picture of our own random nu
 * Do you notice anything different about the top row, which visualizes the values we defined as a class?
 * Does opacity function as a good point of comparison?
 * Can you think of a more effective way to visualize this data?
+
+_This is **Part II** of a two-part tutorial. To view Part I, click **[here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/06_Introduction_to_Processing_Part_1_Creating_Data-Driven_Shapes_Using_Processing.md).**_

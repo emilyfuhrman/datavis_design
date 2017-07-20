@@ -273,3 +273,5 @@ Now we're getting somewhere! To get to know Processing better, try to do the fol
 * Change the background color of the sketch.
 
 Reference to all of Processing's capabilities are available [here](https://processing.org/reference/).
+
+_This is **Part I** of a two-part tutorial. To view Part II, click **[here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/07_Introduction_to_Processing_Part_2_Visualizing_Data.md).**_
