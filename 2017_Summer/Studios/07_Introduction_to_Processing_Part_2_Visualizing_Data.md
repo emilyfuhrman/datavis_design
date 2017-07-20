@@ -77,7 +77,6 @@ void setup(){
 void draw(){
 }
 ```
-
 * Now, we have a value to access for the index position we are on as the `for-loop` continues to run. Go ahead and replace the x-value in the `rect` command with `counter`, so that the line reads `rect(counter,100,current_number,current_number);`.
 * Run your sketch.
 
@@ -89,26 +88,101 @@ void draw(){
 
 * Change the color of the background to black (`#000000`).
 * Change the color of the squares to white (`rgb(255,255,255)`, while retaining the opacity `a` value), so that they appear more readable.
+* In addition, play around with transformations on the raw `current_number` value that drives the alpha of each square, in case you want them to be brighter or higher contrast. 
 
 ![Squares Monochrome](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/04_Squares_Monochrome.png)
 
+* Let's now define a separate array of random numbers. We can do this by creating another `for-loop`. Below the `for-loop` that contains the CSV logic, define a new variable, set to the size of the table we imported: 
 
+`int[] randomArray = new int[my_table.getRowCount()];`
 
+* We can also use more readable syntax for the new `for-loop` we create. The number of times this loop will run is set to the number of elements in the table that we imported. We will create randomized datasets of the same size as our original, which will better facilitate visual comparison. Below the new variable definition, add the following:
 
+```
+	for(int i=0; i < my_table.getRowCount(); i++){
+	}
+```
+* Inside of the `for-loop`, we will push a new random value to the array we defined every time the loop runs. Between the curly brackets, add the following:
 
+`randomArray[i] = int(random(0,100));`
 
+* Repeat the same steps to create five random arrays total, each with a different name. Include these all in the same `for-loop` for the time being. Your code should look something like this:
 
+```
+Table my_table;
 
+void setup(){
+  
+	size(800,400);
+	background(#000000);
 
+	my_table = loadTable("class_dataset.csv", "header");
 
+	int counter = 0;
 
+	for(TableRow current_row : my_table.rows()){
+		String current_uni = current_row.getString("UNI");
+		int current_number = current_row.getInt("random_number"); 
 
+		//println(current_uni + ' ' + current_number);
+		//println(my_table.getRowCount());
+    
+		fill(255,255,255,current_number*2);
+		rect(50+counter*20,50,10,10); 
+    
+		counter++;
+	}
+  
+	int[] randomArray1 = new int[my_table.getRowCount()];
+	int[] randomArray2 = new int[my_table.getRowCount()];
+	int[] randomArray3 = new int[my_table.getRowCount()];
+	int[] randomArray4 = new int[my_table.getRowCount()];
+	int[] randomArray5 = new int[my_table.getRowCount()];
+  
+	for(int i=0; i < my_table.getRowCount(); i++){
+		randomArray1[i] = int(random(0,100));
+		randomArray2[i] = int(random(0,100));
+		randomArray3[i] = int(random(0,100));
+		randomArray4[i] = int(random(0,100));
+		randomArray5[i] = int(random(0,100));
+	}
+}
 
+void draw(){
+}
+```
+* Finally, let's add another `for-loop` just like the first one to draw squares for each of these arrays. Add it after the one we just created. I came up with the following (notice how each array starts at a different y-position):
 
+```
+//draw more squares
+	for(int i=0; i < my_table.getRowCount(); i++){
+     
+		//draw for array 1
+		fill(255,255,255,randomArray1[i]*2);
+		rect(50+i*20,100,10,10); 
+     
+		//draw for array 2
+		fill(255,255,255,randomArray2[i]*2);
+		rect(50+i*20,150,10,10); 
+     
+		//draw for array 3
+		fill(255,255,255,randomArray3[i]*2);
+		rect(50+i*20,200,10,10); 
+     
+		//draw for array 4
+		fill(255,255,255,randomArray4[i]*2);
+		rect(50+i*20,250,10,10); 
+     
+		//draw for array 5
+		fill(255,255,255,randomArray5[i]*2);
+		rect(50+i*20,300,10,10); 
+	}
+```
+* Now, run your code. 
 
+![Final Run](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/05_Final_Run.png)
 
-
-
-
-
-
+* Some questions to consider:
+	* Do you notice anything different about the top row, which visualizes the values we defined as a class?
+	* Does opacity function as a good point of comparison?
+	* Can you think of a more effective way to visualize this data?
