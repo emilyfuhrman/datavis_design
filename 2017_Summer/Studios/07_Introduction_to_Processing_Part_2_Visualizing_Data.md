@@ -182,7 +182,8 @@ void draw(){
 
 ![Final Run](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/05_Final_Run.png)
 
-* Our final version does give us a more comprehensive picture of our own random numbers in comparison to the randomized integers that Processing created for us. Some questions to consider:
-	* Do you notice anything different about the top row, which visualizes the values we defined as a class?
-	* Does opacity function as a good point of comparison?
-	* Can you think of a more effective way to visualize this data?
+Our final version does give us a more comprehensive picture of our own random numbers in comparison to the randomized integers that Processing created for us. Some questions to consider:
+
+* Do you notice anything different about the top row, which visualizes the values we defined as a class?
+* Does opacity function as a good point of comparison?
+* Can you think of a more effective way to visualize this data?
