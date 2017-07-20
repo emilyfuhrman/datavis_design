@@ -102,7 +102,7 @@ void draw(){
 	for(int i=0; i < my_table.getRowCount(); i++){
 	}
 ```
-* Inside of the `for-loop`, we will push a new random value to the array we defined every time the loop runs. Between the curly brackets, add the following:
+* Inside of the `for-loop`, we will push a new random value to the array we defined every time the loop runs. We will access the current position of the array we want to define, ask Processing to give us a random number between 0 and 100, and make doubly sure that the number Processing gives back to us is an integer. Between the curly brackets, add the following:
 
 `randomArray[i] = int(random(0,100));`
 
@@ -178,11 +178,11 @@ void draw(){
 		rect(50+i*20,300,10,10); 
 	}
 ```
-* Now, run your code. 
+* Run your code. 
 
 ![Final Run](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/05_Final_Run.png)
 
-* Some questions to consider:
+* Our final version does give us a more comprehensive picture of our own random numbers in comparison to the randomized integers that Processing created for us. Some questions to consider:
 	* Do you notice anything different about the top row, which visualizes the values we defined as a class?
 	* Does opacity function as a good point of comparison?
 	* Can you think of a more effective way to visualize this data?
