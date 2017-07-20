@@ -8,9 +8,15 @@ We will be using the same class-generated dataset we used in the previous studio
 
 * Random numbers - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/07/class_dataset.csv)
 
-### Glitch projects
+### Glitch
 
-Two projects exist for you to clone and edit:
+We will be using [Glitch](https://glitch.com/) in this studio to facilitate the process of getting a web development environment up and running. Two projects exist for you to clone and edit:
 
-* Getting started - Available [here]()
-* Visualizing data - Available [here]()
+* Getting started - Available [here](https://glitch.com/edit/#!/fir-airport)
+* Visualizing data - Available [here](https://glitch.com/edit/#!/sage-branch)
+
+### Getting started
+
+#### Introduction to A-frame
+
+#### Creating basic 3-D primitives
