@@ -55,29 +55,42 @@ Table my_table;
 
 void setup(){
   
-  size(500,600);
+	size(500,600);
 
-  my_table = loadTable("class_dataset.csv", "header");
+	my_table = loadTable("class_dataset.csv", "header");
 
-  int counter = 0; //**new code**
+	int counter = 0; //**new code**
 
-  for(TableRow current_row : my_table.rows()){
-    String current_uni = current_row.getString("UNI");
-    int current_number = current_row.getInt("random_number"); 
+	for(TableRow current_row : my_table.rows()){
+		String current_uni = current_row.getString("UNI");
+		int current_number = current_row.getInt("random_number"); 
 
-    println(current_uni + ' ' + current_number);
+		println(current_uni + ' ' + current_number);
     
-    fill(255,0,0,current_number); //**new code**
-    rect(current_number,100,current_number,current_number); 
+		fill(255,0,0,current_number); //**new code**
+		rect(current_number,100,50,50); 
     
-    counter++; //**new code**
-  }
+		counter++; //**new code**
+	}
 }
 
 void draw(){
 }
 ```
 
+* Now, we have a value to access for the index position we are on as the `for-loop` continues to run. Go ahead and replace the x-value in the `rect` command with `counter`, so that the line reads `rect(counter,100,current_number,current_number);`.
+* Run your sketch.
+
+![Squares Squished](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/02_Squares_Squished.png)
+
+* The rectangles probably look a bit crunched. Play around with their dimensions and x-positions to get something more like this:
+
+![Squares Spaced](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/03_Squares_Spaced.png)
+
+* Change the color of the background to black (`#000000`).
+* Change the color of the squares to white (`rgb(255,255,255)`, while retaining the opacity `a` value), so that they appear more readable.
+
+![Squares Monochrome](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/04_Squares_Monochrome.png)
 
 
 
