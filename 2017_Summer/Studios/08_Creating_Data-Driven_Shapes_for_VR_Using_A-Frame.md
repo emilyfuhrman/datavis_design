@@ -148,4 +148,4 @@ entityEl.setAttribute('material','color','#00FFFF');
 
 ![Data Boxes Colored](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/18_Data_Boxes_Colored.png)
 
-* Play around with the different data values to see if you can adjust the 3-D shapes from their most basic state. In Google Cardboard, this should start to take on the appearance of an explorable, 3-dimensional bar chart.
+Play around with the different data values to see if you can adjust the 3-D shapes from their most basic state. In Google Cardboard, this should start to take on the appearance of an explorable, 3-dimensional bar chart. Pretty cool.
