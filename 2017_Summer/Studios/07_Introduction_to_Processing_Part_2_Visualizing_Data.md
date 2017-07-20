@@ -31,7 +31,7 @@ void setup(){
 
 		println(current_uni + ' ' + current_number);
     
-		fill(255,0,0,current_number); //**new code**
+		fill(255,0,0,current_number);
 		rect(current_number,100,current_number,current_number); 
 	}
 }
@@ -39,3 +39,63 @@ void setup(){
 void draw(){
 }
 ```
+
+* Now, let's incorporate a couple of visual changes into the sketch to make these squares more readable. First, we can space the squares out evenly. Instead of setting the x-position of each square based on the value that generates them, we can use their position in the array (which consistently increases by 1) to space them out in an even row. Unfortunately, Processing does not make this easy for us, at least using the syntax above. Unlike most loops, this one does not surface the index number for each item. However, knowing that the loop increases by 1 every time it progresses to a new element in the list, we can hack an index counter by defining a new variable that increases by 1 every time the loop runs. Before the `for-loop` begins, define a new integer:
+
+`int counter = 0;`
+
+* Now, inside the `for-loop`, right after the `rect` command at the bottom, add the following code to increase the integer `counter` by 1 every time the loop runs (this can also be written as `counter += 1` or simply `counter++`.):
+
+`counter = counter + 1`
+
+* Check to make sure that your code now looks like this: 
+
+```
+Table my_table;
+
+void setup(){
+  
+  size(500,600);
+
+  my_table = loadTable("class_dataset.csv", "header");
+
+  int counter = 0; //**new code**
+
+  for(TableRow current_row : my_table.rows()){
+    String current_uni = current_row.getString("UNI");
+    int current_number = current_row.getInt("random_number"); 
+
+    println(current_uni + ' ' + current_number);
+    
+    fill(255,0,0,current_number); //**new code**
+    rect(current_number,100,current_number,current_number); 
+    
+    counter++; //**new code**
+  }
+}
+
+void draw(){
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
