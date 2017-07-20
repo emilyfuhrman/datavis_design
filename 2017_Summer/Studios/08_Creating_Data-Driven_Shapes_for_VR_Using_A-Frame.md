@@ -29,7 +29,7 @@ We will be using [Glitch](https://glitch.com/) in this studio to facilitate the 
 
 * Navigate back to the previous view of the project.
 * In the top left corner, click the project name to open a menu labeled `Project info and options`. 
-* Click the `Remix this` button to start your own editable copy of the project. While it is possible to edit my original project, **please do not edit it directly**. Create a clone following the directions above so that everyone in the class may work independently on changes to their code. You should now be facing a new project page, with a different name than the first one. 
+* Click the `Remix This` button to start your own editable copy of the project. While it is possible to edit my original project, **please do not edit it directly**. Create a clone following the directions above so that everyone in the class may work independently on changes to their code. You should now be facing a new project page, with a different name than the first one. 
 * In the left panel, click `index.html`. 
 
 ![New Project Index](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/03_New_Project_Index.png)
@@ -67,6 +67,33 @@ We will be using [Glitch](https://glitch.com/) in this studio to facilitate the 
 Cool. Even though the browser provides decent 3-D navigation, let's see what these look like in Google Cardboard.
 
 ### Visualizing data
+
+* Close all previous tabs.
+* Navigate to the "Visualizing data" project. Your window should look, once again, something like this:
+
+![Initial Project Page](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/08_Initial_Project_Page.png)
+
+* As before, go to the top left corner of the window and open the menu labeled `Project info and options`.
+* Click the `Remix This` button to start your own editable copy of the project. 
+* In the left panel, select `index.html`. 
+
+![New Project Index](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/09_New_Project_Index.png)
+
+* No shapes are being drawn in the index file, but there are a couple of items in the `<a-scene>` brackets. We will revisit these shortly. To test that this is a blank project, click `Show [Live]` in the top left corner of the window. The new tab that opens should be empty.
+* You will notice that there are a couple of additional files in the left hand panel of this project: 
+	* `data/class_data.csv` - The class-generated dataset, copied here as a CSV file
+	* `js/logic.js` - A JavaScript file containing more complex logic for how we generate shapes. 
+* The JavaScript file, `js/logic.js`, appears in the `<head>` section of `index.html`. This enables the page to reference the logic in that file before it starts drawing anything in the `<body>` section.
+
+![JS Link](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/10_JS_Link.png)
+
+
+
+
+
+
+
+
 
 
 
