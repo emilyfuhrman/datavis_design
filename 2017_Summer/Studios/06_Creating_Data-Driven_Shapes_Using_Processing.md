@@ -1,4 +1,4 @@
-## Studio 06 - Introduction to Processing (Part I): Creating Data-Driven Shapes Using Processing
+## Studio 06 - Creating Data-Driven Shapes Using Processing
 
 [Processing](https://processing.org/) is a free and open source framework for visual coding. In this studio, after reviewing the basics of computer drawing, we will generate a simple dataset in class and use it to draw elements that leverage Jacques Bertin's [visual variables](http://www.infovis-wiki.net/index.php?title=Visual_Variables). At the root of complex visualizations are simple, data-driven shapes. By completing this studio, we will attain the basic building blocks for generating more complicated graphics. 
 

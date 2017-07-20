@@ -7,4 +7,4 @@
 * [Creating an Interactive Chart of Economic Census Data Using Plotly](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/03_Creating_an_Interactive_Chart_of_Economic_Census_Data_Using_Plotly.md)
 * [Creating a Network Visualization of Social Media Data Using Gephi](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/04_Creating_a_Network_Visualization_of_Social_Media_Data_Using_Gephi.md)
 * [Creating an Interactive Map Using Google Fusion Tables](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/05_Creating_an_Interactive_Map_Using_Google_Fusion_Tables.md)
-* [Introduction to Processing (Part I): Creating Data-Driven Shapes Using Processing](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/06_Creating_Data-Driven_Shapes_Using_Processing.md)
+* [Creating Data-Driven Shapes Using Processing](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/06_Creating_Data-Driven_Shapes_Using_Processing.md)
