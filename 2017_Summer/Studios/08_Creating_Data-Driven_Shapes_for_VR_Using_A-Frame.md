@@ -108,24 +108,44 @@ Cool. Even though the browser provides decent 3-D navigation, let's see what the
 * Keep all of the code commented out for now. Right inside the `for-loop`, we are going to create some additional shortcuts to make our code cleaner.
 	* On the top line, paste the following line of code: `var entityEl = document.createElement('a-entity');`. This creates a new HTML entity in our HTML document for every time the loop loops, and assigns it an accessible variable.
 	* On the next line, paste the following line of code: `var current_elem = Number(sample_array[i][2]);`. This assigns the current value we are cycling through in the CSV to another accessible variable, and ensures that it is defined as a number, not a string. 
-* Navigate to the `Show [Live]` tab to see if anything is visible. Nothing should appear just yet, because we have not assigned the entity we have created any visual attributes. At this time, your code should look something like this:
+* Navigate to the `Show [Live]` tab to see if anything is visible. Nothing should appear just yet, because we have not assigned the entity we have created any visual attributes, nor have we explicitly told our program to attach it to our HTML structure. At this time, your code should look something like this:
 
 ![Draw Shapes Function](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/13_Draw_Shapes_Function.png)
 
+* Continuing on after the last line, add the following line of code: `sceneEl.appendChild(entityEl);`. 
+* Navigate again to the `Show [Live]` tab. 
+* This time, right-click and select `Inspect`. Even though they are not visible, a series of elements should have been created, visible in the DOM.
 
+![Empty Elements](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/14_Empty_Elements.png)
 
+* Let's add some visual features to these elements. First, add the following code below the last line:
+```
+entityEl.setAttribute('geometry', {
+	primitive: 'box',
+	height: 0.5,
+	width: 0.5
+});
+```
+This defines the type of primitive shape we want to draw for every row in the CSV that the loop cycles through.
+* Next, add the following additional lines of code:
+```
+entityEl.setAttribute('position',{x:i, y:1, z:-8});
+entityEl.setAttribute('material','color','#00FFFF');
+```
+* Checking the `Show [Live]` tab again, something should appear! Drag your screen around to get a feel for how these 3-D shapes work.
 
+![Data Boxes](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/15_Data_Boxes.png)
 
+* Essentially, we have created one box for every row in our dataset. One new box is created with every rendition of the `for-loop`. The position of each new box is set based on its position in the CSV. The additional commented code below our new code contains some logic for adjusting the color and height of each of the boxes. Try playing around with these values to encode the values in our dataset in different ways. Changing the height of the boxes to `current_elem`, for example, gives you something like this:
 
+![Data Boxes Height](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/16_Data_Boxes_Height.png)
 
+* Aligning the boxes by adjusting their y-position gives you something like this:
 
+![Data Boxes Aligned](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/17_Data_Boxes_Aligned.png)
 
+* And adjusting their color based on the same value gives you something like this:
 
+![Data Boxes Colored](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/18_Data_Boxes_Colored.png)
 
-
-
-
-
-
-
-
+* Play around with the different data values to see if you can adjust the 3-D shapes from their most basic state. In Google Cardboard, this should start to take on the appearance of an explorable, 3-dimensional bar chart.
