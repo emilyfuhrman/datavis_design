@@ -85,7 +85,36 @@ Cool. Even though the browser provides decent 3-D navigation, let's see what the
 	* `js/logic.js` - A JavaScript file containing more complex logic for how we generate shapes. 
 * The JavaScript file, `js/logic.js`, appears in the `<head>` section of `index.html`. This enables the page to reference the logic in that file before it starts drawing anything in the `<body>` section.
 
-![JS Link](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/10_JS_Link.png)
+![JavaScript Link](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/10_JavaScript_Link.png)
+
+* Let's take a look at what this file contains. Click on `js/logic.js` in the left panel.
+
+![JavaScript Functions](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/11_JavaScript_Functions.png)
+
+* Inside are a bunch of complex functions. Do not worry about the syntax here -- all you need to know is the following:
+	* The declaration that encompasses everything starts with `AFRAME.registerComponent`. It is named `get-data`. We call this element in the HTML of the `index.html` file. 
+	* Inside this declaration are three functions: `init()`, `processData()`, and `drawShapes()`.
+	* The `init()` function controls the process of getting the CSV file that we can see in the left panel. 
+	* The `processData()` function parses it to make it into a JavaScript-friendly array.
+	* The `drawShapes()` function is what we will be editing, which makes graphics from the parsed data.
+* Inside the `drawShapes()` function is a `for-loop`, which cycles through our parsed CSV. This loop contains a lot of commented-out code at the moment, but that code is set up to draw a new shape every time the loop runs. 
+
+![Draw Shapes Function](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/12_Draw_Shapes_Function.png)
+
+* This syntax is different from the simple HTML that we saw in the `index.html` file of the first "Getting started" project. Here, since we are creating elements using JavaScript, we have to take a different route to attaching elements to the structure outlined in the front page.
+	* The first thing inside the function is a variable that grabs the overall "scene" within which we are drawing our shapes.
+	* The second thing assigns a variable name to the data that this function imports. By assigning them both to variables, we can more quickly access each, and our code will be cleaner. 
+	* The third thing is a `for-loop` that cycles through the imported data. 
+* Keep all of the code commented out for now. Right inside the `for-loop`, we are going to create some additional shortcuts to make our code cleaner.
+	* On the top line, paste the following line of code: `var entityEl = document.createElement('a-entity');`. This creates a new HTML entity in our HTML document for every time the loop loops, and assigns it an accessible variable.
+	* On the next line, paste the following line of code: `var current_elem = Number(sample_array[i][2]);`. This assigns the current value we are cycling through in the CSV to another accessible variable, and ensures that it is defined as a number, not a string. 
+* Navigate to the `Show [Live]` tab to see if anything is visible. Nothing should appear just yet, because we have not assigned the entity we have created any visual attributes. At this time, your code should look something like this:
+
+![Draw Shapes Function](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/13_Draw_Shapes_Function.png)
+
+
+
+
 
 
 
