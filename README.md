@@ -1,6 +1,6 @@
 # datavis_design
 ![Quilt](https://github.com/emilyfuhrman/datavis_design/blob/master/Images/Image_Quilt.jpg)
-<br/><br/><br/>
+<br/><br/>
 This repository is for materials associated with the ***Data Visualization &amp; Design*** course at Columbia University.
 
 ## Sections
