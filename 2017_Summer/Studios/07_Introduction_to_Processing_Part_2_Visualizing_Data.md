@@ -126,11 +126,34 @@ void draw(){
 ![Define Headers](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/11_Define_Headers.png)
 
 * Before we start connecting the pipes, we still need to make a few adjustments. First of all, even though we broke out the square-drawing functionality into a new function, we need to define how the function will know which values to draw, and where to draw them. We can enable these values to change every time by letting the code that calls the function specify them. To set this up, add two variable declarations into the function's parentheses:
-	* `String _colName`
-	* `int _yPos`
+	* `String _colName` - The name of the current column being visualized by a row of squares
+	* `int _yPos` - The y-value the squares should be drawn on
 * Separate the two by a comma, so the function looks something like this: 
 
-![Function Arguments](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/12_Function_Arguments.png)
+![Define Arguments](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/12_Define_Arguments.png)
+
+* These arguments act as ghost values, which the actual code that calls the function can pass in. We can now switch up some of the code inside the function to draw from whatever values these variables might take at a given time. 
+	* Change `"random_number"` in the `getInt()` function to `_colName`. (Note the double quotes are now gone.)
+	* Change the y-value in the `rect()` function (currently 50, in my code) to `_yPos`. 
+* Your for-loop should now look like this:
+
+```
+	for(TableRow current_row : my_table.rows()){
+		String current_uni = current_row.getString("UNI");
+		int current_number = current_row.getInt(_colName); //**new code
+    
+		println(current_uni + ' ' + current_number);
+    
+		fill(255,255,255,current_number*2);
+		rect(50 +counter*20,_yPos,10,10); //**new code
+    
+		counter++;
+	}
+```
+* Finally, before we can run this function again, we have to add values for each of these new arguments into the place where we actually call the function. In the `draw_boxes()` command, add `"random_number"` and `50` into the parentheses, separated by a comma. The line should now read `draw_boxes("random_number",50)`. Here, `"random_number"` corresponds to the column name, while `50` corresponds to the y-position.
+
+![Specify Arguments](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/13_Specify_Arguments.png)
+
 
 
 
