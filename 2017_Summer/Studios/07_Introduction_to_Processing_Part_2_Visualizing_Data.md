@@ -109,13 +109,29 @@ void draw(){
 
 ![Pasted](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/07_Pasted.png)
 
-* Now, to test whether this still works the same way, call the new `draw_boxes()` function by adding `draw_boxes()` to the end of the `setup()` function.
+* To test whether this still works the same way, call the new `draw_boxes()` function by adding `draw_boxes()` to the end of the `setup()` function.
 
 ![Call Function](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/08_Call_Function.png)
 
 * Run your code. The same black window with white squares should appear. 
 
 ![Same Window](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/09_Same_Window.png)
+
+* Let's go ahead and import our different dataset. Change the `loadTable` function to call `class_dataset_random.csv`.
+
+![Change Dataset](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/10_Change_Dataset.png)
+
+* Since we will ultimately want to run the `draw_boxes()` function for every new column in this dataset, it will be easier to store the header names in a list. Given our method for importing the table, it's a bit more involved to get Processing to grab these automatically, so we can go ahead and define them manually. At the top of the sketch, under the `Table my_table;` declaration, add the following: `String[] headers =  {"random_number","r_1","r_2","r_3","r_4"};`. This defines a new array, which contains the names of the columns holding random integer values in the dataset.
+
+![Define Headers](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/11_Define_Headers.png)
+
+* Before we start connecting the pipes, we still need to make a few adjustments. First of all, even though we broke out the square-drawing functionality into a new function, we need to define how the function will know which values to draw, and where to draw them. We can enable these values to change every time by letting the code that calls the function specify them. To set this up, add two variable declarations into the function's parentheses:
+	* `String _colName`
+	* `int _yPos`
+* Separate the two by a comma, so the function looks something like this: 
+
+![Function Arguments](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/12_Function_Arguments.png)
+
 
 
 
