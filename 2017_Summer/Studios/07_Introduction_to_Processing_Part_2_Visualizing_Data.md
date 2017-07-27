@@ -95,7 +95,7 @@ void draw(){
 
 ![Squares Monochrome](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/04_Squares_Monochrome.png)
 
-#### Adding random data
+#### Adding random(er) data
 
 * We are now ready to incorporate the larger, "randomer" dataset into our Processing sketch. But before we do that, let's make a couple of changes to our code to make it more efficient. Since we will be using the new data to draw several rows of squares idential to the row of squares we just drew, it makes sense to break the row-drawing capability out into a separate, more modular, repeatable function. First, under the `void draw(){}` function, add another function by defining `void draw_boxes(){}`.
 
@@ -154,30 +154,46 @@ void draw(){
 
 ![Specify Arguments](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/13_Specify_Arguments.png)
 
+* Run the sketch to make sure everything is working as it should.
+* Now, since we want to cycle through every additional column added to the original random dataset, we can use the `headers` array, along with a new for-loop, to call the function five times. Comment out the current `draw_boxes()` command, and in its plae add the following:
+```
+for(int i=0; i<headers.length; i++){
+	draw_boxes(headers[i], 120 +120*i);
+}
+```
+![New Loop](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/14_New_Loop.png)
 
+Here, we are cycling through each of the headers, using the current header value as the column name within the `draw_boxes()` function, and gradually counting up a well-spaced-out y-value for each successive row to be drawn on. 
+* Increase the height of your sketch to `800`.
+* Go ahead and run your code.
 
+![Many Rows](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/15_Many_Rows.png)
 
+Lo and behold, we now see many rows instead of one. Each new row corresponds to one of the additional random number columns added to the original dataset. 
+* While opacity works moderately well to visualize this data, let's see if we can do something more visible. First, we can use the `current_number` value to set the height of each square, to give us an additional visual variable to play with.
+	* In the `rect()` command, change the height value (the last argument) to `current_number`.
+	* Change the y-value (the second argument) to `(_yPos - current_number)`.
 
+![Resetting Position](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/16_Resetting_Position.png)
 
+* Run the sketch.
 
+![Bar Heights](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/17_Bar_Heights.png)
 
+* Instead of opacity, we can try and use color to differentiate better between these bars. Edit the fill command so that `current_number` affects only one color channel -- in this case, the green (the "G" in RGB). Change your fill line to `fill(255,current_number*5,0);`.
+* Run the sketch.
 
+![RGB Bars](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/18_RGB_Bars.png)
 
+* We can also try using the HSB color mode to get brighter distinctions in hue. This time, add an additional line before the fill value: `colorMode(HSB);`.
+* Now, change the fill line to `fill((current_number),255,255);`. 
 
+![Color Change](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/19_Color_Change.png)
 
+* Run the sketch.
 
+![HSB Bars](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/20_HSB_Bars.png)
 
+* We're starting to tease out some of the differences between these different datasets. At the outset, is there anything we can notice about the class-generated dataset, versus the other random ones? There are many adjustments you could make here to enhance readability, to transform the data before visualizing it, and so on. Go forth and explore.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Final Bar Experimentation](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/21_Final_Bar_Experimentation.png)
