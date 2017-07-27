@@ -6,11 +6,14 @@ _This is **Part II** of a two-part tutorial. To view Part I, click **[here](http
 
 ### Datasets
 
-We will be using the same class-generated dataset we used in the previous studio, this time in its static form.
+We will be using two datasets this time. The first is the same class-generated dataset we used in the previous studio, this time in its static form. The second builds upon the class-generated dataset by adding four additional columns containing randomly-generated values.
 
-* Random numbers - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/07/class_dataset.csv)
+* Random numbers - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/07/class_dataset_random.csv)
+* Randomer numbers - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/07/class_dataset.csv)
+
 
 ### Visualizing data
+#### Cleaning up the squares
 
 * Open up your sketch from the last studio. At its point of completion, we had generated a series of colored squares using the data we defined as a class.
 
@@ -92,100 +95,50 @@ void draw(){
 
 ![Squares Monochrome](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/04_Squares_Monochrome.png)
 
-* Let's now define a separate array of random numbers. We can do this by creating another `for-loop`. Below the `for-loop` that contains the CSV logic, define a new variable, set to the size of the table we imported: 
+#### Adding random data
 
-`int[] randomArray = new int[my_table.getRowCount()];`
+* We are now ready to incorporate the larger, "randomer" dataset into our Processing sketch. But before we do that, let's make a couple of changes to our code to make it more efficient. Since we will be using the new data to draw several rows of squares idential to the row of squares we just drew, it makes sense to break the row-drawing capability out into a separate, more modular, repeatable function. First, under the `void draw(){}` function, add another function by defining `void draw_boxes(){}`.
 
-* We can also use more readable syntax for the new `for-loop` we create. The number of times this loop will run is set to the number of elements in the table that we imported. We will create randomized datasets of the same size as our original, which will better facilitate visual comparison. Below the new variable definition, add the following:
+![New Function](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/05_New_Function.png)
 
-```
-	for(int i=0; i < my_table.getRowCount(); i++){
-	}
-```
-* Inside of the `for-loop`, we will push a new random value to the array we defined every time the loop runs. We will access the current position of the array we want to define, ask Processing to give us a random number between 0 and 100, and make doubly sure that the number Processing gives back to us is an integer. Between the curly brackets, add the following:
+* Now, starting with the line that defines `int counter = 0;`, select down to the closing bracket of the for-loop:
 
-`randomArray[i] = int(random(0,100));`
+![Select Loop](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/06_Select_Loop.png)
 
-* Repeat the same steps to create five random arrays total, each with a different name. Include these all in the same `for-loop` for the time being. Your code should look something like this:
+* Cut and paste this block of text into the inside of the newly-defined function.
 
-```
-Table my_table;
+![Pasted](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/07_Pasted.png)
 
-void setup(){
-  
-	size(800,400);
-	background(#000000);
+* Now, to test whether this still works the same way, call the new `draw_boxes()` function by adding `draw_boxes()` to the end of the `setup()` function.
 
-	my_table = loadTable("class_dataset.csv", "header");
+![Call Function](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/08_Call_Function.png)
 
-	int counter = 0;
+* Run your code. The same black window with white squares should appear. 
 
-	for(TableRow current_row : my_table.rows()){
-		String current_uni = current_row.getString("UNI");
-		int current_number = current_row.getInt("random_number"); 
+![Same Window](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/09_Same_Window.png)
 
-		//println(current_uni + ' ' + current_number);
-		//println(my_table.getRowCount());
-    
-		fill(255,255,255,current_number*2);
-		rect(50+counter*20,50,10,10); 
-    
-		counter++;
-	}
-  
-	int[] randomArray1 = new int[my_table.getRowCount()];
-	int[] randomArray2 = new int[my_table.getRowCount()];
-	int[] randomArray3 = new int[my_table.getRowCount()];
-	int[] randomArray4 = new int[my_table.getRowCount()];
-	int[] randomArray5 = new int[my_table.getRowCount()];
-  
-	for(int i=0; i < my_table.getRowCount(); i++){
-		randomArray1[i] = int(random(0,100));
-		randomArray2[i] = int(random(0,100));
-		randomArray3[i] = int(random(0,100));
-		randomArray4[i] = int(random(0,100));
-		randomArray5[i] = int(random(0,100));
-	}
-}
 
-void draw(){
-}
-```
-* Finally, let's add another `for-loop` just like the first one to draw squares for each of these arrays. Add it after the one we just created. I came up with the following (notice how each array starts at a different y-position):
 
-```
-//draw more squares
-	for(int i=0; i < my_table.getRowCount(); i++){
-     
-		//draw for array 1
-		fill(255,255,255,randomArray1[i]*2);
-		rect(50+i*20,100,10,10); 
-     
-		//draw for array 2
-		fill(255,255,255,randomArray2[i]*2);
-		rect(50+i*20,150,10,10); 
-     
-		//draw for array 3
-		fill(255,255,255,randomArray3[i]*2);
-		rect(50+i*20,200,10,10); 
-     
-		//draw for array 4
-		fill(255,255,255,randomArray4[i]*2);
-		rect(50+i*20,250,10,10); 
-     
-		//draw for array 5
-		fill(255,255,255,randomArray5[i]*2);
-		rect(50+i*20,300,10,10); 
-	}
-```
-* Run your code. 
 
-![Final Run](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/07/05_Final_Run.png)
 
-Our final version does give us a more comprehensive picture of our own random numbers in comparison to the randomized integers that Processing created for us. Some questions to consider:
 
-* Do you notice anything different about the top row, which visualizes the values we defined as a class?
-* Does opacity function as a good point of comparison?
-* Can you think of a more effective way to visualize this data?
 
-_This is **Part II** of a two-part tutorial. To view Part I, click **[here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/06_Introduction_to_Processing_Part_1_Creating_Data-Driven_Shapes_Using_Processing.md).**_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
