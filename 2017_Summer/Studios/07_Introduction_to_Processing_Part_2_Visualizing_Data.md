@@ -8,8 +8,8 @@ _This is **Part II** of a two-part tutorial. To view Part I, click **[here](http
 
 We will be using two datasets this time. The first is the same class-generated dataset we used in the previous studio, this time in its static form. The second builds upon the class-generated dataset by adding four additional columns containing randomly-generated values.
 
-* Random numbers - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/07/class_dataset_random.csv)
-* Randomer numbers - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/07/class_dataset.csv)
+* Random numbers - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/07/class_dataset.csv)
+* Randomer numbers - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Data/07/class_dataset_random.csv)
 
 
 ### Visualizing data
