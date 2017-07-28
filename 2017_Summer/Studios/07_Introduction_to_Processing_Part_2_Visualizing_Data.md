@@ -4,6 +4,10 @@ _This is **Part II** of a two-part tutorial. To view Part I, click **[here](http
 
 [Processing](https://processing.org/) is a free and open source framework for visual coding. In this studio, after creating a series of data-driven shapes using a class-generated dataset, we will generate a series of random-number rows to compare our "random" data to randomized data (namely, the definition of "random" as defined by Processing itself). 
 
+### Sketch
+
+The sketch we will start with is available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Materials/07/sketch_start.zip).
+
 ### Datasets
 
 We will be using two datasets this time. The first is the same class-generated dataset we used in the previous studio, this time in its static form. The second builds upon the class-generated dataset by adding four additional columns containing randomly-generated values.
