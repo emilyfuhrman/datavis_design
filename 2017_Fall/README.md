@@ -1,0 +1,7 @@
+# Course resources
+***Data Visualization &amp; Design***, Fall 2017.
+
+## Decks
+* [*Week 1:* Introduction to Visualization](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Decks/Week_01.pdf)
+* [*Week 2:* Foundations of Visual Design &amp; Perceptual Psychology (Part I)](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Decks/Week_02.pdf)
+* [*Week 3:* Foundations of Visual Design &amp; Perceptual Psychology (Part II)](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Decks/Week_03.pdf)
