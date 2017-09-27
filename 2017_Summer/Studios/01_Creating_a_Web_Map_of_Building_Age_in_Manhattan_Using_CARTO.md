@@ -8,7 +8,7 @@ This studio will walk you through the process of creating an interactive map in 
 
 We will be using one dataset for this map:
 
-* PLUTO for Manhattan - Originally downloaded from [here](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page)
+* PLUTO for Manhattan - Originally downloaded from [here](http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page). Also available [here](https://github.com/emilyfuhrman/datavis_design/tree/master/2017_Summer/Data/01).
 
 ### Creating a building age map of Manhattan
 #### Importing and loading your data into CARTO
