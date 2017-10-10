@@ -146,6 +146,55 @@ We will be using one dataset for this map:
 
 ![Pivot Visualized](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/21_Pivot_Visualized.png) 
 
+### Visualizing 311 Data
+#### Making a chart
+
+* Return to our trimmed 311 dataset (`Data Source` > `Database icon` > `(Select)`).
+* Tableau uses a workbook and sheet file structure, similar to Microsoft Excel.
+	* A 'workbook' is a saved Tableau project
+	* A 'sheet' may be a worksheet, a dashboard, or a story
+* Within a workbook, you can create new sheets, clear an entire worksheet, duplicate sheets, hide or show a worksheet, and delete a sheet. 
+* Along the bottom tab, we can see a few different view possibilities that correspond to this paradigm:
+	* The default `Sheet 1`, which is automatically generated anytime we open a new project
+	* An option to add additional sheets
+	* An option to add additional dashboards
+
+![Bottom Tab](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/22_Bottom_Tab.png) 
+
+* Navigate to `Sheet 1` to view the 311 data in a new workspace. 
+
+![311 Blank Workspace](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/23_311_Blank_Workspace.png) 
+
+* In the left pane, we can see a breakdown of our variables. The variables are sorted into `Dimensions` and `Measures` based on the variable types we saw on import.
+	* In the top `Dimensions` section, we see:
+		* `Agency`
+		* `Agency Name`
+		* `Borough`
+		* `Complaint Type`
+		* `Created Date`
+		* `Descriptor`
+		* `Incident Zip`
+		* `Location Type`
+		* `Status`
+		* `Unique Key`
+	* In the lower `Measures` section, we see:
+		* `Latitude`
+		* `Longitude`
+	* Note that geographic data may fall into either of the sections.
+* Tableau makes it incredibly easy to build simple charts. Let's start by creating a bar chart of complaint counts by borough. In the left panel, find the `Borough` label in the `Dimensions` section.
+* Double click `Borough`.
+
+![Borough Only](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/24_Borough_Only.png) 
+
+* You should see all the possible values of `Borough` listed in a tabular format, since we have not selected any other variable to throw into the mix. Now, select the automatically-generated `(Number of Records)` label in the `Measures` section. 
+* Drag it to the `Rows` section at the top of the workspace. Just like that, we can get a quick view of how many 311 complaints were filed within each borough within the past day:
+
+![Simple Bar Chart](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/25_Simple_Bar_Chart.png) 
+
+
+
+
+
 
 
 
