@@ -1,6 +1,6 @@
 ## Studio 01 - Introduction to Tableau
 
-This studio will walk you through the process of creating an interactive map in CARTO, a powerful platform for visualizing geographic data. 
+This studio will provide an introduction to the interface, functionality, and visual capabilities of [Tableau Public](https://public.tableau.com/s/).
 
 ### Datasets
 
