@@ -8,7 +8,7 @@ We will be using one dataset for this map:
 
 * 311 Service Requests - Originally downloaded from [here](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data)
 
-### Generating an editable, vector-based visualization
+### Gathering and preparing data
 #### Downloading 311 Data from the NYC OpenData portal
 
 * Navigate to the [NYC OpenData portal](https://opendata.cityofnewyork.us/).
