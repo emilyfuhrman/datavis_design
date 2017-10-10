@@ -33,11 +33,11 @@ We will be using one dataset for this map:
 * Click the `Unique Key` field. This opens a menu containing all of the column headers in the dataset. 
 * Select `Created Date`.
 * Click the `is` dropdown menu, and select `is between`. Two fields, one for a start value and one for an end value, should automatically appear below.
-* Click the first field to open a calendar picker. Navigate to and select June 11th, 2017.
+* Click the first field to open a calendar picker. Navigate to and select October 9th, 2017.
 * Click the second field to open a second calendar picker. Today's date should automatically be selected. Keep today's date.
 * Once you click out of this view, the dataset on the left should update to contain only the rows to which the filters apply.
 
-![311 Filter](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/05_311_Filter_Date.png)
+![311 Filter](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/05_Filter_Date.png)
 
 * Now, click the blue `Export` button from the set of colorful buttons on the top right side of the table. Click `Download As > CSV`. This will download the filtered dataset in CSV format.
 * Open up the downloaded CSV in Excel or Google Sheets. Before creating our visualization, we'll want to trim down the size of the dataset by deleting unnecessary columns.
