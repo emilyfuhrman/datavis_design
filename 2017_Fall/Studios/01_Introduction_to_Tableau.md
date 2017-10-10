@@ -57,3 +57,34 @@ We will be using one dataset for this map:
 
 ![Excel](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/06_Excel.png)
 
+### Importing data into Tableau
+
+* If you have not already done so, download and install [Tableau Public](https://public.tableau.com/s/).
+* Open Tableau Public.
+
+![Tableau Landing Screen](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/07_Tableau_Landing_Screen.png)
+
+* The first thing you see when you open Tableau is a screen with three sections: "Connect," "Open," and "Discover."
+* * The "Connect" section enables us to connect different types of data into the workspace.
+* * Since we have not saved any workbooks yet, the "Open" section is blank. 
+* * "Discover" points us to a series of Tableau-provided resources.
+
+### Pivoting
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
