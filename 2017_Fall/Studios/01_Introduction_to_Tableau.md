@@ -41,6 +41,7 @@ We will be using one dataset for this map:
 
 * Now, click the blue `Export` button from the set of colorful buttons on the top right side of the table. Click `Download As > CSV`. This will download the filtered dataset in CSV format.
 * Open up the downloaded CSV in Excel or Google Sheets. Before creating our visualization, we'll want to trim down the size of the dataset by deleting unnecessary columns.
+* Keep the raw data in its current tab. In Excel, right-click the tab, select `Move or Copy...`, select `Create a copy`, and `(move to end)`. Name the tab `Trimmed`, or something similar. In this new copied tab, we will edit down the original raw data into a cleaner working version.
 * Delete all columns except the following:
 	* `Unique Key`
 	* `Created Date`
@@ -55,7 +56,7 @@ We will be using one dataset for this map:
 	* `Longitude`
 * Your dataset should now look something like this:
 
-![Excel](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/06_Excel.png)
+![Excel](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/06_Excel_Working.png)
 
 ### Importing data into Tableau
 
@@ -68,6 +69,19 @@ We will be using one dataset for this map:
 	* The "Connect" section enables us to connect different types of data into the workspace.
 	* Since we have not saved any workbooks yet, the "Open" section is blank. 
 	* "Discover" points us to a series of Tableau-provided resources.
+* In the left "Connect" panel, under `To a File`, select `Excel`. 
+
+![Tableau Open File](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/08_Tableau_Open.png)
+
+* Browse for your Excel file, and select it. 
+
+![Tableau Imported](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/09_Tableau_Imported.png)
+ 
+* We land on a blank workspace, with our connected Excel file visible in the top left corner. Try dragging your `Trimmed` sheet to the `Drag sheets here` area.
+
+![Tableau Dragged Trimmed](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/10_Tableau_Dragged_Trimmed.png)
+
+* The data should show up in a tabular format. 
 
 ### Pivoting
 
