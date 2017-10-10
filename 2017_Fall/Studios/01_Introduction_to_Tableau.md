@@ -187,7 +187,7 @@ We will be using one dataset for this map:
 ![Borough Only](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/24_Borough_Only.png) 
 
 * You should see all the possible values of `Borough` listed in a tabular format, since we have not selected any other variable to throw into the mix. Now, select the automatically-generated `(Number of Records)` label in the `Measures` section. 
-* Drag it to the `Rows` section at the top of the workspace. Just like that, we can get a quick view of how many 311 complaints were filed within each borough within the past day:
+* Drag it to the `Rows` section at the top of the workspace. Make sure that `Borough` is in the `Columns` section. And just like that, we can get a quick view of how many 311 complaints were filed within each borough within the past day:
 
 ![Simple Bar Chart](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/25_Simple_Bar_Chart.png) 
 
