@@ -191,23 +191,66 @@ We will be using one dataset for this map:
 
 ![Simple Bar Chart](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/25_Simple_Bar_Chart.png) 
 
+* In the right panel, you can see a number of different visualization options. Many of the options are grayed out. If you hover over a grayed-out tile, Tableau will give you a prompt to describe the kind of data necessary to make that option available. Some of the visualization options are not grayed out, however. Try clicking the `box-and-whisker plot`.
 
+![Box-and-whisker](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/26_Box_Whisker.png) 
 
+This one gives us a weird distribution of the number of records by borough. Now, try clicking the `packed bubbles` option.
 
+![Packed Bubbles](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/27_Packed_Bubbles.png) 
 
+Tableau does not give us much insight into whether these circles are sized by their diameters or areas, but this is an interesting representation nonetheless. Notice the changes that dynamically occur in the left panel as we render the data using these different methods. Also notice that Tableau has applied *both* position and color to these bubbles. Some of the terminology in the `Marks` panel should look familiar. Recall that the term `Mark` refers to the type of element we use to represent our _items_ and _links_. This panel contains a shape control, a `Color` control, a `Size` control, a `Label` control, as well as controls for `Detail` and `Tooltip`. Tableau surfaces many of the different visual variables we have talked about so far. (Bonus question: which ones are missing?) 
+* Select the `treemap` option in the top right panel. 
 
+![Treemap](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/28_Treemap.png) 
 
+Would you consider this an accurate representation? Why or why not?
 
+* Try the stacked bar, now. How about this one? What might be its strengths or weaknesses?
 
+![Stacked Bar](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/29_Stacked_Bar.png) 
 
+* Try any of the additional visualizations we have not yet explored. Different options become available with different combinations (and numbers) of dimensions and attributes. 
+* Go back to the bar chart.
+* Again, put `Borough` in the `Columns` section, and `SUM(Number of Records)` in the `Rows` section. 
+* Let's try to break this up a bit by complaint type, in order to gain more insight into the things different boroughs complain about. A good way to do this might be by exploring a stacked bar chart. From the left `Dimensions` panel, grab `Complaint Type` and drag it into the `Marks` panel, on top of the `Color` swatch.
 
+![Tableau Warning](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/30_Tableau_Warning.png) 
 
+* A warning pops up, because there are so many different types of complaints in the dataset. Click `Filter and then add`. This will allow us to select the complaint types we are most interested in, and apply them to the existing borough bars.
 
+![Filter Panel](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/31_Filter_Panel.png) 
 
+* In the filter panel, select a few complaint types that interest you (I chose `Blocked Driveway` and `Damaged Tree`). Remember these, because we will need them later.
+* Once finished, click `OK`. Your chart should update to include only those values you selected.
 
+![Stacked Borough Bars](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/32_Stacked_Borough_Bars.png) 
 
+* Right away, I notice that `Staten Island` and the `Unspecified` catchall have been filtered out, because there were no complaints registered in those boroughs (or without a borough designation) that fall into the categories I selected.
+* To make this more interesting, I am going to go back and select seven total complaint types to display in my bar chart. Go to the left `Complaint Type` pill in the `Filters` section, click to open the menu, and select `Edit filter...`.
 
+![Edit Filter](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/33_Edit_Filter.png) 
 
+* Check seven (no more! -- remember this rule of thumb) different items in the list. Again, remember what these are.
+* Click `OK`.
+
+![More Categories](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/34_More_Categories.png) 
+
+* My bar chart has a few more categories now. (Still no Staten Island, though). There is one more change I would like to make: I want to remove the `Unspecified` bar from the chart. To do this, navigate to the `Columns` section, which contains the `Boroughs` pill.
+* Click to open its menu.
+* Select `Filter...`
+
+![Filter Boroughs](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/35_Filter_Boroughs.png) 
+
+* Un-check `Unspecified`.
+
+![No Unspecified](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/36_No_Unspecified.png) 
+
+* Click `OK`.
+
+![Filtered](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/37_Filtered.png) 
+
+Great! It disappeared.
 
 
 
