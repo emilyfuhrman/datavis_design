@@ -1,6 +1,6 @@
 ## Studio 02 - Introduction to R Graphics with ggplot2
 
-This studio will explore the basic plotting functionalities of R. Specifically, it will delve into the functionality of the `ggplot2` package (read more [here](http://ggplot2.tidyverse.org/index.html)) for the purposes of basic data exploration and visualization. The `ggplot2` package is based on [_The Grammar of Graphics_](https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448/), and forms a declarative syntax for the graphics creation with sensible aesthetic defaults and deep customizability. Thank you for the inspiration and resources, [ramnathv](http://ramnathv.github.io/swc-nw-dataviz/visualize/base_graphics.html).
+This studio will explore the basic plotting functionalities of R. Specifically, it will delve into the functionality of the `ggplot2` package (read more [here](http://ggplot2.tidyverse.org/index.html)) for the purposes of basic data exploration and visualization. The `ggplot2` package is based on [_The Grammar of Graphics_](https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448/), and forms a declarative syntax for graphics creation with sensible aesthetic defaults and deep customizability. Thank you for the inspiration and resources, [ramnathv](http://ramnathv.github.io/swc-nw-dataviz/visualize/base_graphics.html).
 
 ### Datasets
 
