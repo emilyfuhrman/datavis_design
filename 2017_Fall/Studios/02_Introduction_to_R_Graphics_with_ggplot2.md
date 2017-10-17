@@ -189,7 +189,7 @@ Finally, we can combine these two datasets into a single, richer dataset, which 
 6 1880   Frank 0.027380 boy    F652 118405
 ```
 
-Looks good. You can read up on `join` documentation by typing `?join` into the console. Let's continue on with the exploration we started.
+Looks good. Note the addition of the `births` column on the far right. You can read up on `join` documentation by typing `?join` into the console. Let's continue on with the exploration we started.
 
 * To delve more deeply into the popularity of the name Otto over time, let's compute an absolute count of the instances of `Otto` using the `prop` variable and the newly-joined `births` value. Since the `prop` variable represents the proportion of people of a given gender with a given name for a given year, multiplying `prop` by `births` for that year gives us an absolute number representative of the number of people with that name. We will use the `mutate` function to create a new variable and plot it. As before, we start by subsetting out instances of `Otto`. Make sure to specify our new dataset:
 
@@ -273,12 +273,12 @@ Not the most interesting distribution, but the smaller bins add more granularity
 
 Generating a bar plot is similar to generating a histogram. In this case, we use the native `geom_bar()` function, and specify a single discrete variable. 
 
-* Let's use the `sex` variable in `births_data` as our variable for this one, and plot the counts of each specified sex (`boy` and `girl`) recorded for each year.
+* Let's use the `sex` variable in `births_data` as our variable for this one, and plot the counts of each specified `sex` (`boy` and `girl`) recorded for each year.
 	* The first argument in `ggplot()` specifies our dataset. In this case, `births_data`.
 	* The second argument is our `aes()` function, containing aesthetic guidelines for the chart as a whole. Here, we tell it to treat the `year` variable as a factor (or a categorical, not continuous, variable).
 
 ```
-> ggplot(births_data, aes(x=as.factor(year))) + geom_bar()
+> ggplot(births_data, aes(x=as.factor(sex))) + geom_bar()
 ```
 
 ![ggplot Bar Plot](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/14_ggplot_Bar_Plot.png)

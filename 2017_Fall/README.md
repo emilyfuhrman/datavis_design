@@ -11,3 +11,4 @@
 
 ## Studios
 * [Introduction to Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/01_Introduction_to_Tableau.md)
+* [Introduction to R Graphics with ggplot2](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/02_Introduction_to_R_Graphics_with_ggplot2.md)
