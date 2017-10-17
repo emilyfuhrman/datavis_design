@@ -361,6 +361,6 @@ ggsave("my_chart.pdf")
 
 * The chart will appear saved in your working directory. See [this](http://ggplot2.tidyverse.org/reference/ggsave.html) reference for more detail regarding sensible aesthetic defaults.
 
-### Challenge
+### Participation
 
-* Return to the `bnames2_b` dataset. Generate two different visualizations exploring a name we did not mention in class.
+* Generate two different visualizations from the original datasets exploring a name we did not mention in class.
