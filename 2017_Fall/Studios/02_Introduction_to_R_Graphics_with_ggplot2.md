@@ -23,13 +23,13 @@ We will be using two datasets for this studio:
 
 Packages in R are bundled collections of functions that make it easy to extend the functionality of R on your machine. Packages are primarily distributed through CRAN (the Comprehensive R Archive Network). If prompted to set a download mirror at this point, choose the one closest to you. 
 
-* Once the package is finished installing, we need to load the library for our current session. Type the following:
+* Once the package is finished installing, we need to load the package for our current session. Type the following:
 
 ```
 > library(ggplot2)
 ```
 
-You may only load a library if its package is already installed on your machine.
+You may only load `ggplot2` if its package is already installed on your machine.
 
 #### Loading a delimited text data file
 
@@ -227,6 +227,9 @@ Looks good. Note the addition of the `births` column on the far right. You can r
 Okay! This paints a different picture. Otto is still declining in absolute terms, but we can see a small peak around ~1915.
 
 #### Basic chart types
+
+The `ggplot2` package contains a range of different graphs. We will explore a couple of them below. See [this gallery](http://www.r-graph-gallery.com/portfolio/ggplot2-package/) for more detail.
+
 ##### Histogram
 
 A histogram provides a snapshot of the distribution of values for a given variable in a dataset. Remember, a histogram differs from a bar chart: it plots the distribution of records across a continuous variable, not a discrete variable. To test out this functionality, let's generate a histogram from the `bnames2` dataset that visualizes the distribution of the `prop` value.
