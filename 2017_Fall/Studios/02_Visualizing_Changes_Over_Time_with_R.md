@@ -95,9 +95,9 @@ Interesting! And more readable. This plot makes it clear that there are two clus
 
 ```
 > qplot(x = year, y = prop, data = michelle_records, geom = 'line', group = sex, color = sex)
+```
 
 ![Michelle Plot Colored](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/06_Michelle_Plot_Colored.png)
-```
 
 * We can now clearly see that Michelle as a female name peaked around 1970, around the same period it surfaced as a male name.
 
