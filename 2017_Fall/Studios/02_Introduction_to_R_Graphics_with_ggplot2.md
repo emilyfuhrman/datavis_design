@@ -47,7 +47,7 @@ You may only load a library if its package is already installed on your machine.
 
 * Scroll to the top, and confirm that the column order is as follows: `year`, `name`, `prop`, `sex`, and `soundex`. 
 
-#### Exploring and summarizing
+#### Exploring and summarizing with ggplot2
 
 * Let's start by tracking the popularity of a single name over the period of time represented by the dataset. I will track the name "Otto". To do this, we need to cut the portion of the dataset in which the `name` variable is equal to `Otto`, and assign it to a new variable:
 
@@ -124,9 +124,22 @@ Interesting! And more readable. This plot makes it clear that there are two clus
 And we can see a pattern similar to the one we saw to our original "Otto" line plot.
 * Now, run through the same process on a different name, and see if you can uncover any interesting patterns.
 
+#### A note on R base graphics
+
+When working with simple charts like the ones above, it can be suitable to use the native plotting functions in base R. These functions do not require the installation of an additional package. When looking to create anything other than a simple plot, however, move on to `ggplot2`. The package surfaces extensive aesthetic control over your graphics, and provides more options for customization. 
+
+As an example, the syntax below (which takes into account the subsets we created above), which is written in base R, produces a simple scatterplot about equivalent to the `qplot` we created for Otto:
+
+```
+> plot(otto_records$year,otto_records$prop)
+```
+
+![Otto Base R](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/08_Otto_Base_R.png)
+
 #### Births
 
 #### Data manipulation
+
 
 
 
