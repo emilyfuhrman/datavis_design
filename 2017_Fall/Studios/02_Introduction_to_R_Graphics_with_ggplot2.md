@@ -134,7 +134,7 @@ As an example, the syntax below (which takes into account the subsets we created
 > plot(otto_records$year,otto_records$prop)
 ```
 
-![Otto Base R](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/08_Otto_Base_R.png)
+![Otto Base](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/08_Otto_Base.png)
 
 #### Births
 
