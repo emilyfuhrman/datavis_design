@@ -4,9 +4,10 @@ This studio will explore the basic plotting functionalities of R. Specifically, 
 
 ### Datasets
 
-We will be using one dataset for this studio:
+We will be using two datasets for this studio:
 
 * bnames2 - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Data/02/bnames2.csv.bz2). This dataset consists of the top 1000 male and female baby names in the U.S., from 1880 to 2008. It contains 258,000 records with five variables: `year`, `name`, `soundex`, `sex`, and `prop`. The `prop` variable refers to the proportions of people of that gender with that name born in that year. The `soundex` variable contains a phonetic code designed to index names based on sound similarity, irrespective of spelling variations.
+* births - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Data/02/births.csv).
 
 ### R
 #### Setting up your environment
@@ -100,7 +101,30 @@ Interesting! And more readable. This plot makes it clear that there are two clus
 ![Michelle Plot Colored](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/06_Michelle_Plot_Colored.png)
 
 * We can now clearly see that Michelle as a female name peaked around 1970, around the same period it surfaced as a male name.
+* Now, let's try to use the `soundex` variable to plot the popularity over time of names that sound like Otto. Let's first access our subset, `otto_records`, to write the value of the `soundex` variable in the first record to a new variable, `otto_soundex`:
 
+```
+> otto_soundex = otto_records$soundex[1]
+```
+
+* Next, let's create a new dataset of names that share the same `soundex` value (i.e. names that sound similar to Otto):
+
+```
+> otto_like <- subset (bnames2, soundex == otto_soundex)
+```
+
+* Finally, plot the new dataset using `point` geometry:
+
+```
+> qplot(x = year, y = prop, data = otto_like, geom = 'point')
+```
+
+![Like Otto Plot](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/07_Like_Otto_Plot.png)
+
+And we can see a pattern similar to the one we saw to our original "Otto" line plot.
+* Now, run through the same process on a different name, and see if you can uncover any interesting patterns.
+
+#### Births
 
 
 
