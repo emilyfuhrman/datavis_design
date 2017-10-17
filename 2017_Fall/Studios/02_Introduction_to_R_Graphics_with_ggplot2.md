@@ -1,4 +1,4 @@
-## Studio 02 - Visualizing Changes Over Time with R
+## Studio 02 - Introduction to R Graphics with ggplot2
 
 This studio will explore the basic plotting functionalities of R. Specifically, it will delve into the functionality of the `ggplot2` package, for basic data exploration and visualization. Thank you for the inspiration and resources, [ramnathv](http://ramnathv.github.io/swc-nw-dataviz/visualize/base_graphics.html).
 
@@ -7,7 +7,7 @@ This studio will explore the basic plotting functionalities of R. Specifically, 
 We will be using two datasets for this studio:
 
 * bnames2 - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Data/02/bnames2.csv.bz2). This dataset consists of the top 1000 male and female baby names in the U.S., from 1880 to 2008. It contains 258,000 records with five variables: `year`, `name`, `soundex`, `sex`, and `prop`. The `prop` variable refers to the proportions of people of that gender with that name born in that year. The `soundex` variable contains a phonetic code designed to index names based on sound similarity, irrespective of spelling variations.
-* births - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Data/02/births.csv).
+* births - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Data/02/births.csv). This dataset contains 261 records with three variables: `year`, `sex`, and `births`.
 
 ### R
 #### Setting up your environment
@@ -125,6 +125,8 @@ And we can see a pattern similar to the one we saw to our original "Otto" line p
 * Now, run through the same process on a different name, and see if you can uncover any interesting patterns.
 
 #### Births
+
+#### Data manipulation
 
 
 
