@@ -105,7 +105,7 @@ Interesting! And more readable. This plot makes it clear that there are two clus
 * Now, let's try to use the `soundex` variable to plot the popularity over time of names that sound like Otto. Let's first access our subset, `otto_records`, to write the value of the `soundex` variable in the first record to a new variable, `otto_soundex`:
 
 ```
-> otto_soundex = otto_records$soundex[1]
+> otto_soundex <- otto_records$soundex[1]
 ```
 
 * Next, let's create a new dataset of names that share the same `soundex` value (i.e. names that sound similar to Otto):
@@ -272,23 +272,56 @@ Not the most interesting distribution, but the smaller bins add more granularity
 
 ![ggplot Histogram Proportional](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/13_ggplot_Histogram_Proportional.png)
 
-##### Bar plot
+##### Bar chart
 
-Generating a bar plot is similar to generating a histogram. In this case, we use the native `geom_bar()` function, and specify a single discrete variable. 
+Generating a bar chart is similar to generating a histogram. In this case, we use the native `geom_bar()` function, and specify a single discrete variable. 
 
-* Let's use the `sex` variable in `births_data` as our variable for this one, and plot the counts of each specified `sex` (`boy` and `girl`) recorded for each year.
-	* The first argument in `ggplot()` specifies our dataset. In this case, `births_data`.
-	* The second argument is our `aes()` function, containing aesthetic guidelines for the chart as a whole. Here, we tell it to treat the `year` variable as a factor (or a categorical, not continuous, variable).
+* Let's return to our previous exploration of the name Michelle. To plot the instances of each similar name, we first capture the `soundex` value of `Michelle` from our newly-joined `bnames2_b` dataset. Note how this time, we can chain our commands to both filter the dataset and capture the first `soundex` value in the returned records.
 
 ```
-> ggplot(births_data, aes(x=as.factor(sex))) + geom_bar()
+> michelle_soundex <- subset(bnames2_b, name == "Michelle")$soundex[1]
 ```
 
-![ggplot Bar Plot](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/14_ggplot_Bar_Plot.png)
+* We now filter the dataset for soundex values equivalent to `michelle_soundex`:
 
-As expected, these are just about equal.
+```
+> like_michelle <- subset(bnames2_b, soundex == michelle_soundex)
+```
 
-* To plot the relationship between a continuous and discrete variable, we need to specify `stat = "identity"` when calling the barplot. 
+* Check it, to make sure the operation produced expected results:
+
+```
+> head(like_michelle)
+     year    name     prop sex soundex births
+46   1880 Michael 0.002990 boy    M240 118405
+390  1880 Micheal 0.000169 boy    M240 118405
+551  1880  Miguel 0.000101 boy    M240 118405
+668  1880 Maxwell 0.000076 boy    M240 118405
+878  1880  Michel 0.000051 boy    M240 118405
+1054 1881 Michael 0.002761 boy    M240 108290
+```
+
+* Now, we create a bar plot with `name` along the x-axis.
+	* The first argument in `ggplot()` specifies our dataset. In this case, `like_michelle`.
+	* The second argument is our `aes()` function, containing aesthetic guidelines for the chart as a whole. Here, we tell it to treat the `name` variable as a factor (or a categorical, not continuous, variable).
+
+```
+> ggplot(like_michelle, aes(x=as.factor(name))) + geom_bar()
+```
+
+![ggplot Like Michelle Bar](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/16_ggplot_Like_Michelle_Bar.png)
+
+If nothing shows up in your generated chart, expand the window so the bars have enough room to render.
+
+##### Stacked bar chart
+
+* The simplest way to turn our previous bar chart into a stacked bar chart is to specify a `fill` condition in the `aes()` function. Let's color the bars by `sex`.
+
+```
+> ggplot(like_michelle, aes(x=as.factor(name), fill = sex)) + geom_bar()
+```
+
+![ggplot Michelle Stacked](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/17_ggplot_Michelle_Stacked.png)
 
 #### Saving
 
