@@ -46,6 +46,7 @@ You may only load a library if its package is already installed on your machine.
 ![Data preview](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/01_Data_Preview.png)
 
 * Scroll to the top, and confirm that the column order is as follows: `year`, `name`, `prop`, `sex`, and `soundex`. 
+* To shortcut this process in the future, you can type `head(bnames2)` to get a truncated preview of the imported data.
 
 #### Exploring and summarizing with ggplot2
 
@@ -160,12 +161,48 @@ Note that by specifying `color = sex`, we do not need to additionally specify `g
 
 #### Data manipulation
 
+#### Other chart types
+##### Histogram
 
+A histogram provides a snapshot of the distribution of values for a given variable in a dataset. Remember, a histogram differs from a bar chart: it plots the distribution of records across a continuous variable, not a discrete variable. To test out this functionality, let's generate a histogram from the `bnames2` dataset that visualizes the distribution of the `prop` value.
 
+* Instead of `qplot`, this time we will call `ggplot`. 
+	* The first argument in the `ggplot` function specifies the dataset we are using. We specify `bnames2`.
+	* The second argument in the `ggplot` function, `aes()`, contains aesthetic guidelines for the output chart. We specify the variable we would like to use along the x-axis: `prop`.
+	* `geom_histogram()` is a function native to `ggplot`, which automatically generates a histogram from the provided data.
 
+```
+> ggplot(bnames2, aes(x=prop)) + geom_histogram()
+```
 
+![ggplot Histogram](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/10_ggplot_Histogram.png)
 
+* R sends us the following message: 
 
+```
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+```
+
+To act on this, let's specify our bins to be of width `0.0005`.
+
+```
+> ggplot(bnames2, aes(x=prop)) + geom_histogram(binwidth = 0.0005)
+```
+
+![ggplot Histogram Bins](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/11_ggplot_Histogram_Bins.png)
+
+Not the most interesting distribution, but the smaller bins add more granularity.
+* We can use the `geom_histogram()` function to specify additional guidelines for the output chart. We can try a uniform color for all of the bars:
+
+```
+> ggplot(bnames2, aes(x=prop)) + geom_histogram(binwidth = 0.0005, fill = "red")
+```
+
+![ggplot Histogram Red](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/12_ggplot_Histogram_Red.png)
+
+* We can also try coloring the bars based on the values they represent, using an `aes()` function internal to `geom_histogram()`:
+
+![ggplot Histogram Proportional](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/13_ggplot_Histogram_Proportional.png)
 
 
 
