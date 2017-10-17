@@ -228,7 +228,7 @@ Okay! This paints a different picture. Otto is still declining in absolute terms
 
 #### Basic chart types
 
-The `ggplot2` package contains a range of different graphs. We will explore a couple of them below. See [this gallery](http://www.r-graph-gallery.com/portfolio/ggplot2-package/) for more detail.
+The `ggplot2` package contains a range of different graphs. We explore a few of them below. See [this gallery](http://www.r-graph-gallery.com/portfolio/ggplot2-package/) for more detail.
 
 ##### Histogram
 
@@ -331,6 +331,23 @@ If nothing shows up in your generated chart, expand the window so the bars have 
 
 ![ggplot Rotate Labels](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/18_ggplot_Rotate_Labels.png)
 
+##### Stacked area chart
+
+In our case, working with yearly data in the `bnames2` and `births_data` datasets lends itself to both categorical and continuous visualization methods, due to the discrete (but linear, and reasonably granular) nature of time. We now explore the stacked area chart native to the library, which provides a breakdown of component categories over time, and return to the `births_data` dataset.
+
+* We define a new `ggplot`.
+	* The first argument is, as usual, our dataset: `births_data`.
+	* The second argument is the `aes()` function. In it, we define `year` to be along the x-axis, `births` to be along the y-axis, and `fill` to be determined by `sex`.
+	* The last element is `geom_area()`, the area chart function.
+
+```
+> ggplot(births_data, aes(x=year, y=births, fill=sex)) + geom_area()
+```
+
+![ggplot Sex Over Time](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/19_ggplot_Sex_Over_Time.png)
+
+* Nice. We see births as a total value, comprised of both specified genders.
+
 #### Saving
 
 The easiest way to quickly save a chart to either a PDF or a PNG is to use `ggsave()`.
@@ -343,19 +360,3 @@ ggsave("my_chart.pdf")
 ```
 
 * The chart will appear saved in your working directory. See [this](http://ggplot2.tidyverse.org/reference/ggsave.html) reference for more detail regarding sensible aesthetic defaults.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
