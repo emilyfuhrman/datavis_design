@@ -1,6 +1,6 @@
 ## Studio 02 - Introduction to R Graphics with ggplot2
 
-This studio will explore the basic plotting functionalities of R. Specifically, it will delve into the functionality of the `ggplot2` package, for basic data exploration and visualization. Thank you for the inspiration and resources, [ramnathv](http://ramnathv.github.io/swc-nw-dataviz/visualize/base_graphics.html).
+This studio will explore the basic plotting functionalities of R. Specifically, it will delve into the functionality of the `ggplot2` package (read more [here](http://ggplot2.tidyverse.org/index.html)) for the purposes of basic data exploration and visualization. The `ggplot2` package is based on [_The Grammar of Graphics_](https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448/), and forms a declarative syntax for the graphics creation with sensible aesthetic defaults and deep customizability. Thank you for the inspiration and resources, [ramnathv](http://ramnathv.github.io/swc-nw-dataviz/visualize/base_graphics.html).
 
 ### Datasets
 
@@ -161,7 +161,72 @@ Note that by specifying `color = sex`, we do not need to additionally specify `g
 
 #### Data manipulation
 
-#### Other chart types
+Finally, we can combine these two datasets into a single, richer dataset, which opens up new analyses. Base R has a `merge` function that can achieve this. (Read more about the `merge` function and its parameters [here](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/merge).) However, we can also use the `plyr` package to `join` the datasets.
+
+* Install and load the `plyr` package:
+
+```
+> install.packages("plyr")
+> library(plyr)
+```
+
+* For our purposes, the following command is enough to join the `bnames2` dataset with the `births_data` dataset, by way of the matching `year` column:
+
+```
+> bnames2_b <- join(bnames2, births_data, by = c("sex", "year"))
+```
+
+* Now, test that the join was properly carried out by entering `head(bnames2_b)`:
+
+```
+> head(bnames2_b)
+  year    name     prop sex soundex births
+1 1880    John 0.081541 boy    J500 118405
+2 1880 William 0.080511 boy    W450 118405
+3 1880   James 0.050057 boy    J520 118405
+4 1880 Charles 0.045167 boy    C642 118405
+5 1880  George 0.043292 boy    G620 118405
+6 1880   Frank 0.027380 boy    F652 118405
+```
+
+Looks good. You can read up on `join` documentation by typing `?join` into the console. Let's continue on with the exploration we started.
+
+* To delve more deeply into the popularity of the name Otto over time, let's compute an absolute count of the instances of `Otto` using the `prop` variable and the newly-joined `births` value. Since the `prop` variable represents the proportion of people of a given gender with a given name for a given year, multiplying `prop` by `births` for that year gives us an absolute number representative of the number of people with that name. We will use the `mutate` function to create a new variable and plot it. As before, we start by subsetting out instances of `Otto`. Make sure to specify our new dataset:
+
+```
+> otto_records <- subset(bnames2_b, name == "Otto")
+```
+
+* Use the `mutate` function to create a new `tot` column, containing the value of `prop * births` (our absolute count):
+
+```
+> otto_records <- mutate(otto_records, tot = prop * births)
+```
+
+* Double check that this worked as expected:
+
+```
+> head(otto_records)
+     year name     prop sex soundex births      tot
+63   1880 Otto 0.002289 boy    O300 118405 271.0290
+1069 1881 Otto 0.002041 boy    O300 108290 221.0199
+2069 1882 Otto 0.002065 boy    O300 122034 252.0002
+3066 1883 Otto 0.002134 boy    O300 112487 240.0473
+4065 1884 Otto 0.002346 boy    O300 122745 287.9598
+5069 1885 Otto 0.002268 boy    O300 115948 262.9701
+```
+
+* And it did. Now, let's plot the popularity of `Otto` as a line once again, though using `tot` on our y-axis instead of `prop`:
+
+```
+> qplot(year, tot, data = otto_records, geom = 'line')
+```
+
+![Otto Absolute](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/15_Otto_Absolute.png)
+
+Okay! This paints a different picture. Otto is still declining in absolute terms, but we can see a small peak around ~1915.
+
+#### Basic chart types
 ##### Histogram
 
 A histogram provides a snapshot of the distribution of values for a given variable in a dataset. Remember, a histogram differs from a bar chart: it plots the distribution of records across a continuous variable, not a discrete variable. To test out this functionality, let's generate a histogram from the `bnames2` dataset that visualizes the distribution of the `prop` value.
@@ -180,7 +245,7 @@ A histogram provides a snapshot of the distribution of values for a given variab
 * R sends us the following message: 
 
 ```
-`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+> `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
 To act on this, let's specify our bins to be of width `0.0005`.
@@ -204,8 +269,36 @@ Not the most interesting distribution, but the smaller bins add more granularity
 
 ![ggplot Histogram Proportional](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/13_ggplot_Histogram_Proportional.png)
 
+##### Bar plot
 
+Generating a bar plot is similar to generating a histogram. In this case, we use the native `geom_bar()` function, and specify a single discrete variable. 
 
+* Let's use the `sex` variable in `births_data` as our variable for this one, and plot the counts of each specified sex (`boy` and `girl`) recorded for each year.
+	* The first argument in `ggplot()` specifies our dataset. In this case, `births_data`.
+	* The second argument is our `aes()` function, containing aesthetic guidelines for the chart as a whole. Here, we tell it to treat the `year` variable as a factor (or a categorical, not continuous, variable).
+
+```
+> ggplot(births_data, aes(x=as.factor(year))) + geom_bar()
+```
+
+![ggplot Bar Plot](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/14_ggplot_Bar_Plot.png)
+
+As expected, these are just about equal.
+
+* To plot the relationship between a continuous and discrete variable, we need to specify `stat = "identity"` when calling the barplot. 
+
+#### Saving
+
+The easiest way to quickly save a chart to either a PDF or a PNG is to use `ggsave()`.
+
+* Render a chart using `ggplot()`
+* Enter the following, supplying your own custom name and extension (`.pdf` or `.png`):
+
+```
+ggsave("my_chart.pdf")
+```
+
+* The chart will appear saved in your working directory. See [this](http://ggplot2.tidyverse.org/reference/ggsave.html) reference for more detail regarding sensible aesthetic defaults.
 
 
 
