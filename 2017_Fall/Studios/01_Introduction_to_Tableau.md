@@ -4,7 +4,7 @@ This studio will provide an introduction to the interface, functionality, and vi
 
 ### Datasets
 
-We will be using one dataset for this map:
+We will be using one dataset for this studio:
 
 * 311 Service Requests - Originally downloaded from [here](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data)
 
