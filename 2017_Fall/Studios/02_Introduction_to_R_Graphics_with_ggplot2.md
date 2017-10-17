@@ -323,6 +323,14 @@ If nothing shows up in your generated chart, expand the window so the bars have 
 
 ![ggplot Michelle Stacked](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/17_ggplot_Michelle_Stacked.png)
 
+* Finally, let's rotate the labels so we can read what the similar names actually are. Adjusting the `theme` component here allows us to edit native style settings for the chart.
+
+```
+> ggplot(like_michelle, aes(x=as.factor(name), fill = sex)) + geom_bar() + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+![ggplot Rotate Labels](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/18_ggplot_Rotate_Labels.png)
+
 #### Saving
 
 The easiest way to quickly save a chart to either a PDF or a PNG is to use `ggsave()`.
