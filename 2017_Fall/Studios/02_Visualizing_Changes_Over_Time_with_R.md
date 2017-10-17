@@ -1,6 +1,6 @@
 ## Studio 02 - Visualizing Changes Over Time with R
 
-This studio will explore the basic plotting functionalities of R. Specifically, it will delve into the functionality of the `ggplot2` package, for basic data exploration and visualization. 
+This studio will explore the basic plotting functionalities of R. Specifically, it will delve into the functionality of the `ggplot2` package, for basic data exploration and visualization. Thank you for the inspiration and resources, [ramnathv](http://ramnathv.github.io/swc-nw-dataviz/visualize/base_graphics.html).
 
 ### Datasets
 
