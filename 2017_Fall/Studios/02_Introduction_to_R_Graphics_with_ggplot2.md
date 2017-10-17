@@ -138,6 +138,26 @@ As an example, the syntax below (which takes into account the subsets we created
 
 #### Births
 
+Now, suppose we would like to explore trends in the total number of people with specific names across all of the years. The `bnames2` dataset only contains proportions. To be able to explore this question further, we need total number of births by year. Enter the `births` dataset. After some initial exploration, we will combine this dataset with our `bnames2` dataset to give our analysis more granularity.
+
+* Download the `births` dataset above.
+* Add it to your working directory.
+* Read the dataset in using `read.csv()`, and assign it to the variable `births`.
+
+```
+> births_data <- read.csv("births.csv")
+```
+
+* To get a picture of what this dataset looks like, let's plot the trends in total number of `births` across `sex` by `year`.
+
+```
+> qplot(x = year, y = births, color = sex, data = births_data, geom = 'line')
+```
+
+![Plot Births](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/09_Plot_Births.png)
+
+Note that by specifying `color = sex`, we do not need to additionally specify `group = sex`. If we only specify `group = sex`, the two groups are not colored. If we specify neither, we get a jagged line as in our original exploration of "Michelle" in `bnames2`.
+
 #### Data manipulation
 
 
