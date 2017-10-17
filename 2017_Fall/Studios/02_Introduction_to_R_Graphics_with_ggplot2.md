@@ -142,7 +142,7 @@ Now, suppose we would like to explore trends in the total number of people with 
 
 * Download the `births` dataset above.
 * Add it to your working directory.
-* Read the dataset in using `read.csv()`, and assign it to the variable `births`.
+* Read the dataset in using `read.csv()`, and assign it to the variable `births_data`.
 
 ```
 > births_data <- read.csv("births.csv")
