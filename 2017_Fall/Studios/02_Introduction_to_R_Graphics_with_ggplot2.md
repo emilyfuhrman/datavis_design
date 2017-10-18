@@ -270,6 +270,10 @@ Not the most interesting distribution, but the smaller bins add more granularity
 
 * We can also try coloring the bars based on the values they represent, using an `aes()` function internal to `geom_histogram()`:
 
+```
+ggplot(bnames2, aes(x=prop)) + geom_histogram(binwidth = 0.0005, aes(fill = ..count..))
+```
+
 ![ggplot Histogram Proportional](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/13_ggplot_Histogram_Proportional.png)
 
 ##### Bar chart
