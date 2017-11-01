@@ -13,7 +13,7 @@ This file contains details on how to draw circles with data-driven radii and col
 * example_02 - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Files/03/examples_02.zip).
 This file contains details on how to draw circles with data-driven radii and color fill, as well as how to begin adding hover and click events to elements.
 
-### Software
+### Preparation
 
 #### Downloading a text editor
 
