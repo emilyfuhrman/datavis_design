@@ -9,8 +9,9 @@
 * [*Week 5:* Digital Storytelling and Ethics](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Decks/Week_05.pdf)
 * [*Week 6:* Visualization with Big Data, Varied Data, and Multivariate Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Decks/Week_06.pdf)
 * [*Week 7:* Visualizing Phenomena Over Time](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Decks/Week_07.pdf)
+* [*Week 8:* Interactive Data Analysis](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Decks/Week_08.pdf)
 
 ## Studios
 * [Introduction to Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/01_Introduction_to_Tableau.md)
 * [Introduction to R Graphics with ggplot2](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/02_Introduction_to_R_Graphics_with_ggplot2.md)
-* [Introduction to D3](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/03_Introduction_to_D3.md)
+* [Introduction to D3.js](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/03_Introduction_to_D3.md)

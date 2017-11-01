@@ -1,4 +1,4 @@
-## Studio 03 - Introduction to D3
+## Studio 03 - Introduction to D3.js
 
 This studio will walk through the process of creating data-driven shapes in the browser using [D3.js](https://d3js.org/), a powerful JavaScript library for visualization. 
 
@@ -22,3 +22,7 @@ If you do not already have a favorite text editor, go ahead and download [Sublim
 #### Setting up a local server
 
 To import external data, you will need to be able to serve files locally. Do this either by running Python's [SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html) (see [this](http://stackoverflow.com/questions/7943751/what-is-the-python3-equivalent-of-python-m-simplehttpserver) StackOverflow question if you are using Python 3), or by downloading [MAMP](https://www.mamp.info/en/).
+
+### Introduction to D3.js
+
+All materials for this studio may be accessed [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Decks/Week_08.pdf).
