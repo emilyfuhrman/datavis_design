@@ -86,17 +86,82 @@ Make sure to keep all of these files in the same folder, and do not change any n
 We will mostly use the `Vector Layer` and `Delimited Text Layer` import controls. Vector data typically comes in the form of regional boundaries (polygons), while a delimited text layer often takes the form of a simple `.CSV`, with or without geometry.
 
 * As may be evident by these controls, QGIS composes working projects in "Layers", similar to Adobe software like Photoshop or Illustrator. This simply adds logic to the order in which elements are visible: layers at the top of the list appear to be "on top" of the layers at the bottom of the list, and vice versa.
-* Zooming and panning controls along the top of the screen enable you to zoom in and out of a selected layer. 
+* Zooming and panning controls along the top of the screen enable you to zoom in and out of a selected layer.
 
-![QGIS Import Controls](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/08_QGIS_Zoom_Controls.png)
+![QGIS Zoom Controls](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/08_QGIS_Zoom_Controls.png)
 
 * If you ever lose sight of a selected layer, tap the `Zoom Full` magnifying glass to recenter. We can test this on an actual file in a moment.
 
 #### Importing TIGER Shapefiles
 
-* Import
-* Select
-* ALAND vs. AWATER
+* First, save your QGIS project to an accessible folder.
+* Within the same folder, create a `Data` folder to store all of your working Shapefiles. This will make organization easier as we progress.
+* Navigate to the left toolbar in your QGIS project, and click the `Add Vector Layer` icon. A popup window should appear.
+
+![QGIS Add Vector Layer](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/09_QGIS_Add_Vector_Layer.png)
+
+* Click `Browse`.
+* Navigate to your saved TIGER Shapefile. You may select the entire *zipped* file, or the individual `.shp` file.
+* Click `Open`.
+
+![QGIS Import Shapefile](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/10_QGIS_Import_Shapefile.png)
+
+* Click `Open` again to close the modal dialog and import the Shapefile. 
+* You should now see New York City county outlines appear on your blank canvas. Note that the outlines appear in the bottom left `Layers Panel` under the same title as the file, `tl_2017_36_cousub`.
+
+![QGIS Imported Shapefile](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/11_QGIS_Imported_Shapefile.png)
+
+* Find the tile at the top of the screen that looks like an arrow pointing to a yellow rectangle. 
+* Hover over the tile to make sure it says `Select Features by area or single click`.
+
+![QGIS Select Tile](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/12_QGIS_Select_Tile.png)
+
+* Click the tile.
+* Now, try clicking on a region of the visible county boundaries. Your selection should highlight yellow.
+
+![QGIS Test Selection](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/13_QGIS_Test_Selection.png)
+
+* While we can visually see that we have selected one of the entries in the county boundaries dataset, it is hard to tell which one just by looking at the map. In order to get more detail, we can open up the attribute table for this imported layer. 
+* Find the icon along the top toolbar that looks like a small table.
+
+![QGIS Attribute Table](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/14_QGIS_Attribute_Table.png)
+
+* Click the icon. A data table should open, that looks something like this:
+
+![QGIS Attribute Table](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/15_QGIS_Attribute_Table.png)
+
+* Here, we can see all of the different variables associated with each of these county-boundary polygons. From this view, we can see what we have directly selected from the visual canvas, as well as create new variables and write queries. To filter the visible data down to the particular area we have selected manually, navigate to the bottom left of the modal dialog to the `Show All Features` button.
+
+![QGIS Show All Features](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/16_QGIS_Show_All_Features.png)
+
+* Click the button to open the menu.
+* Select `Show Selected Features`. The table should now update to contain only one row, which corresponds to the yellow polygon in the canvas view.
+
+![QGIS View Selected](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/17_QGIS_View_Selected.png)
+
+We can't see much that's human-readable here, aside from the fact that the county name is "Webb".
+* Close out the modal dialog.
+
+#### Manipulating TIGER Shapefiles
+
+Looking at this representation of New York, we can see that the shape seems a little off. Some of the areas along the left hand side seem to extend beyond the actual land boundary of the state. Let's examine this more deeply.
+
+* Manually select one or more of these large boundaries on the left hand side. 
+
+![QGIS Select Outliers](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/18_QGIS_Select_Outliers.png)
+
+* Open up the attribute table again, by clicking the icon that looks like a table.
+* Again, click `Show Selected Features` to view the elements we have selected manually.
+
+![QGIS ALAND](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/19_QGIS_ALAND.png)
+
+* If we scroll to the right, we can see that the `ALAND` value for each of these selected items is `0`. This means that the land area for each of these boundaries is actually equal zero -- each one encompasses only water. We can use this knowledge to query the entire table, to filter out items that match the same description. 
+* Locate the tile at the top of the modal dialog with the label `Select features using an expression`.
+
+![QGIS Select Using Expression](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/20_QGIS_Select_Using_Expression.png)
+
+
+
 * Trim
 * Save as new
 
