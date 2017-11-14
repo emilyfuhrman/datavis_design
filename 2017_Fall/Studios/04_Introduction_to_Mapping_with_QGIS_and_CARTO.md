@@ -82,6 +82,7 @@ Make sure to keep all of these files in the same folder, and do not change any n
 	* Adding a `Delimited Text Layer` (common)
 	* Adding a `Virtual Layer`
 	* Adding a `Shapefile Layer`
+
 We will mostly use the `Vector Layer` and `Delimited Text Layer` import controls. Vector data typically comes in the form of regional boundaries (polygons), while a delimited text layer often takes the form of a simple `.CSV`, with or without geometry.
 
 * As may be evident by these controls, QGIS composes working projects in "Layers", similar to Adobe software like Photoshop or Illustrator. This simply adds logic to the order in which elements are visible: layers at the top of the list appear to be "on top" of the layers at the bottom of the list, and vice versa.
@@ -89,7 +90,7 @@ We will mostly use the `Vector Layer` and `Delimited Text Layer` import controls
 
 ![QGIS Import Controls](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/08_QGIS_Zoom_Controls.png)
 
-* If you ever lose sight of a selected layer, tap the `Zoom Full` magnifying glass to recenter.
+* If you ever lose sight of a selected layer, tap the `Zoom Full` magnifying glass to recenter. We can test this on an actual file in a moment.
 
 #### Importing TIGER Shapefiles
 
