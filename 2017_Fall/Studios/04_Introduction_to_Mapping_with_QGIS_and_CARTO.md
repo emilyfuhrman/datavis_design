@@ -160,10 +160,52 @@ Looking at this representation of New York, we can see that the shape seems a li
 
 ![QGIS Select Using Expression](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/20_QGIS_Select_Using_Expression.png)
 
+* Click the tile. 
+* This opens up another modal dialog to help us write a query to filter the whole dataset. In the center panel, open the `Fields and Values` row.
 
+![QGIS Fields and Values](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/21_QGIS_Fields_Values.png)
 
-* Trim
-* Save as new
+* Find the `ALAND` value in the list. Double click it.
+* Click the `=` tile.
+* Type `0`.
+
+![QGIS Write Query](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/22_QGIS_Write_Query.png)
+
+* Click `Select`. This should update the table in the background.
+
+![QGIS Select](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/23_QGIS_Select.png)
+
+* Close the dialog. The corresponding areas on the map should be selected. 
+
+![QGIS Selected](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/24_QGIS_Selected.png)
+
+* Now, we have all the polygons with an `ALAND` value of `0` selected -- or, all of the polygons that do not encompass land area. To edit this Shapefile, however, we want to *keep* all of the polygons that *do* encompass land area. So we need to invert our selection, grabbing everything for which `ALAND` does *not* equal `0`. Since we have already made out selection, this operation is actually quite easy. Open the attribute table again by clicking the tile that looks like a table.
+* Find the `Invert Selection` icon.
+
+![QGIS Invert](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/25_QGIS_Invert.png)
+
+* Click the icon.
+* Now, when we close out the dialog, the inverse selection is selected on the map.
+
+![QGIS Inverted](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/26_QGIS_Inverted.png)
+
+* As our final step, we actually want to trim this shapefile so that it only retains those elements that encompass land area. To do this, navigate to the Layers Panel in the bottom left.
+* Right-click the layer to bring up a menu of options. 
+* Click `Save as...`
+
+![QGIS Save As](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/27_QGIS_Save_As.png)
+
+* In the dialog, fill in the following options:
+	* Under `Format`, keep `ESRI Shapefile` selected.
+	* Under `Filename`, click `Browse`, and save the file as something you will rememebr in the `Data` folder you already created. (I saved mine as `NYC_Trimmed`).
+	* Under `Encoding`, *make sure to check `Save only selected features`*.
+
+![QGIS Save Options](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/28_QGIS_Save_Options.png)
+
+* Once you have done all of these things, click `OK`.
+* Once the save is complete, the newly-saved shapefile should open as a new layer in your map as well. Note that this one excludes the water-only elements. If you like, hide the layer below it to see this more clearly.
+
+![QGIS Trimmed](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/29_QGIS_Trimmed.png)
 
 #### Importing TIGER demographic data
 
