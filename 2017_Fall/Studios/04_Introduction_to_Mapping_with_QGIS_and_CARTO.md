@@ -209,11 +209,99 @@ Looking at this representation of New York, we can see that the shape seems a li
 
 #### Importing TIGER demographic data
 
-#### Creating new variables
+Now that we have imported our boundaries, it is time to import the demographic data we downloaded that is associated with each boundary.
+
+* Navigate to the `Add Vector Layer` tile.
+
+![QGIS Add Vector Layer](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/30_QGIS_Add_Vector_Layer.png)
+
+* In the `Source Type` section, select `Directory`.
+* Under `Source > Type`, select `OpenFileGDB`.
+
+![QGIS Select Directory](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/31_QGIS_Select_Directory.png)
+
+* Navigate to the place where you stored the *unzipped* NYC County Subdivision Demographic and Economic Data (`ACS_2015_5YR_COUSUB_36.gdb`).
+
+![QGIS Choose Directory](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/32_QGIS_Choose_Directory.png) 
+
+* Choose the *unzipped* directory, which should still have an extension of `.gdb`.
+* Click `Open`.
+* In the popup window that appears, check to see that the visible columns correspond to the columns we saw in the metadata for this column. 
+
+![QGIS Preview](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/33_QGIS_Preview.png) 
+
+* Click the row of Layer 1 - `X00_COUNTS`, to make sure that only that row is imported.
+* Click `Okay`.
+* Nothing should appear on top of the map at this point, because this data does not contain explicit geographic coordinates. Instead, you should see a new layer appear in the bottom left `Layers Panel`.
+* Click the table tile at the top of the screen to view the attribute table for the layer. It should look something like this:
+
+![QGIS GDB Imported](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/34_QGIS_GDB_Imported.png) 
+
+The column labeled `B00001e1`, an unweighted sample count of the population for each county, is the one we will be focusing on.
+
+#### Creating a new variable
+
+These datasets are still separate from one another. In order to work with them together, we need to join them based on a unique identifier for each county. We will need to create a new column in our Shapefile in order to enable this.
+
+* In the attribute table for the demographic data, note the `GEOID` column.
+* Open up the attribute table for the Shapefile. It, too, has a `GEOID` column.
+
+![QGIS Shapefile GEOID](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/35_QGIS_Shapefile_GEOID.png) 
+
+However, these columns are not in exactly the same format. Though the string of numbers at the end of each one is the same, the one in the newly-imported attribute table is preceded by the characters `06000US`. We need them to match in order to enable our join.
+* In the Shapefile attribute table, click the pencil icon in the top left corner to `Toggle editing mode`.
+* Click the tile with an abacus on it, labeled `Open field calculator`.
+
+![QGIS New Field](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/36_QGIS_New_Field.png) 
+
+* Here, select the following:
+	* `Create new field`
+	* Output field name: `GEOID_Full`
+	* Output field type: `Text (string)`
+	* Output field length: `255`
+	* Precision: `0`
+* Find the `String` section in the center panel. Open it.
+* Double-click `concat`, so it appears in the left panel.
+
+![QGIS Concat](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/37_QGIS_Concat.png) 
+
+* Inside the parentheses, type `06000US` in *single-quotes*.
+* Type a comma, `,`.
+* In the center panel, open the `Fields and Values` section.
+* Double-click `GEOID`.
+* Close the parentheses in the left panel. Your query should look like this:
+
+![QGIS Query](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/38_QGIS_Query.png)
+
+* Click `OK`.
+* If you scroll to the right of the table, you will now see a new column created.
+* Unclick the left pencil icon to exit editing mode.
+* Save your changes.
+* Close the attribute table. 
 
 #### Joining TIGER demographic data to TIGER Shapefiles
 
+* Double-click the Shapefile in the `Layers Panel` to open up its preferences modal.
+* In the left panel, select `Joins`.
+* Hit the `+` button at the bottom of the dialog.
+* Enter the following:
+	* Join layer: `ACS_2015_5YR_COUSUB_36...` (your `.gdb` layer)
+	* Join field: `GEOID`
+	* Target field: `GEOID_Full`
+	* Check `Custom field name prefix`, and enter an underscore (`_`) in the text area. 
+	* Keep the other defaults. 
+
+![QGIS Join Parameters](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/39_QGIS_Join_Parameters.png)
+
+* Click `OK`.
+* Click `Okay` to exit the preferences dialog.
+* Now, open up the attribute table for the Shapefile. You should see additional columns from the demographic dataset now appended to your Shapefile. Success!
+
+![QGIS Joined](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/39_QGIS_Joined.png)
+
 #### Creating a population density variable
+
+As you might recall, visualizing raw counts in a choropleth map is bad practice. As such, we cannot simply use the values in this column to drive the colors on a thematic map. Instead, we need to derive a new column, which represents the population density for a given county region. We will do this in two steps: first, we will create a new 
 
 #### Styling: Creating a choropleth map within QGIS
 
