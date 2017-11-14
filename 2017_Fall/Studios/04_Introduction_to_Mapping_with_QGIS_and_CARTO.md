@@ -61,8 +61,35 @@ Make sure to keep all of these files in the same folder, and do not change any n
 * Note the extension of the unzipped folder, `gdb`. This file is in Geodatabase format. The files inside the folder have a range of different extensions, and are not really human readable. QGIS will help us with this. 
 
 ### Working with data in QGIS
-
 #### Quick Tour: Zooming, Filtering, and Selection
+
+* Open up a new project in QGIS. You should be faced with a new, blank canvas.
+
+![QGIS Default](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/06_QGIS_Default.png)
+
+* Before we get started, there are a few things to understand about the QGIS interface, as well as geospatial data itself. Geodata can come in a number of different forms, some of which we have already discussed in class. For our purposes, vector, raster, and text are the main formats with which we will be concerned. QGIS provides specific workflows for importing each of these different types of data, as visible in the left toolbar of the screen (your screen may default to putting this toolbar in a different position, but the icons are the same):
+
+![QGIS Import Controls](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/07_QGIS_Import_Controls.png)
+
+* From top to bottom, the icons stand for:
+	* Adding a `Vector Layer` (most common)
+	* Adding a `Raster Layer` (common)
+	* Adding a `SpatiaLite Layer`
+	* Adding a `PostGIS Layers`
+	* Adding a `WMS/WMTS Layer`
+	* Adding a `WCS Layer`
+	* Adding a `WFS Layer`
+	* Adding a `Delimited Text Layer` (common)
+	* Adding a `Virtual Layer`
+	* Adding a `Shapefile Layer`
+We will mostly use the `Vector Layer` and `Delimited Text Layer` import controls. Vector data typically comes in the form of regional boundaries (polygons), while a delimited text layer often takes the form of a simple `.CSV`, with or without geometry.
+
+* As may be evident by these controls, QGIS composes working projects in "Layers", similar to Adobe software like Photoshop or Illustrator. This simply adds logic to the order in which elements are visible: layers at the top of the list appear to be "on top" of the layers at the bottom of the list, and vice versa.
+* Zooming and panning controls along the top of the screen enable you to zoom in and out of a selected layer. 
+
+![QGIS Import Controls](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/08_QGIS_Zoom_Controls.png)
+
+* If you ever lose sight of a selected layer, tap the `Zoom Full` magnifying glass to recenter.
 
 #### Importing TIGER Shapefiles
 
@@ -94,7 +121,6 @@ Make sure to keep all of these files in the same folder, and do not change any n
 #### Exporting new Shapefile
 
 ### Visualizing data in CARTO
-
 #### Importing new Shapefile
 
 #### Styling: Creating a choropleth map within CARTO
