@@ -297,11 +297,33 @@ However, these columns are not in exactly the same format. Though the string of 
 * Click `Okay` to exit the preferences dialog.
 * Now, open up the attribute table for the Shapefile. You should see additional columns from the demographic dataset now appended to your Shapefile. Success!
 
-![QGIS Joined](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/39_QGIS_Joined.png)
+![QGIS Joined](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/40_QGIS_Joined.png)
 
 #### Creating a population density variable
 
-As you might recall, visualizing raw counts in a choropleth map is bad practice. As such, we cannot simply use the values in this column to drive the colors on a thematic map. Instead, we need to derive a new column, which represents the population density for a given county region. We will do this in two steps: first, we will create a new 
+As you might recall, visualizing raw counts in a choropleth map is bad practice. As such, we cannot simply use the values in this column to drive the colors on a thematic map. Instead, we need to derive a new column, which represents the population density for a given county region.
+
+* Within your open, newly-joined attribute table, click the abacus icon to open up the new field calculator.
+* Here, select the following:
+	* `Create new field`
+	* Output field name: `PopDensity`
+	* Output field type: `Decimal number (real)`
+	* Output field length: `10`
+	* Precision: `10`
+* In the central panel, open the `Geometry` section.
+* Double click `$area`. This is a variable native to QGIS, which automatically calculates the area of a bounded shape. Since we are trying to calculate population density, we need to first get the area of the shape we are focused on, and then divide it by the count value in the joined dataset. The default units for these calculations are in the units of the default projection, which in this case is `m^2`.
+* After `$area` appears in the left panel, click the `/` tile.
+* In the central panel, open the `Fields and Values` section.
+* Double-click `_B00001e1`, the joined variable that represents the unweighted sample count for the population of each county. Your expressino should now look like this:
+
+![QGIS Calculate Density](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/41_QGIS_Calculate_Density.png)
+
+* Click `OK`.
+* Scroll all the way to the right of the attribute table. As before, a new column should appear. This time, it is called `PopDensity` as we defined it, and is populated by population density values calculated using the native QGIS `$area` variable and the estimated count for each county.
+
+![QGIS New Column](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/42_QGIS_New_Column.png)
+
+* Hit the pencil icon to exit edit mode.
 
 #### Styling: Creating a choropleth map within QGIS
 
