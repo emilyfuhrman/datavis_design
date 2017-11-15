@@ -217,9 +217,6 @@ Now that we have imported our boundaries, it is time to import the demographic d
 
 * In the `Source Type` section, select `Directory`.
 * Under `Source > Type`, select `OpenFileGDB`.
-
-![QGIS Select Directory](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/31_QGIS_Select_Directory.png)
-
 * Navigate to the place where you stored the *unzipped* NYC County Subdivision Demographic and Economic Data (`ACS_2015_5YR_COUSUB_36.gdb`).
 
 ![QGIS Choose Directory](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/32_QGIS_Choose_Directory.png) 
@@ -314,7 +311,7 @@ As you might recall, visualizing raw counts in a choropleth map is bad practice.
 * Double click `$area`. This is a variable native to QGIS, which automatically calculates the area of a bounded shape. Since we are trying to calculate population density, we need to first get the area of the shape we are focused on, and then divide it by the count value in the joined dataset. The default units for these calculations are in the units of the default projection, which in this case is `m^2`.
 * After `$area` appears in the left panel, click the `/` tile.
 * In the central panel, open the `Fields and Values` section.
-* Double-click `_B00001e1`, the joined variable that represents the unweighted sample count for the population of each county. Your expressino should now look like this:
+* Double-click `_B00001e1`, the joined variable that represents the unweighted sample count for the population of each county. Your expression should now look like this:
 
 ![QGIS Calculate Density](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/41_QGIS_Calculate_Density.png)
 
@@ -324,46 +321,86 @@ As you might recall, visualizing raw counts in a choropleth map is bad practice.
 ![QGIS New Column](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/42_QGIS_New_Column.png)
 
 * Hit the pencil icon to exit edit mode.
+* Save your work.
 
 #### Styling: Creating a choropleth map within QGIS
 
-* Choropleth options:
-	* Number of data classes
-	* Mode:
-		* Equal Interval
-		* Quantile (Equal Count)
-		* Natural breaks (Jenks)
-		* Standard Deviation
-		* Pretty Breaks
+* We can now use this newly-created variable to color the Shapefile we have within QGIS. Exit the attribute table, and double click the Shapefile layer in the bottom left hand corner to bring up its preferences dialog. 
+* In the left hand navigation, select `Style`.
+* At the top of the dialog, instead of `Single symbol`, select `Graduated`.
+* In the `Column` section, select the `PopDensity` variable.
+
+![QGIS Style](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/43_QGIS_Style.png)
+
+* In the bottom right corner below the main text area, set the number of `Classes` to `12`.
+* In the `Mode` section, we can see there are a number of different options for dividing up the data:
+	* Equal Interval
+	* Quantile (Equal Count)
+	* Natural breaks (Jenks)
+	* Standard Deviation
+	* Pretty Breaks
+* Select `Quantile (Equal Count)`, and notice the values update in the main text area.
+
+![QGIS Quantile](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/44_QGIS_Quantile.png)
+
+* Click `Apply`.
+* Click `OK`.
+* The visible map should now update to fill its county boundaries based on the population density for each area.
+
+![QGIS Map](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/45_QGIS_Map.png)
 
 #### Exporting new Shapefile
+
+* To make this data more shareable, we can export a *zipped* Shapefile from QGIS and import it into CARTO. Exporting the Shapefile will not export the colors, but will export the `PopDensity` variable we created. Navigate to the place where you saved your trimmed Shapefile.
+* Compress the *whole folder*. You can import the resultant zipfile into CARTO, and visualize it in a similar way.
 
 ### Visualizing data in CARTO
 #### Importing new Shapefile
 
+* Log in to your existing CARTO account.
+* Make sure "Datasets" are chosen in your top navigation bar.
+
+![CARTO Datasets](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/46_CARTO_Datasets.png)
+
+* Click `New dataset`.
+* Browse to your zipped file.
+
+![Zipped Shapefile](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/47_Zipped_Shapefile.png)
+
+* Click `CONNECT DATASET`. This may take a moment to upload.
+* Once the Shapefile is uploaded, click `SHOW`.
+
 #### Styling: Creating a choropleth map within CARTO
 
-* Choropleth options:
-	* Number of buckets
-	* Mode:
-		* Quantiles
-		* Jenks
-		* Equal Interval
-		* Heads/Tails
-		* Category
+* The default view of your new dataset should look something like this:
 
+![CARTO Imported](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/48_CARTO_Imported.png)
 
+* Click `CREATE MAP` to open the data in a visual view.
 
+![Default View](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/49_Default_View.png)
 
+* Click the `nyc_trimmed` layer (or whatever name was imported -- this matches the name to which you saved your Shapefile).
+* Under `Polygons Style`, click the `COLOR` bar.
+* Select `BY VALUE`.
+* In the `Search by column` field, find `PopDensity`.
 
+![CARTO Color](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/50_CARTO_Color.png)
 
+* Zoom into your map.
+* Similar to as we did in QGIS, set the number of buckets (or data classes) to `7`.
+* Click the `Quantiles` menu. We can see that CARTO provides a number of similar options to QGIS:
+	* Quantiles
+	* Jenks
+	* Equal Interval
+	* Heads/Tails
+	* Category
+* Selecting `Quantiles` will produce a similar map to the one we created in QGIS. 
+* Choose a color scheme to your liking -- it should *not* be a dual-ended, divergent scale, because we are trying to visualize population density on a unidirectional continuum (less dense -> more dense).
+* Once you have tweaked the styles as appropriate, navigate out of the layer.
+* Customize a legend, tooltip, and title as needed.
+* Select a basemap that you would like to use. I chose this one:
 
+![CARTO Final](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/04/51_CARTO_Final.png)
 
-
-
-
-
-
-
-
-
+* Once you are finished, click `PUBLISH` to publish your map to the web. 
