@@ -7,7 +7,8 @@ In this studio, we will be exploring the world of data-driven, VR-ready shapes u
 We will be using [Glitch](https://glitch.com/) in this studio to facilitate the process of getting a web development environment up and running. Two projects exist for you to clone and edit:
 
 * Getting started - Available [here](https://glitch.com/edit/#!/fir-airport)
-* Visualizing data - Available [here](https://glitch.com/edit/#!/sage-branch)
+* (Simple) Visualizing data - Available [here](https://glitch.com/edit/#!/swanky-brush)
+* (Advanced) Visualizing data - Available [here](https://glitch.com/edit/#!/sage-branch)
 
 ### A-Frame basics
 
@@ -66,10 +67,17 @@ We will be using [Glitch](https://glitch.com/) in this studio to facilitate the 
 
 Cool. Even though the browser provides decent 3-D navigation, let's see what these look like in Google Cardboard.
 
-### Visualizing data
+### (Simple) Visualizing data
 
 * Close all previous tabs.
-* Navigate to the "Visualizing data" project. Your window should look, once again, something like this:
+* Navigate to the "(Simple) Visualizing data" project.  Your window should look something like this:
+
+![Blank State](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/19_Blank_State.png)
+
+### (Advanced) Visualizing data
+
+* Close all previous tabs.
+* Navigate to the "(Advanced) Visualizing data" project. Your window should look, once again, something like this:
 
 ![Initial Project Page](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/08_Initial_Project_Page.png)
 
