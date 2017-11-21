@@ -22,18 +22,18 @@ We will be using [Glitch](https://glitch.com/) in this studio to facilitate the 
 
 * Navigate to the "Getting started" project. (Close the other tab.) Your window should look something like this:
 
-![Initial Project Page](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/01_Initial_Project_Page.png)
+![Initial Project Page](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/08/01_Initial_Project_Page.png)
 
 * To see what we are working with, click the `Show [Live]` button at the top left corner of the window. In the new tab that opens, you should see a cube, a sphere, and a cylinder resting on a plane. Try clicking and dragging around your window to get a feel for the 3-D effects.
 
-![Initial Project Shapes](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/02_Initial_Project_Shapes.png)
+![Initial Project Shapes](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/08/02_Initial_Project_Shapes.png)
 
 * Navigate back to the previous view of the project.
 * In the top left corner, click the project name to open a menu labeled `Project info and options`. 
 * Click the `Remix This` button to start your own editable copy of the project. While it is possible to edit my original project, **please do not edit it directly**. Create a clone following the directions above so that everyone in the class may work independently on changes to their code. You should now be facing a new project page, with a different name than the first one. 
 * In the left panel, click `index.html`. 
 
-![New Project Index](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/03_New_Project_Index.png)
+![New Project Index](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/08/03_New_Project_Index.png)
 
 * Here, you can see all of the logic that goes into creating the shapes visible in the previous screen.
 	* In the `<body>` section of the code, we see a new `<a-scene>` container that bounds a series of shapes. 
@@ -49,21 +49,21 @@ We will be using [Glitch](https://glitch.com/) in this studio to facilitate the 
 	* Change the color of the sky.
 	* Change the radii of the sphere and cylinder. 
 
-![Editing Shapes](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/04_Editing_Shapes.png)
+![Editing Shapes](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/08/04_Editing_Shapes.png)
 
 * As a test, try setting the z-value of the `box`, `sphere`, and `cylinder` to `-10`, `-15`, and `-12`, respectively. Click on the `Show [Live]` tab to see what happens.
 
-![Far Away](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/05_Far_Away.png)
+![Far Away](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/08/05_Far_Away.png)
 
 * Now, just for fun, let's try adding a torus to the scene. Navigate back to the HTML view, and below the `<a-cylinder>` declaration, add the following line of code:
 
 `<a-torus position="1 0.75 -6"  color="#43A367" arc="270" radius="5" radius-tubular="0.1"></a-torus>`
 
-![New Torus Code](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/06_New_Torus_Code.png)
+![New Torus Code](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/08/06_New_Torus_Code.png)
 
 * If we navigate to the `Show [Live]` tab, something new should appear:
 
-![New Torus Scene](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/07_New_Torus_Scene.png)
+![New Torus Scene](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/08/07_New_Torus_Scene.png)
 
 Cool. Even though the browser provides decent 3-D navigation, let's see what these look like in Google Cardboard.
 
@@ -72,20 +72,20 @@ Cool. Even though the browser provides decent 3-D navigation, let's see what the
 * Close all previous tabs.
 * Navigate to the "(Simple) Visualizing data" project.  Your window should look something like this:
 
-![Blank State](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/19_Blank_State.png)
+![Blank State](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/08/19_Blank_State.png)
 
 ### (Advanced) Visualizing data
 
 * Close all previous tabs.
 * Navigate to the "(Advanced) Visualizing data" project. Your window should look, once again, something like this:
 
-![Initial Project Page](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/08_Initial_Project_Page.png)
+![Initial Project Page](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/08/08_Initial_Project_Page.png)
 
 * As before, go to the top left corner of the window and open the menu labeled `Project info and options`.
 * Click the `Remix This` button to start your own editable copy of the project. 
 * In the left panel, select `index.html`. 
 
-![New Project Index](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/09_New_Project_Index.png)
+![New Project Index](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/08/09_New_Project_Index.png)
 
 * No shapes are being drawn in the index file, but there are a couple of items in the `<a-scene>` brackets. We will revisit these shortly. To test that this is a blank project, click `Show [Live]` in the top left corner of the window. The new tab that opens should be empty.
 * You will notice that there are a couple of additional files in the left hand panel of this project: 
@@ -93,11 +93,11 @@ Cool. Even though the browser provides decent 3-D navigation, let's see what the
 	* `js/logic.js` - A JavaScript file containing more complex logic for how we generate shapes. 
 * The JavaScript file, `js/logic.js`, appears in the `<head>` section of `index.html`. This enables the page to reference the logic in that file before it starts drawing anything in the `<body>` section.
 
-![JavaScript Link](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/10_JavaScript_Link.png)
+![JavaScript Link](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/08/10_JavaScript_Link.png)
 
 * Let's take a look at what this file contains. Click on `js/logic.js` in the left panel.
 
-![JavaScript Functions](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/11_JavaScript_Functions.png)
+![JavaScript Functions](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/08/11_JavaScript_Functions.png)
 
 * Inside are a bunch of complex functions. Do not worry about the syntax here -- all you need to know is the following:
 	* The declaration that encompasses everything starts with `AFRAME.registerComponent`. It is named `get-data`. We call this element in the HTML of the `index.html` file. 
@@ -107,7 +107,7 @@ Cool. Even though the browser provides decent 3-D navigation, let's see what the
 	* The `drawShapes()` function is what we will be editing, which makes graphics from the parsed data.
 * Inside the `drawShapes()` function is a `for-loop`, which cycles through our parsed CSV. This loop contains a lot of commented-out code at the moment, but that code is set up to draw a new shape every time the loop runs. 
 
-![Draw Shapes Function](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/12_Draw_Shapes_Function.png)
+![Draw Shapes Function](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/08/12_Draw_Shapes_Function.png)
 
 * This syntax is different from the simple HTML that we saw in the `index.html` file of the first "Getting started" project. Here, since we are creating elements using JavaScript, we have to take a different route to attaching elements to the structure outlined in the front page.
 	* The first thing inside the function is a variable that grabs the overall "scene" within which we are drawing our shapes.
@@ -118,13 +118,13 @@ Cool. Even though the browser provides decent 3-D navigation, let's see what the
 	* On the next line, paste the following line of code: `var current_elem = Number(sample_array[i][2]);`. This assigns the current value we are cycling through in the CSV to another accessible variable, and ensures that it is defined as a number, not a string. 
 * Navigate to the `Show [Live]` tab to see if anything is visible. Nothing should appear just yet, because we have not assigned the entity we have created any visual attributes, nor have we explicitly told our program to attach it to our HTML structure. At this time, your code should look something like this:
 
-![Draw Shapes Function](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/13_Draw_Shapes_Function.png)
+![Draw Shapes Function](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/08/13_Draw_Shapes_Function.png)
 
 * Continuing on after the last line, add the following line of code: `sceneEl.appendChild(entityEl);`. 
 * Navigate again to the `Show [Live]` tab. 
 * This time, right-click and select `Inspect`. Even though they are not visible, a series of elements should have been created, visible in the DOM.
 
-![Empty Elements](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/14_Empty_Elements.png)
+![Empty Elements](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/08/14_Empty_Elements.png)
 
 * Let's add some visual features to these elements. First, add the following code below the last line:
 ```
@@ -142,18 +142,18 @@ entityEl.setAttribute('material','color','#00FFFF');
 ```
 * Checking the `Show [Live]` tab again, something should appear! Drag your screen around to get a feel for how these 3-D shapes work.
 
-![Data Boxes](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/15_Data_Boxes.png)
+![Data Boxes](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/08/15_Data_Boxes.png)
 
 * Essentially, we have created one box for every row in our dataset. One new box is created with every rendition of the `for-loop`. The position of each new box is set based on its position in the CSV. The additional commented code below our new code contains some logic for adjusting the color and height of each of the boxes. Try playing around with these values to encode the values in our dataset in different ways. Changing the height of the boxes to `current_elem`, for example, gives you something like this:
 
-![Data Boxes Height](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/16_Data_Boxes_Height.png)
+![Data Boxes Height](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/08/16_Data_Boxes_Height.png)
 
 * Aligning the boxes by adjusting their y-position gives you something like this:
 
-![Data Boxes Aligned](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/17_Data_Boxes_Aligned.png)
+![Data Boxes Aligned](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/08/17_Data_Boxes_Aligned.png)
 
 * And adjusting their color based on the same value gives you something like this:
 
-![Data Boxes Colored](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Summer/Studios/Images/08/18_Data_Boxes_Colored.png)
+![Data Boxes Colored](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/08/18_Data_Boxes_Colored.png)
 
 Play around with the different data values to see if you can adjust the 3-D shapes from their most basic state. In Google Cardboard, this should start to take on the appearance of an explorable, 3-dimensional bar chart. Pretty cool.
