@@ -4,7 +4,7 @@ In this studio, we will be exploring the world of data-driven, VR-ready shapes u
 
 ### Glitch
 
-We will be using [Glitch](https://glitch.com/) in this studio to facilitate the process of getting a web development environment up and running. Two projects exist for you to clone and edit:
+We will be using [Glitch](https://glitch.com/) in this studio to facilitate the process of getting a web development environment up and running. Three projects exist for you to clone and edit:
 
 * Getting started - Available [here](https://glitch.com/edit/#!/fir-airport)
 * (Simple) Visualizing data - Available [here](https://glitch.com/edit/#!/swanky-brush)
@@ -91,11 +91,11 @@ Cool. Even though the browser provides decent 3-D navigation, let's see what the
 
 ![JavaScript Functions](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/05/22_JavaScript_Functions.png)
 
-* Inside are a bunch of complex functions. Do not worry about the syntax here -- all you need to know is the following:
+* Inside are a few complex-looking functions. Do not worry about the syntax here -- all you need to know is the following:
 	* The declaration that encompasses everything starts with `AFRAME.registerComponent`. It is named `get-data`. We call this element in the HTML of the `index.html` file. 
 	* Inside this declaration is one more function: `init()`.
 	* The `init()` function is what we will be editing, which makes graphics from an array we define.
-* Inside the `drawShapes()` function is a `for-loop`, which cycles through our custom array. This loop contains a lot of commented-out code at the moment, but that code is set up to draw a new shape every time the loop runs.
+* Inside the `init()` function is a `for-loop`, which cycles through our custom array. This loop contains a lot of commented-out code at the moment, but that code is set up to draw a new shape every time the loop runs.
 
 ![Init Function](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/05/23_Init_Function.png)
 
@@ -103,6 +103,7 @@ Cool. Even though the browser provides decent 3-D navigation, let's see what the
 	* The first thing inside the function is a variable that grabs the overall "scene" within which we are drawing our shapes.
 	* The second thing assigns a variable name to an array we define. By assigning both of these things to variables, we can more quickly access each, and our code will be cleaner. 
 	* The third thing is a `for-loop` that cycles through the array we define. 
+* Go ahead and adjust the array values if you'd like, though keep them roughly within the same range.
 * Keep all of the code commented out for now. Right inside the `for-loop`, we are going to create some additional shortcuts to make our code cleaner.
 	* On the top line, type the following line of code: `var entityEl = document.createElement('a-entity');`. This creates a new HTML entity in our HTML document for every time the loop loops, and assigns it an accessible variable.
 	* On the next line, type the following line of code: `var current_elem = Number(sample_array[i]);`. This assigns the current value we are cycling through in the array to another accessible variable, and ensures that it is defined as a number, not a string. 
@@ -131,14 +132,17 @@ entityEl.setAttribute('geometry', {
 ![Add Attributes](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/05/27_Add_Attributes.png)
 
 This defines the type of primitive shape we want to draw for every row in the CSV that the loop cycles through.
-* Next, add the following additional lines of code:
+* Next, type the following additional lines of code, which set the position and color of the shapes we are drawing:
 ```
 entityEl.setAttribute('position',{x:i, y:0, z:-20});
-entityEl.setAttribute('material','color','#00FFFF');
+entityEl.setAttribute('material','color','red');
+
+![Set styles](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/05/29_Shapes.png)
 ```
 * Checking the `Show [Live]` tab again, something should appear! Drag your screen around to get a feel for how these 3-D shapes work.
+* As you can see, we visualized 
 
-![Array Shapes](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/05/28_Array_Shapes.png)
+![Array Shapes](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/05/29_Shapes.png)
 
 ### (Advanced) Visualizing data
 
