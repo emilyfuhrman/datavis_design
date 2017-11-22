@@ -110,6 +110,36 @@ Cool. Even though the browser provides decent 3-D navigation, let's see what the
 
 ![Defining Variables](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/05/24_Defining_Variables.png)
 
+* Continuing on after the last line, type the following line of code: `sceneEl.appendChild(entityEl);`. 
+
+![Add Entity](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/05/25_Add_Entity.png)
+
+* Navigate again to the `Show [Live]` tab. 
+* This time, right-click and select `Inspect`. Even though they are not visible, a series of elements should have been created, visible in the DOM.
+
+![Check Entities](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/05/26_Check_Entities.png)
+
+* Let's add some visual features to these elements. First, add the following code below the last line:
+```
+entityEl.setAttribute('geometry', {
+	primitive: 'box',
+	height: 0.5,
+	width: 0.5
+});
+```
+
+![Add Attributes](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/05/27_Add_Attributes.png)
+
+This defines the type of primitive shape we want to draw for every row in the CSV that the loop cycles through.
+* Next, add the following additional lines of code:
+```
+entityEl.setAttribute('position',{x:i, y:0, z:-20});
+entityEl.setAttribute('material','color','#00FFFF');
+```
+* Checking the `Show [Live]` tab again, something should appear! Drag your screen around to get a feel for how these 3-D shapes work.
+
+![Array Shapes](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/05/28_Array_Shapes.png)
+
 ### (Advanced) Visualizing data
 
 * Close all previous tabs.
