@@ -11,6 +11,7 @@
 * [*Week 7:* Visualizing Phenomena Over Time](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Decks/Week_07.pdf)
 * [*Week 8:* Interactive Data Analysis](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Decks/Week_08.pdf)
 * [*Week 9:* Maps](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Decks/Week_09.pdf)
+* [*Week 10:* 3D, VR, AR, and Gaming](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Decks/Week_10.pdf)
 
 ## Studios
 * [Introduction to Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/01_Introduction_to_Tableau.md)
