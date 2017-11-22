@@ -137,12 +137,15 @@ This defines the type of primitive shape we want to draw for every row in the CS
 entityEl.setAttribute('position',{x:i, y:0, z:-20});
 entityEl.setAttribute('material','color','red');
 
-![Set styles](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/05/29_Shapes.png)
+![Set styles](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/05/28_Set_Styles.png)
 ```
 * Checking the `Show [Live]` tab again, something should appear! Drag your screen around to get a feel for how these 3-D shapes work.
-* As you can see, we visualized 
 
-![Array Shapes](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/05/29_Shapes.png)
+![Shapes](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/05/29_Shapes.png)
+
+* As you can see, we have not yet integrated our data into our code. Can you figure out how to use the values of the array to generate shapes that look something like the below?
+
+![Array Shapes](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/05/30_Array_Shapes.png)
 
 ### (Advanced) Visualizing data
 
