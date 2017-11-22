@@ -136,7 +136,6 @@ This defines the type of primitive shape we want to draw for every row in the CS
 ```
 entityEl.setAttribute('position',{x:i, y:0, z:-20});
 entityEl.setAttribute('material','color','red');
-
 ```
 
 ![Set styles](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/05/28_Set_Styles.png)
