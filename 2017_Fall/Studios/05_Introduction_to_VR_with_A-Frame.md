@@ -163,7 +163,7 @@ entityEl.setAttribute('material','color','red');
 
 * No shapes are being drawn in the index file, but there are a couple of items in the `<a-scene>` brackets. We will revisit these shortly. To test that this is a blank project, click `Show [Live]` in the top left corner of the window. The new tab that opens should be empty.
 * You will notice that there are a couple of additional files in the left hand panel of this project: 
-	* `data/class_data.csv` - The class-generated dataset, copied here as a CSV file
+	* `data/class_data.csv` - A randomly-generated dataset, copied here as a CSV file
 	* `js/logic.js` - A JavaScript file containing more complex logic for how we generate shapes. 
 * The JavaScript file, `js/logic.js`, appears in the `<head>` section of `index.html`. This enables the page to reference the logic in that file before it starts drawing anything in the `<body>` section.
 
