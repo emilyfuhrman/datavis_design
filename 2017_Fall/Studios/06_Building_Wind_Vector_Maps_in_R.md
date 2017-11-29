@@ -16,7 +16,7 @@ library(plotly)
 
 ### Downloading data
 
-Download data from [http://coastwatch.pfeg.noaa.gov/erddap/tabledap/ndbcSosWind.html](http://coastwatch.pfeg.noaa.gov/erddap/tabledap/ndbcSosWind.html). For this we will need at least Longitude, Latitude, station_id, time, wind_from_direction, and wind_speed. The website limits to one month of data and generally times out with >1-2 weeks of data so it’s best to stick to the presets. Finally, select ‘.csv’ for your file type and click submit.
+Download data from [http://coastwatch.pfeg.noaa.gov/erddap/tabledap/ndbcSosWind.html](http://coastwatch.pfeg.noaa.gov/erddap/tabledap/ndbcSosWind.html) (you may also access it [here](https://github.com/emilyfuhrman/datavis_design/tree/master/2017_Fall/Data/06)). For this we will need at least Longitude, Latitude, station_id, time, wind_from_direction, and wind_speed. The website limits to one month of data and generally times out with >1-2 weeks of data so it’s best to stick to the presets. Finally, select ‘.csv’ for your file type and click submit.
 
 It may take a minute to download your dataset, but once completed move that file to your desired working directory. There is one quick edit to the dataset needed before reading it in. The second line of data contains the field’s units, so we want to quickly open up the .csv and delete that line of data.
 
@@ -98,3 +98,123 @@ usa_plot
 
 ![USA Map](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/06/01_USA_Map.png)
 
+Once the map is set up, we’re going to add the wind speed data as a scalar quantity onto the map. We’re simply going to add a point at each station with the color representing the average wind speed at that location. The color represents the scalar quantity of wind speed as it contains no directional data.
+
+```
+# Scalar Plot
+usa_plot +
+  geom_point(data = df_usa, aes(x=longitude, y=latitude, color=speed_mean)) +
+  scale_color_gradient(low="light blue", high="dark blue")
+```
+
+![Scalar Map](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/06/02_Scalar_Map.png)
+
+Onto vectors, we’re going plot the wind vectors. We will represent the wind vectors with arrows to denote their direction, with the length of the arrow proportional to its magnitude.
+
+```
+# vector plot
+usa_plot +
+  geom_segment(data = df_usa, aes(x=longitude, y=latitude, xend=longitude+u_wnd/10, yend=latitude+v_wnd/10),
+               arrow = arrow(length = unit(0.1, 'cm')), size=0.3)
+
+## Warning: Removed 5 rows containing missing values (geom_segment).
+```
+
+![Vector Map](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/06/03_Vector_Map.png)
+
+In order to see a bit more detail on the scalar and vector quantities in these maps, we’re going to zoom in on one region. For this example, we’re going to look at the great lakes area. First, we’re going to create a subset map of the original US map. Next we’re going to subset the mean wind speed data frame and plot the different scalar and vector quantities.
+
+```
+# lakes Map Setup
+lakes <- subset(usa, region %in% c("ohio", "indiana", "michigan", "illinois", "wisconsin", "minnesota"))
+
+df_lakes <- df_mean %>% 
+  filter(latitude <= max(lakes$lat) &
+         latitude >= min(lakes$lat) &
+         longitude <= max(lakes$lon) &
+         longitude >= min(lakes$lon))
+
+# lakes map setup
+lakes_plot <- ggplot() +
+  geom_polygon(data = lakes, aes(x=long, y=lat, group=group), fill=NA, color='grey60')+
+  coord_fixed(1.3) +
+  theme_bw()
+
+lakes_plot
+```
+
+![Lakes Outline](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/06/04_Lakes_Outline.png)
+
+```
+# lakes scalar plot
+lakes_plot+
+  geom_point(data=df_lakes, aes(x=longitude, y=latitude, color=speed_mean)) +
+  scale_color_gradient(low="light blue", high="dark blue")
+```
+
+![Lakes Scalar](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/06/05_Lakes_Scalar.png)
+
+```
+# lakes vector plot
+lakes_plot +
+  geom_segment(data = df_lakes, aes(x=longitude, y=latitude, xend=longitude+u_wnd/10, yend=latitude+v_wnd/10),
+               arrow = arrow(length = unit(0.1, 'cm')), size=0.3)
+```
+
+![Lakes Vector](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/06/06_Lakes_Vector.png)
+
+Last bonus step: Simple R animation with `ggplot` and `plotly`.
+
+Instead of looking at the average wind speed and velocity over the entire time period, let’s look at how this changes over time. Using plotly, we’re going to animate the daily average wind velocity.
+
+We’re going to use the plotly package in conjunction with ggplot, so it will work almost identically to the previous code with only 1-2 additions.
+
+A couple quick things to set up in the data: 1. We now want to group by the date as well so we need to extract that value from the ‘time’ field. 2. Again, creating a daily aggregated data frame using almost the same code as above. 3. Plotly has limitations when working with missing data, so we’re going to filter the data frame so that only stations with complete data (here we have 8 days of data).
+
+```
+df$date <- as.Date(df$time, format='%Y-%m-%d')
+
+df_daily <- df %>% 
+  group_by(station_id, longitude, latitude, date) %>% 
+  summarize(speed_mean = mean(wind_speed, na.rm=T),
+            direction_mean = mean(wind_from_direction, na.rm=T)) %>% 
+  mutate(u_wnd = speed_mean*cos(pi*direction_mean/180),
+         v_wnd = speed_mean*sin(pi*direction_mean/180)) %>% 
+  filter(latitude <= max(lakes$lat) &
+           latitude >= min(lakes$lat) &
+           longitude <= max(lakes$lon) &
+           longitude >= min(lakes$lon))
+
+df_lakes_animate <- df_daily %>%
+  filter(n() == 8)
+
+head(df_lakes_animate)
+## # A tibble: 6 x 8
+## # Groups:   station_id, longitude, latitude [1]
+##                   station_id longitude latitude       date speed_mean
+##                       <fctr>     <dbl>    <dbl>     <date>      <dbl>
+## 1 urn:ioos:station:wmo:45002   -86.411   45.344 2017-11-21  13.000000
+## 2 urn:ioos:station:wmo:45002   -86.411   45.344 2017-11-22   7.416667
+## 3 urn:ioos:station:wmo:45002   -86.411   45.344 2017-11-23   7.916667
+## 4 urn:ioos:station:wmo:45002   -86.411   45.344 2017-11-24  12.391304
+## 5 urn:ioos:station:wmo:45002   -86.411   45.344 2017-11-25   9.739130
+## 6 urn:ioos:station:wmo:45002   -86.411   45.344 2017-11-26   8.625000
+## # ... with 3 more variables: direction_mean <dbl>, u_wnd <dbl>,
+## #   v_wnd <dbl>
+```
+
+Finally, setting up the visualization code will be almost identical to the original ggplot vector plot. The only additional argument will be the `frame=` argument. This will identify what field we want to animate over.
+
+Unfortunately plotly does not handle dates that well, so as a workaround we will convert the dates to a numeric class. To do that we first convert it to a timestamp and then to a numeric. A second caveat with plotly is that the arrows unfortunately do not work, so this will appear as a spoke graph.
+
+The result will be a plot that looks almost identical to the original, but can shift between days and animate the full data frame with ‘Play’.
+
+```
+animated_vectors<- lakes_plot+
+  geom_segment(data = df_lakes_animate, aes(x=longitude, y=latitude, xend=longitude+u_wnd/10,
+                                            yend=latitude+v_wnd/10, frame=as.numeric(as.POSIXct(date))),
+               arrow = arrow(length = unit(0.1, 'cm')), size=0.3)
+
+## Warning: Ignoring unknown aesthetics: frame
+ggplotly(animated_vectors)
+```
