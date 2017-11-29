@@ -39,7 +39,7 @@ The first step in aggregation is to specify what you want the aggregation to be 
 
 ```
 df_mean <- df %>% 
-	group_by(station_id, longitude, latitude)
+  group_by(station_id, longitude, latitude)
 ```
 
 Now, using `%>%`, we’re going to chain together a few more functions. You can just start adding any new lines to your original code.
@@ -50,11 +50,11 @@ Now, using `%>%`, we’re going to chain together a few more functions. You can 
 
 ```
 df_mean <- df %>% 
-	group_by(station_id, longitude, latitude) %>% 
-	summarize(speed_mean = mean(wind_speed, na.rm=T),
-						direction_mean = mean(wind_from_direction, na.rm=T)) %>% 
-	mutate(u_wnd = speed_mean*cos(pi*direction_mean/180),
-					v_wnd = speed_mean*sin(pi*direction_mean/180))
+  group_by(station_id, longitude, latitude) %>% 
+  summarize(speed_mean = mean(wind_speed, na.rm=T),
+            direction_mean = mean(wind_from_direction, na.rm=T)) %>% 
+  mutate(u_wnd = speed_mean*cos(pi*direction_mean/180),
+          v_wnd = speed_mean*sin(pi*direction_mean/180))
 ```
 
 Here’s what the output df looks like:
@@ -78,10 +78,10 @@ Next, we’re going to subset the aggregated dataframe to only show the continen
 
 ```
 df_usa <- df_mean %>% 
-	filter(latitude <= max(usa$lat) &
-					latitude >= min(usa$lat) &
-					longitude <= max(usa$lon) &
-					longitude >= min(usa$lon))
+  filter(latitude <= max(usa$lat) &
+          latitude >= min(usa$lat) &
+          longitude <= max(usa$lon) &
+          longitude >= min(usa$lon))
 ```
 
 Now, setting up the map of the US with ggplot. The dataframe called is the usa dataframe that we created earlier. A couple arguments that we add are `fill`, `color`, `coord_fixed()`, and `theme_bw()`. Fill changes the state’s colors, color changes the map outline color, coord_fixed() is used to make sure that the aspect ratio of the map remains consistent if the size of the map is changed, and theme_bw() gives a nice minimal theme that works well with this graphic.
@@ -89,9 +89,9 @@ Now, setting up the map of the US with ggplot. The dataframe called is the usa d
 ```
 #Set up Map of USA
 usa_plot <- ggplot() + 
-	geom_polygon(data = usa, aes(x=long, y=lat, group=group), fill = NA, color = "grey60") + 
-	coord_fixed(1.3) +
-	theme_bw()
+  geom_polygon(data = usa, aes(x=long, y=lat, group=group), fill = NA, color = "grey60") + 
+  coord_fixed(1.3) +
+  theme_bw()
 
 usa_plot
 ```
