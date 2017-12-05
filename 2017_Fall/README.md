@@ -22,3 +22,4 @@
 * [Introduction to Mapping with QGIS and CARTO](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/04_Introduction_to_Mapping_with_QGIS_and_CARTO.md)
 * [Introduction to VR with A-FRAME](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/05_Introduction_to_VR_with_A-Frame.md)
 * [Building Wind Vector Maps in R](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/06_Building_Wind_Vector_Maps_in_R.md)
+* [Introduction to Network Visualization with Gephi](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/07_Introduction_to_Network_Visualization_with_Gephi.md)
