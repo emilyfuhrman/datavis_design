@@ -14,6 +14,7 @@
 * [*Week 10:* 3D, VR, AR, and Gaming](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Decks/Week_10.pdf)
 * [*Week 11:* Scalar, Vector, &amp; Tensor Visualization (Part I)](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Decks/Week_11_01.pdf)
 * [*Week 11:* Scalar, Vector, &amp; Tensor Visualization (Part II)](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Decks/Week_11_02.pdf)
+* [*Week 12:* Integrating Analysis and Visualization](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Decks/Week_12.pdf)
 
 ## Studios
 * [Introduction to Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/01_Introduction_to_Tableau.md)

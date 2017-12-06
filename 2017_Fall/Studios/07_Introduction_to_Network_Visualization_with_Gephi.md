@@ -136,6 +136,7 @@ For this section, we will be creating a much more complex network from a random 
 * Hit `Next >`.
 * At the bottom of this pane, check the `Force nodes to be created as new ones` box.
 * Click `Finish`.
+* At this point, make sure to mark *all* imported attributes as `String`, instead of `Integer`. 
 
 ![Imported Nodes](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/07/20_Imported_Nodes.png)
 
