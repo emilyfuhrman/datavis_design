@@ -94,7 +94,7 @@ We will be using one dataset for this studio:
 	* `Unique Key` resolved to `Number (whole)`
 * Some of the icon dropdowns contain a `Geographic role` option in the menu that appears. This may or may not be applicable to the actual variable. Try clicking on `Incident Zip`. While the value resolved to `Number (whole)`, if you navigate down to the `Geographic role` option in the menu, Tableau was able to detect that this is a zip code. 
 
-![Tableau Zip Geographic Role](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/11_Tableau_Zip_Geographic_Role.png)
+![Tableau Zip Geographic Role](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/01/11_Zip_Geographic_Role.png)
 
 * Now, try scrolling all the way to the right to the `Latitude` and `Longitude` columns. Check the `Geographic Role` for each of these, which should be `Latitude` and `Longitude`, accordingly.
 
