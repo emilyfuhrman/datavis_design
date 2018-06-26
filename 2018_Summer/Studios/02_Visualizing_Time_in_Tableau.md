@@ -159,5 +159,88 @@ This time, we will try representing this data in a different manner, using a [co
 
 #### Animated Scatterplot
 
+Now, let's use _motion_ to depict changes over time, by creating a short, simple animation that paints in data points over time.
+
+* Open a fresh tab in your Tableau workbook.
+* Drag `Finishers` to the `Columns` shelf.
+* Drag `Entrants` to the `Rows` shelf.
+
+![Scatter Setup](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/25_Scatter_Setup.png)
+
+* To break out this single point into a different point for every row in the dataset, drag `Year` from the `Dimensions` section in the left panel to the `Marks` panel.
+
+![Scatter by Year](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/26_Scatter_by_Year.png)
+
+* Let's add another dimension to this scatterplot, and color the points by the nationality of the winner for each year. To do this, drag `Winner's Nationality` to the `Color` tile in the `Marks` panel.
+
+![Color by Nationality](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/27_Color_by_Nationality.png)
+
+* Now, to pack even more information into this scatterplot, let's size the circles by the winner's average speed. Drag `Winner's avg speed` to the `Size` tile in the `Marks` panel.
+
+![Size by Speed](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/28_Size_by_Speed.png)
+
+* In the top right of the legend that appears to define the different size buckets, click the dropdown arrow to and choose `Edit sizes...`.
+
+![Customize Sizes](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/29_Customize_Sizes.png)
+
+* A new modal dialog should open. To make these sizes more distinct from one another, choose `By range` under the `Sizes vary:` menu.
+
+![Sizes by Range](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/30_Sizes_by_Range.png)
+
+* Click `OK`.
+* In the `Size` tile of the `Marks` panel, feel free to drag the slider down or up to get the right spread of sizes for your display.
+
+![Slide Sizes](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/31_Slide_Sizes.png)
+
+* Now, let's zoom in on the data even further. Double-click the y-axis to bring up an axis customization dialog. 
+* Uncheck `Include zero`.
+
+![Axis Customization](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/32_Axis_Customization.png)
+
+* Click `OK`.
+* Do the same thing for the x-axis. 
+* Now that the data is more in focus in the chart body, drag `Year` up to the `Pages` panel to make a "player" appear in the bottom right corner.
+
+![Play by Year](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/33_Play_by_Year.png)
+
+* In this player control, click `Show history` to bring up a display configuration control.
+ * Under `Marks to show history for`, select `All`.
+ * Under `Show`, select `Marks`.
+
+![Show History](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/34_Show_History.png)
+
+* In the player control, use the right trio of icons to control the speed of the animation. Click the play button to test it out. The marks should progressively paint in as the player cycles through the different years.
+* Give your chart a title, and add any final polish.
+
+![Animated Final](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/35_Animated_Final.png)
+
+#### Parallel Coordinates
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
