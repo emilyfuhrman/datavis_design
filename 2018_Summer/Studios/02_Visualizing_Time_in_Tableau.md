@@ -154,4 +154,4 @@ This time, we will try representing this data in a different manner, using a [co
 * Reduce the line width of the chart by adjusting the `Size` tile.
 * Adjust your axis labels to include units, and give the chart a sensible title.
 
-![Final Scatter](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/23_Final_Scatter.png)
+![Final Scatter](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/24_Final_Scatter.png)
