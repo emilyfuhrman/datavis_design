@@ -10,3 +10,4 @@
 
 ## Studios
 * [Introduction to Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/01_Introduction_to_Tableau.md)
+* [Visualizing Time in Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/02_Visualizing_Time_in_Tableau.md)
