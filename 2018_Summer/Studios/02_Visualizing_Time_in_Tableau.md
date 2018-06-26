@@ -281,6 +281,6 @@ Okay! Now we're getting somewhere. However, even though our rows are broken out 
 
 ![Filter Nationality](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/45_Filter_Nationality.png)
 
-* Add a title to your chart and save.
+* Try playing around with the order of the normalized attributes and the coloring of the lines. Once you are satisfied, add a title to your chart and save.
 
 ![Parallel Coordinates Final](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/46_Parallel_Coordinates_Final.png)
