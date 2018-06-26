@@ -284,27 +284,3 @@ Okay! Now we're getting somewhere. However, even though our rows are broken out 
 * Add a title to your chart and save.
 
 ![Parallel Coordinates Final](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/46_Parallel_Coordinates_Final.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
