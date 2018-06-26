@@ -23,7 +23,8 @@ Our data gathering process this week will be easy. We are accessing one of the m
 
 ![Data in Excel](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/02_Data_in_Excel.png)
 
-As we can see, this dataset includes information about every winner of the Tour de France since 1903: 
+Note the column headers. As you can see, this dataset includes information about every winner of the Tour de France since 1903:
+
  * Year
  * Winner's average speed (km/h)
  * Total distance (km)
@@ -155,3 +156,8 @@ This time, we will try representing this data in a different manner, using a [co
 * Adjust your axis labels to include units, and give the chart a sensible title.
 
 ![Final Scatter](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/24_Final_Scatter.png)
+
+#### Animated Scatterplot
+
+
+
