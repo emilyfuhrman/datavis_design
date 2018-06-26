@@ -81,32 +81,42 @@ However, if you look closely at the `Year` column, some years are missing: `1915
 * Click `Connect > To a File > Microsoft Excel`.
 * Navigate to your file, and click `Open`.
 
-![Import Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/03_Import_Data.png)
+![Import Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/10_Import_Data.png)
 
 * Once your data loads, you should see a preview that looks similar to what we viewed in Excel:
 
-![Preview Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/04_Preview_Data.png)
+![Preview Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/11_Preview_Data.png)
 
-* Check your variables to make sure they look as you expected them to. Note that the `Year` column was imported as a number. Keep it this way -- the types of visualizations we are making will work more easily with a simple data, without us trying to extrapolate a time and day for each one. 
+* Check your variables to make sure they look as you expected them to. If the `Year` column was imported as a string, change it now to a whole number (`Number (whole)`). Do not change it to a `Date` or `Date & Time` value -- the types of visualizations we are making will work more easily with a simple data, without us trying to extrapolate a time and day for each one. 
 
 ### Visualizing data
 #### Simple time series
 
 We will start with something simple. A line chart is often the most effective way to visualize change over time. As our first graphic, let's create a line chart (with `year` along the x-axis) that visualizes the winners' average speeds over time. 
 
-* Drag `Year` to the `Columns` shelf. By default (for my version of Tableau, at least), I get a series of ticks along an automatically-generated timeline.
+* Drag `Year` to the `Columns` shelf. By default (for my version of Tableau, at least), I get a series of ticks.
 
-![Year Alone](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/05_Year_Alone.png)
+![Year Alone](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/12_Year_Alone.png)
 
-* Now, drag `Winner's avg speed` from the `Measures` section to the `Rows` shelf. Tableau should automatically generate a line chart. 
+* Now, drag `Winner's avg speed` from the `Measures` section to the `Rows` shelf. Tableau should automatically generate a line chart. If it did not, in the `Marks` dropdown menu, select `Line`. 
+* Your chart should now be a line chart.
 
-![Line Average Speed](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/06_Line_Average_Speed.png)
+![Line Chart](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/13_Line_Chart.png)
 
+* Note the gaps in the chart that represent the null rows we added. 
+* Adjust the line width as needed. Give the chart a title, and edit the axis labels to include units.
 
-
-
+![Line Chart Final](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/14_Line_Chart_Final.png)
 
 #### Connected scatterplot
+
+This time, we will try representing this data in a different manner, using a [connected scatterplot](http://www.thefunctionalart.com/2012/09/in-praise-of-connected-scatter-plots.html). A connected scatterplot breaks up the typical linearity of time series displays and gives the viewer a _path_ to follow. 
+
+* Create a new sheet in Tableau.
+* Drag `Winner's avg speed` from the `Measures` section to the `Rows` shelf.
+
+![Average Speed Alone](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/15_Average_Speed_Alone.png)
+
 
 
 
