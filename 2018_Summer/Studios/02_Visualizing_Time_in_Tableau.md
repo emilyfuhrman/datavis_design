@@ -216,10 +216,74 @@ Now, let's use _motion_ to depict changes over time, by creating a short, simple
 
 #### Parallel Coordinates
 
+For this final visualization, we will be making a [parallel coordinates](https://en.wikipedia.org/wiki/Parallel_coordinates) chart. This technique is useful for visualizing multivariate data. This type of chart is related to a typical time series visualization, only it does not represent time along the x-axis. As such, playing around with the order of dimensions can reveal interesting patterns.
 
+* Open up another fresh tab in your Tableau workbook. 
+* Drag `Measure Names` from the `Dimensions` area in the left panel to the `Columns` shelf.
+* Drag `Measure Values` from the `Measures` area in the left panel to the `Rows` shelf. As you can see, all measures names are now visible along the x-axis in bar chart format, with the sum or average of each measure represented along the same y-axis.
 
+![First Bars](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/36_First_Bars.png)
 
+* In the `Marks` dropdown, instead of `Automatic`, select `Line`.
 
+![First Line](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/37_First_Line.png)
+
+* We only see a single line here. To break these out into the individual rows in the dataset, drag `Year` from the `Dimensions` area into the `Marks` panel.
+
+![Parallel All Bad](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/38_Parallel_All_Bad.png)
+
+Okay! Now we're getting somewhere. However, even though our rows are broken out as individual lines, there are a few problems with this display. 
+
+* First, there are variables here that do not make sense to compare along the same scale as the others. Remove the following from the `Measure Values` panel:
+
+ * `SUM(End Date)`
+ * `AVG(Finishing city Latitude)`
+ * `AVG(Finishing city Longitude)`
+ * `SUM(Number of Records)`
+ * `SUM(Start Date)`
+ * `AVG(Starting city Latitude)`
+ * `AVG(Starting city Longitude)`
+
+![Filtered Down](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/39_Filtered_Down.png)
+
+* Second, each included field is on a different scale, meaning we cannot meaningfully compare values from one to the next. We must normalize our data in order for this to work. To do this, we will be creating _new_ fields for each field included in the display. Each new field will map the values of the original field to a scale of 0-1. Navigate to the top right corner of the `Dimensions` area in the left panel.
+* Select `Create calculated field...`
+
+![Select Calculated Field](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/40_Select_Calculated_Field.png)
+
+* A new window will pop up. This is where we will type our formula. We will start by creating a new field for the `SUM(Entrants)` Measure. 
+ * Name the calculation "Normalized Entrants".
+ * In the calculation area, type the following:
+
+ ```
+ (SUM([Entrants])- TOTAL(MIN([Entrants]))) / (TOTAL(MAX([Entrants])) - TOTAL(MIN([Entrants])))
+ ```
+
+![Field Formula](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/41_Field_Formula.png)
+
+* Click `OK`. The new `Normalized Entrants` field should appear in the `Measures` area of the left panel.
+* Now, remove `SUM(Entrants)` from the `Measure Values` panel.
+* In its place, add the new `Normalized Entrants` field.
+
+![Normalized Added](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/42_Normalized_Added.png)
+
+* Repeat these steps for the remaining fields (`Finishers`,`Number of stages`, `Total distance (km)`, and `Winner's avg speed`). Each time you create a new field, be sure to switch out `[Entrants]` for the name of the variable you are normalizing. Your resultant graphic should look something like this:
+
+![All Normalized Added](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/43_All_Normalized_Added.png)
+
+* Extend the width of your chart.
+* In the `Size` tile of the `Marks` panel, adjust the line width to be smaller.
+
+![Thinner Lines](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/44_Thinner_Lines.png)
+
+* To add more dimension to this chart, let's color the lines by the nationality of the winner for each year. Drag `Winner's Nationality` from the `Dimensions` area of the left panel to the `Color` tile in the `Marks` panel.
+* Open up the filter for `Winner's Nationality` to hide `Null` and `Results voided` values.
+
+![Filter Nationality](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/45_Filter_Nationality.png)
+
+* Add a title to your chart and save.
+
+![Parallel Coordinates Final](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/46_Parallel_Coordinates_Final.png)
 
 
 
