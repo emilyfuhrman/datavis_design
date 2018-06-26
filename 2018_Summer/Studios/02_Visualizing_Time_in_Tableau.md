@@ -117,27 +117,41 @@ This time, we will try representing this data in a different manner, using a [co
 
 ![Average Speed Alone](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/15_Average_Speed_Alone.png)
 
+* Now, drag `Total distance (km)` to the `Columns` shelf, to create an extremely simple scatterplot.
 
+![Simple Scatterplot](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/16_Simple_Scatterplot.png)
 
+* Navigate to the dropdown in the left `Marks` panel. Its default selection is `Automatic`. Open this menu up and select `Line` instead. The style of the point in the scatterplot should change slightly to have a solid fill.
 
+![Change to Line](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/17_Change_to_Line.png)
 
+* Now comes a bit of maneuvering. Grab the `Year` dimension from the top of the left panel, and drag it over to the `Path` tile in the `Marks` panel.
 
+![Drag to Path](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/18_Drag_to_Path.png)
 
+* A line connecting each of the scatterplot points should now appear. The dots are connected in the numerical order of the year values.
+* Because this resultant bundle of lines is a little far away, let's zoom in more closely on the data itself by manipulating the x- and y-axis scales.
+ * Double-click on the `Winner's avg speed` axis to bring up a dialog. 
+ * _Unclick_ the `Include zero` checkbox.
+ * Click `OK`.
 
+![Edit Y-Axis](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/19_Edit_Y-Axis.png)
 
+* The chart should scale accordingly. Now, do the same for the x-axis.
 
+![Centered Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/20_Centered_Data.png)
 
+* Now, let's add another dimension to this chart, and color different segments by `Starting country`. Find `Starting country` under the `Dimensions` panel in the left, and drag it to the `Color` tile in the `Marks` panel.
 
+![Colored by Country](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/21_Colored_by_Country.png)
 
+* Click `Edit Colors...` to customize your category colors.
 
+![Color Editor](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/22_Color_Editor.png)
 
+* Click any individual category (country name) to bring up a color wheel, or select a palette of your choice.
+* To make this chart easier to read, click on the `Color` tab again, and select the middle option in the `Markers:` row to make data points appear.
+* Reduce the line width of the chart by adjusting the `Size` tile.
+* Adjust your axis labels to include units, and give the chart a sensible title.
 
-
-
-
-
-
-
-
-
-
+![Final Scatter](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/23_Final_Scatter.png)
