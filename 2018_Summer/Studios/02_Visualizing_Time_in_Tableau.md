@@ -43,9 +43,7 @@ Our data gathering process this week will be easy. We are accessing one of the m
 	* `Finishing city latitude`
 	* `Finishing city longitude`
 
-However, if you look closely at the `Year` column, some years are missing: `1915` through `1918` seem to form a gap, for example. Before we bring this data into Tableau, let's add some placeholder rows to make this more sensible to handle.
-
-* As we went over in our last studio, *always* create a copy of the raw data you are working with before making any changes. In this case, copy the first tab into a new tab.
+* However, if you look closely at the `Year` column, some years are missing: `1915` through `1918` seem to form a gap, for example. Before we bring this data into Tableau, let's add some placeholder rows to make this more sensible to handle. As we went over in our last studio, *always* create a copy of the raw data you are working with before making any changes. In this case, copy the first tab into a new tab.
 
 ![Copy Tab](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/03_Copy_Tab.png)
 
