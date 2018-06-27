@@ -24,24 +24,24 @@ Our data gathering process this week will be easy. We are accessing one of the m
 ![Data in Excel](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/02_Data_in_Excel.png)
 
 * Note the column headers. As you can see, this dataset includes information about every winner of the Tour de France since 1903:
- * `Year`
- * `Winner's average speed (km/h)`
- * `Total distance (km)`
- * `Number of stages`
- * `Finishers`
- * `Entrants`
- * `Winner`
- * `Winner's nationality`
- * `Winner's team`
- * `Start date`
- * `End date`
- * `Starting city`
- * `Starting city latitude`
- * `Starting city longitude`
- * `Starting country`
- * `Finishing city`
- * `Finishing city latitude`
- * `Finishing city longitude`
+** `Year`
+** `Winner's average speed (km/h)`
+** `Total distance (km)`
+** `Number of stages`
+** `Finishers`
+** `Entrants`
+** `Winner`
+** `Winner's nationality`
+** `Winner's team`
+** `Start date`
+** `End date`
+** `Starting city`
+** `Starting city latitude`
+** `Starting city longitude`
+** `Starting country`
+** `Finishing city`
+** `Finishing city latitude`
+** `Finishing city longitude`
 
 However, if you look closely at the `Year` column, some years are missing: `1915` through `1918` seem to form a gap, for example. Before we bring this data into Tableau, let's add some placeholder rows to make this more sensible to handle.
 
