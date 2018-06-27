@@ -23,8 +23,7 @@ Our data gathering process this week will be easy. We are accessing one of the m
 
 ![Data in Excel](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/02_Data_in_Excel.png)
 
-Note the column headers. As you can see, this dataset includes information about every winner of the Tour de France since 1903:
-
+* Note the column headers. As you can see, this dataset includes information about every winner of the Tour de France since 1903:
 	* `Year`
 	* `Winner's average speed (km/h)`
 	* `Total distance (km)`
@@ -204,8 +203,8 @@ Now, let's use _motion_ to depict changes over time, by creating a short, simple
 ![Play by Year](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/33_Play_by_Year.png)
 
 * In this player control, click `Show history` to bring up a display configuration control.
- * Under `Marks to show history for`, select `All`.
- * Under `Show`, select `Marks`.
+	* Under `Marks to show history for`, select `All`.
+	* Under `Show`, select `Marks`.
 
 ![Show History](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/Images/02/34_Show_History.png)
 
