@@ -2,7 +2,7 @@
 
 This studio will walk through the process of creating data-driven shapes in the browser using [D3.js](https://d3js.org/), a powerful JavaScript library for visualization. 
 
-### Resources and Preparation
+### Preparation
 
 We will be working in [Observable](https://beta.observablehq.com/). If you would like to save your work today, you must create an Observable account (which requires creating a [Github](https://github.com/) account first).
 
