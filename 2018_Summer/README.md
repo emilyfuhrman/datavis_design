@@ -16,3 +16,4 @@
 * [Visualizing Time in Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/02_Visualizing_Time_in_Tableau.md)
 * [Introduction to D3.js](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/03_Introduction_to_D3.md)
 * [Introduction to Mapping with QGIS and CARTO](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/04_Introduction_to_Mapping_with_QGIS_and_CARTO.md)
+* [t-SNE Tensor Visualization Tutorial](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/05_t-SNE_Tensor_Visualization_Tutorial.ipynb)
