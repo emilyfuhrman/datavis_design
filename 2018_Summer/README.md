@@ -20,3 +20,4 @@
 * [Introduction to Mapping with QGIS and CARTO](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/04_Introduction_to_Mapping_with_QGIS_and_CARTO.md)
 * [t-SNE Tensor Visualization Tutorial](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/05_t-SNE_Tensor_Visualization_Tutorial.ipynb)
 * [Introduction to VR with A-Frame](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/06_Introduction_to_VR_with_A-Frame.md)
+* [Introduction to Network Visualization with Gephi](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/07_Introduction_to_Network_Visualization_with_Gephi.md)
