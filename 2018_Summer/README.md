@@ -22,3 +22,4 @@
 * [t-SNE Tensor Visualization Tutorial](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/05_t-SNE_Tensor_Visualization_Tutorial.ipynb)
 * [Introduction to VR with A-Frame](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/06_Introduction_to_VR_with_A-Frame.md)
 * [Introduction to Network Visualization with Gephi](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/07_Introduction_to_Network_Visualization_with_Gephi.md)
+* [Hierarchical Circle Packing in D3.js](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/08_Hierarchical_Circle_Packing_in_D3.md)
