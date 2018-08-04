@@ -13,6 +13,7 @@
 * [*Week 9:* Visualizing Scalars, Vectors, &amp; Tensors](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Decks/Week_09.pdf)
 * [*Week 10:* 3-D, Virtual Reality, &amp; Augmented Reality](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Decks/Week_10.pdf)
 * [*Week 11:* Visual Applications: Integrating Analysis and Visualization](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Decks/Week_11.pdf) 
+* [*Week 12:* Synthesis](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Decks/Week_12.pdf) 
 
 ## Studios
 * [Introduction to Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Studios/01_Introduction_to_Tableau.md)
