@@ -33,7 +33,7 @@ We will be using one dataset for this studio:
 * Click the `Unique Key` field. This opens a menu containing all of the column headers in the dataset. 
 * Select `Created Date`.
 * Click the `is` dropdown menu, and select `is between`. Two fields, one for a start value and one for an end value, should automatically appear below.
-* Click the first field to open a calendar picker. Navigate to and select October 9th, 2017.
+* Click the first field to open a calendar picker. Navigate to and select the _day before_ today's date.
 * Click the second field to open a second calendar picker. Today's date should automatically be selected. Keep today's date.
 * Once you click out of this view, the dataset on the left should update to contain only the rows to which the filters apply.
 
