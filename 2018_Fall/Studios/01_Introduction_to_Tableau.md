@@ -162,30 +162,34 @@ And just like that, we can get a quick view of how many trees were added to the 
 ![Simple Bar Chart](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/22_Simple_Bar_Chart.png) 
 
 ___
-* **_PAUSE:_** Clear your workspace. Create a simple bar chart, but instead of plotting the number of records added by day, plot the number of records in this dataset by borough. 
+**_PAUSE:_** Clear your workspace. Create a simple bar chart, but instead of plotting the number of records added by day, plot the number of records in this dataset by borough. 
 ___
 
+![Borough Bars](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/23_Borough_Bars.png) 
 
-* In the right panel, you can see a number of different visualization options. Many of the options are grayed out. If you hover over a grayed-out tile, Tableau will give you a prompt to describe the kind of data necessary to make that option available. Some of the visualization options are not grayed out, however. Try clicking the `box-and-whisker plot`.
+* You should have landed about here. Click the `Show Me` tile in the top right side of the interface. Here, you can see a number of different visualization options. Many of the options are grayed out. If you hover over a grayed-out tile, Tableau will give you a prompt to describe the kind of data necessary to make that option available. Some of the visualization options are not grayed out, however. Try clicking the `packed bubbles` option.
 
-![Box-and-whisker](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/26_Box_Whisker.png) 
-
-This one gives us a weird distribution of the number of records by borough. Now, try clicking the `packed bubbles` option.
-
-![Packed Bubbles](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/27_Packed_Bubbles.png) 
+![Packed Bubbles](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/24_Packed_Bubbles.png) 
 
 Tableau does not give us much insight into whether these circles are sized by their diameters or areas, but this is an interesting representation nonetheless. Notice the changes that dynamically occur in the left panel as we render the data using these different methods. Also notice that Tableau has applied *both* position and color to these bubbles. Some of the terminology in the `Marks` panel should look familiar. Recall that the term `Mark` refers to the type of element we use to represent our _items_ and _links_. This panel contains a shape control, a `Color` control, a `Size` control, a `Label` control, as well as controls for `Detail` and `Tooltip`. Tableau surfaces many of the different visual variables we have talked about so far. (Bonus question: which ones are missing?) 
-* Select the `treemap` option in the top right panel. 
+* Now, try selecting the `treemap` option in the top right panel. 
 
-![Treemap](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/28_Treemap.png) 
+![Treemap](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/25_Treemap.png) 
 
 Would you consider this an accurate representation? Why or why not?
 
 * Try the stacked bar, now. How about this one? What might be its strengths or weaknesses?
 
-![Stacked Bar](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/29_Stacked_Bar.png) 
+![Stacked Bar](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/26_Stacked_Bar.png) 
 
-* Try any of the additional visualizations we have not yet explored. Different options become available with different combinations (and numbers) of dimensions and attributes. 
+___
+**_PAUSE:_** Clear your workspace. Trying creating two different visualizations using any of the types we have not yet explored. Different options become available with different combinations (and numbers) of dimensions and attributes. 
+___
+
+
+
+
+
 * Go back to the bar chart.
 * Again, put `Borough` in the `Columns` section, and `SUM(Number of Records)` in the `Rows` section. 
 * Let's try to break this up a bit by complaint type, in order to gain more insight into the things different boroughs complain about. A good way to do this might be by exploring a stacked bar chart. From the left `Dimensions` panel, grab `Complaint Type` and drag it into the `Marks` panel, on top of the `Color` swatch.
