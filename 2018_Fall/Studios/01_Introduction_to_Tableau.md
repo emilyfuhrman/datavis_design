@@ -186,50 +186,23 @@ ___
 **_PAUSE:_** Clear your workspace. Trying creating two different visualizations using any of the types we have not yet explored. Different options become available with different combinations (and numbers) of dimensions and attributes. 
 ___
 
+* Clear your workspace again. 
+* Once more, put `Created At` in the `Columns` section, and set it to `DAY` granularity.
+* Put `Number of Records` in the `Rows` section. 
+* Let's now layer on an additional visual variable to break these bars out by borough, to gain more insight into the boroughs the volunteers who put this dataset together were spending time in. A good way to do this might be by exploring a stacked bar chart. From the left `Dimensions` panel, grab `Borough` and drag it into the `Marks` panel, on top of the `Color` swatch.
+
+![Stacked Borough Bars](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/27_Stacked_Borough_Bars.png) 
+
+* I cannot immediately tell by looking at this what borough each color refers to. To mitigate this, go to the top `Analysis` menu, `> Legends > Color Legend (Borough)`. 
+
+![Color Legend Menu](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/28_Color_Legend_Menu.png) 
+
+A legend on the right, labeling each color swatch, should appear. 
+
+![Color Legend](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/29_Color_Legend.png) 
 
 
 
-
-* Go back to the bar chart.
-* Again, put `Borough` in the `Columns` section, and `SUM(Number of Records)` in the `Rows` section. 
-* Let's try to break this up a bit by complaint type, in order to gain more insight into the things different boroughs complain about. A good way to do this might be by exploring a stacked bar chart. From the left `Dimensions` panel, grab `Complaint Type` and drag it into the `Marks` panel, on top of the `Color` swatch.
-
-![Tableau Warning](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/30_Tableau_Warning.png) 
-
-* A warning pops up, because there are so many different types of complaints in the dataset. Click `Filter and then add`. This will allow us to select the complaint types we are most interested in, and apply them to the existing borough bars.
-
-![Filter Panel](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/31_Filter_Panel.png) 
-
-* In the filter panel, select a few complaint types that interest you (I chose `Blocked Driveway` and `Damaged Tree`). Remember these, because we will need them later.
-* Once finished, click `OK`. Your chart should update to include only those values you selected.
-
-![Stacked Borough Bars](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/32_Stacked_Borough_Bars.png) 
-
-* Right away, I notice that `Staten Island` and the `Unspecified` catchall have been filtered out, because there were no complaints registered in those boroughs (or without a borough designation) that fall into the categories I selected.
-* To make this more interesting, I am going to go back and select seven total complaint types to display in my bar chart. Go to the left `Complaint Type` pill in the `Filters` section, click to open the menu, and select `Edit filter...`.
-
-![Edit Filter](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/33_Edit_Filter.png) 
-
-* Check seven (no more! -- remember this rule of thumb) different items in the list. Again, remember what these are.
-* Click `OK`.
-
-![More Categories](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/34_More_Categories.png) 
-
-* My bar chart has a few more categories now. (Still no Staten Island, though). There is one more change I would like to make: I want to remove the `Unspecified` bar from the chart. To do this, navigate to the `Columns` section, which contains the `Boroughs` pill.
-* Click to open its menu.
-* Select `Filter...`
-
-![Filter Boroughs](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/35_Filter_Boroughs.png) 
-
-* Un-check `Unspecified`.
-
-![No Unspecified](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/36_No_Unspecified.png) 
-
-* Click `OK`.
-
-![Filtered](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/37_Filtered.png) 
-
-Great! It disappeared.
 
 #### Making a map
 
