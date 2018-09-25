@@ -202,54 +202,11 @@ ___
 A legend on the right, labeling each color swatch, should appear. 
 
 ![Color Legend](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/29_Color_Legend.png) 
+___
+**_CHALLENGE #1:_** In a new worksheet in your workbook, create the below chart. 
+___
 
-
-
-
-#### Making a map
-
-* Let's leave this sheet alone for now. But before we go, let's change the title of `Sheet 1` to something else. I will call this `Types_by_Borough`.
-* Double-click `Sheet 1` to edit.
-* Type your desired name.
-* Hit `Enter`.
-* Now, navigate to the button just to the right of this sheet. Its tooltip should say `New Worksheet`. 
-* Click this button.
-* We land on a workspace just like the one we just left. This one is a blank, fresh slate. We can still access the chart we just made by clicking a tab to the left. Here, let's make a quick map. Tableau makes this incredibly easy. In the `Dimensions` section of the left panel, locate `Incident Zip`.
-* Double-click `Incident Zip`.
-
-![Zip Map](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/38_Zip_Map.png) 
-
-* Right away, we see a dot map containing a point for every zip code in the dataset. However, this does not tell us very much: the dots are evenly distributed across New York City. To add some more nuance to this, let's go back to the `Complaint Type` variable. From the `Dimensions` panel, drag `Complaint Type` once again onto the `Color` tile in the left `Marks` panel.
-* We are faced with the same filter dialog. Select the same complaint types that you selected for the previous chart.
-
-![Zip Complaints](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/39_Zip_Complaints.png) 
-
-* The points now take on the color of their associated complaint type. However, this does not tell us how many of each complaint type occurred in each given location. To draw this out of the data, drag `Number of Records` from the `Measures` section of the left panel to the `Size` tile in the `Marks` panel.
-
-![Zip Complaints Sized](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/40_Zip_Complaints_Sized.png) 
-
-* Now we can get a bit more insight into the types of complaints occurring across the city. (You might try doing this with all complaints at once, to see what patterns emerge.) Let's now create an interactive display of the two charts we have made. First, name this tab to something sensible. I'm calling mine `Types_Map`.
-* Next to the `New Worksheet` button is a `New Dashboard` button. Click this.
-
-![New Dashboard](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/41_New_Dashboard.png) 
-
-* We now land in a new kind of workspace, which gives us access to the two sheets we just created. On the left panel, instead of our variables, we now see a `Sheets` section, which contains both our map and our chart. Drag the `Types_by_Borough` chart into the area labeled `Drop sheets here`.
-
-![Dropped Chart](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/42_Dropped_Chart.png) 
-
-* The chart appears, polished and already interactive. Drag the `Types_Map` over, too, in whatever arrangement feels best.
-
-![Dropped Map](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/43_Dropped_Map.png) 
-
-* Anytime you navigate back to the sheet tabs and make changes, those changes will be visible here. Experiment with hiding and showing the legend, changing the titles of each chart, and even editing the colors, if you like.
-* Let's add a filter to this view, to make it more navigable. Click the `Types_by_Borough` chart.
-* Notice that a light gray toolbar appears on the right. Click the option that looks like a funnel, `Use as filter`.
-
-![Use as Filter](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/44_Use_as_Filter.png) 
-
-* Now, when I click an item in the bar chart, the map below will update to show only the data that corresponds to the currently-selected bar.
-
-![Filtered](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/45_Filtered.png)
+![Challenge 01](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/30_Challenge_01.png) 
 
 * Save your workbook to Tableau Public.
 
