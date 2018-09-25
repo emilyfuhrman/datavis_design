@@ -161,10 +161,9 @@ And just like that, we can get a quick view of how many trees were added to the 
 
 ![Simple Bar Chart](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/22_Simple_Bar_Chart.png) 
 
+___
 * **_PAUSE:_** Clear your workspace. Create a simple bar chart, but instead of plotting the number of records added by day, plot the number of records in this dataset by borough. 
-
-
-===
+___
 
 
 * In the right panel, you can see a number of different visualization options. Many of the options are grayed out. If you hover over a grayed-out tile, Tableau will give you a prompt to describe the kind of data necessary to make that option available. Some of the visualization options are not grayed out, however. Try clicking the `box-and-whisker plot`.
