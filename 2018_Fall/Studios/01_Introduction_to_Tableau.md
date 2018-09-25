@@ -76,22 +76,15 @@ We will be using one dataset for this studio:
 	* "Discover" points us to a series of Tableau-provided resources.
 * In the left "Connect" panel, under `To a File`, select `Excel`. 
 
-
-
-x
-
-
-
-
-![Tableau Open File](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/08_Tableau_Open.png)
+![Tableau Open File](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/11_Tableau_Open_File.png)
 
 * Browse for your Excel file, and select it. 
 
-![Tableau Imported](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/09_Tableau_Imported.png)
- 
+![Tableau Imported](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/12_Tableau_Imported.png)
+
 * We land on a blank workspace, with our connected Excel file visible in the top left corner. Try dragging your `Trimmed` sheet to the `Drag sheets here` area.
 
-![Tableau Dragged Trimmed](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/10_Tableau_Dragged_Trimmed.png)
+![Tableau Dragged Trimmed](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/13_Tableau_Dragged_Trimmed.png)
 
 * The data should show up in a tabular format, exactly as it appeared in Excel. Tableau attempts to automatically resolve attribute types into one of the following:
 	* Number (decimal)
@@ -101,64 +94,17 @@ x
 	* String
 	* Boolean
 * Click on the small icons accompanying the label in each column to get a closer look.
-	* `Created date` resolved to `Date & Time`
-	* `Agency` resolved to `String`
-	* `Unique Key` resolved to `Number (whole)`
-* Some of the icon dropdowns contain a `Geographic role` option in the menu that appears. This may or may not be applicable to the actual variable. Try clicking on `Incident Zip`. While the value resolved to `Number (whole)`, if you navigate down to the `Geographic role` option in the menu, Tableau was able to detect that this is a zip code. 
+	* `Created At` resolved to `Date & Time`
+	* `Status` resolved to `String`
+	* `Borocode` resolved to `Number (whole)`
+* Some of the icon dropdowns contain a `Geographic role` option in the menu that appears. This may or may not be applicable to the actual variable. Try clicking on `Postcode`. While the value resolved to `Number (whole)`, if you navigate down to the `Geographic role` option in the menu, Tableau was able to detect that this is a zip code. 
 
-![Tableau Zip Geographic Role](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/11_Zip_Geographic_Role.png)
+![Tableau Zip Geographic Role](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/14_Zip_Geographic_Role.png)
 
-* Now, try scrolling all the way to the right to the `Latitude` and `Longitude` columns. Check the `Geographic Role` for each of these, which should be `Latitude` and `Longitude`, accordingly.
+* Now, try scrolling all the way to the right to the `Latitude` and `Longitude` columns. Check the `Geographic Role` for each of these, which should be `Latitude` and `Longitude`, accordingly. 
 
-#### Cleaning data in Tableau
-
-* In an ideal scenario, each variable we want to work with is in a separate column in our dataset. Sometimes, however, data that is meant to be human-readable is poorly formatted for machines. Take this Excel file, which includes some additional metadata in its top rows:
-
-![Excel Dirty](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/12_Excel_Dirty.png)
-
-* When I try to import this into Tableau, I do get a data preview that represents values from the file. However, some things are messed up: the column headers in my preview, here, took on the cell numbers from my spreadsheet, instead of the actual names of each variable. 
-
-![Tableau Dirty](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/13_Tableau_Dirty.png)
-
-* Luckily, Tableau does offer us a handy way of cleaning up common formatting mistakes like this one. In the left panel, in the `Sheets` section, find the `Use Data Interpreter` option. Check the box.
-
-![Tableau Clean](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/14_Tableau_Clean.png)
-
-* Once the box is checked, Tableau strips out what it detects to be unnecessary noise, and presents us with the table headers we saw in our "clean" data view. 
-
-#### Pivoting data in Tableau
-
-* Tableau's pivot function is another way of handling data that is not in its ideal format. Though the 311 dataset is in a workable format, with one variable per column, sometimes we encounter data with one variable spread out over multiple columns. Take this sample `.CSV` file of sales data, for instance:
-
-![Sample Pivot Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/15_Sample_Pivot_Data.png)
-
-* Here, years are spread out over three different columns: `2014`, `2015`, and `2016`. If we import this into Tableau, we see the following:
-
-![Imported Pivot](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/16_Imported_Pivot.png)
-
-* The first thing to notice here is that Tableau did not properly detect our header row, likely because the variable types of the headers correspond to the detected variable types of the values. To fix this, navigate to the labeled bar in the workspace above the table preview, click the bar to reveal a dropdown menu, and select `Field names are in first row`.
-
-![Fix Field Names](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/17_Fix_Field_Names.png)
-
-* Even though our data is now properly detected, we still want to solve the multiple-date-columns problem. In their current format, they do not make even creating a line chart over time easy, since each date value is considered a separate field. If we navigate to `Sheet 1` into Tableau's visual workspace, we can see that the current data format is not amenable to visualizing very much:
-
-![Needs Pivoting](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/18_Needs_Pivoting.png)
-
-* In this preview area, select all three columns.
-* Right-click the columns to bring up a menu.
-
-![Pivot Menu](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/19_Pivot_Menu.png)
-
-* Select `Pivot`. 
-
-![Pivoted](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/20_Pivoted.png)
-
-* We can now see that the data from the three columns has now been "stacked" into two new columns: `Pivot Field Names` and `Pivot Field Values`. Rename these columns to `Year` and `Num_Sales`.
-* Now, if we navigate to `Sheet 1`, we can easily drag and drop the new variables to form a chart that displays this data over time.
-
-![Pivot Visualized](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/21_Pivot_Visualized.png) 
-
-### Visualizing 311 Data
+===
+### Visualizing 2015 Tree Census Data
 #### Making a chart
 
 * Return to our trimmed 311 dataset (`Data Source` > `Database icon` > `(Select)`).
@@ -310,3 +256,52 @@ Great! It disappeared.
 ![Filtered](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/45_Filtered.png)
 
 * Save your workbook to Tableau Public.
+
+### Extra Tips
+#### Cleaning data in Tableau
+
+* In an ideal scenario, each variable we want to work with is in a separate column in our dataset. Sometimes, however, data that is meant to be human-readable is poorly formatted for machines. Take this Excel file, which includes some additional metadata in its top rows:
+
+![Excel Dirty](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/12_Excel_Dirty.png)
+
+* When I try to import this into Tableau, I do get a data preview that represents values from the file. However, some things are messed up: the column headers in my preview, here, took on the cell numbers from my spreadsheet, instead of the actual names of each variable. 
+
+![Tableau Dirty](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/13_Tableau_Dirty.png)
+
+* Luckily, Tableau does offer us a handy way of cleaning up common formatting mistakes like this one. In the left panel, in the `Sheets` section, find the `Use Data Interpreter` option. Check the box.
+
+![Tableau Clean](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/14_Tableau_Clean.png)
+
+* Once the box is checked, Tableau strips out what it detects to be unnecessary noise, and presents us with the table headers we saw in our "clean" data view. 
+
+#### Pivoting data in Tableau
+
+* Tableau's pivot function is another way of handling data that is not in its ideal format. Though the 311 dataset is in a workable format, with one variable per column, sometimes we encounter data with one variable spread out over multiple columns. Take this sample `.CSV` file of sales data, for instance:
+
+![Sample Pivot Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/15_Sample_Pivot_Data.png)
+
+* Here, years are spread out over three different columns: `2014`, `2015`, and `2016`. If we import this into Tableau, we see the following:
+
+![Imported Pivot](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/16_Imported_Pivot.png)
+
+* The first thing to notice here is that Tableau did not properly detect our header row, likely because the variable types of the headers correspond to the detected variable types of the values. To fix this, navigate to the labeled bar in the workspace above the table preview, click the bar to reveal a dropdown menu, and select `Field names are in first row`.
+
+![Fix Field Names](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/17_Fix_Field_Names.png)
+
+* Even though our data is now properly detected, we still want to solve the multiple-date-columns problem. In their current format, they do not make even creating a line chart over time easy, since each date value is considered a separate field. If we navigate to `Sheet 1` into Tableau's visual workspace, we can see that the current data format is not amenable to visualizing very much:
+
+![Needs Pivoting](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/18_Needs_Pivoting.png)
+
+* In this preview area, select all three columns.
+* Right-click the columns to bring up a menu.
+
+![Pivot Menu](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/19_Pivot_Menu.png)
+
+* Select `Pivot`. 
+
+![Pivoted](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/20_Pivoted.png)
+
+* We can now see that the data from the three columns has now been "stacked" into two new columns: `Pivot Field Names` and `Pivot Field Values`. Rename these columns to `Year` and `Num_Sales`.
+* Now, if we navigate to `Sheet 1`, we can easily drag and drop the new variables to form a chart that displays this data over time.
+
+![Pivot Visualized](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/21_Pivot_Visualized.png)
