@@ -16,14 +16,14 @@ We will be using one dataset for this studio:
 ![Landing](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/01_Landing.png)
 
 * Click on the `Data` tab. Here you can explore different datasets by category, by popularity, or by recency. 
-* Today we will be working with the 2015 Tree Census dataset. The Tree Census (this one, put together between 2015-2016) is conducted by "2,200 volunteers together in the largest participatory municipal urban forestry project in United States history. Using both high tech tools and survey wheels, tape measures, and tree identification keys, citizen mappers [help] create a spatially accurate digital inventory of NYC’s street trees" ([Source](https://www.nycgovparks.org/trees/treescount)). Type `tree` in the search bar, and hit `Enter`. 
+* Today we will be working with the 2015 Tree Census dataset. The Tree Census (this one, put together between 2015-2016) is conducted by "2,200 volunteers together in the largest participatory municipal urban forestry project in United States history. Using both high tech tools and survey wheels, tape measures, and tree identification keys, citizen mappers [help] create a spatially accurate digital inventory of NYC’s street trees" ([Source](https://www.nycgovparks.org/trees/treescount)). To access this dataset, type `tree` in the search bar, and hit `Enter`. 
 
 ![Search](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/02_Search.png)
 
 * Click on the second result, `2015 Tree Census - Tree Data`.
 
 ![Selection](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/03_Selection.png)
-![Preview](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/04_Preview.png)
+![Data Preview](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/04_Data_Preview.png)
 
 * [Here](https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/uvpi-gqnh), you can see a great deal of information about this dataset: its attributes, its size, the frequency with which it is updated, its format. Scroll down to the `Table Preview` section to get a picture of what the data looks like in tabular format.
 * Click `View Data`. Here, you can see the dataset in its entirety. You can also apply filters to the data to prepare it for download.
