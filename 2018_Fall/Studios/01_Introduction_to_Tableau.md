@@ -202,11 +202,18 @@ ___
 A legend on the right, labeling each color swatch, should appear. 
 
 ![Color Legend](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/29_Color_Legend.png) 
+
 ___
-**_CHALLENGE #1:_** In a new worksheet in your workbook, create the below chart. 
+**_CHALLENGE #1:_** In a new worksheet in your workbook, create a chart that answers the question: "What is the proportion of `Alive`, `Dead`, and `Stump` trees in this census?"
 ___
 
 ![Challenge 01](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/30_Challenge_01.png) 
+
+___
+**_CHALLENGE #2:_** In a new worksheet in your workbook, create a chart that answers the question: "What is the distribution of stump diameters measured by borough over time?"
+___
+
+![Challenge 02](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/31_Challenge_02.png) 
 
 * Save your workbook to Tableau Public.
 
@@ -215,15 +222,15 @@ ___
 
 * In an ideal scenario, each variable we want to work with is in a separate column in our dataset. Sometimes, however, data that is meant to be human-readable is poorly formatted for machines. Take this Excel file, which includes some additional metadata in its top rows:
 
-![Excel Dirty](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/12_Excel_Dirty.png)
+![Excel Dirty](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/32_Excel_Dirty.png)
 
 * When I try to import this into Tableau, I do get a data preview that represents values from the file. However, some things are messed up: the column headers in my preview, here, took on the cell numbers from my spreadsheet, instead of the actual names of each variable. 
 
-![Tableau Dirty](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/13_Tableau_Dirty.png)
+![Tableau Dirty](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/33_Tableau_Dirty.png)
 
 * Luckily, Tableau does offer us a handy way of cleaning up common formatting mistakes like this one. In the left panel, in the `Sheets` section, find the `Use Data Interpreter` option. Check the box.
 
-![Tableau Clean](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/14_Tableau_Clean.png)
+![Tableau Clean](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/34_Tableau_Clean.png)
 
 * Once the box is checked, Tableau strips out what it detects to be unnecessary noise, and presents us with the table headers we saw in our "clean" data view. 
 
@@ -231,30 +238,30 @@ ___
 
 * Tableau's pivot function is another way of handling data that is not in its ideal format. Though the 311 dataset is in a workable format, with one variable per column, sometimes we encounter data with one variable spread out over multiple columns. Take this sample `.CSV` file of sales data, for instance:
 
-![Sample Pivot Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/15_Sample_Pivot_Data.png)
+![Sample Pivot Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/35_Sample_Pivot_Data.png)
 
 * Here, years are spread out over three different columns: `2014`, `2015`, and `2016`. If we import this into Tableau, we see the following:
 
-![Imported Pivot](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/16_Imported_Pivot.png)
+![Imported Pivot](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/36_Imported_Pivot.png)
 
 * The first thing to notice here is that Tableau did not properly detect our header row, likely because the variable types of the headers correspond to the detected variable types of the values. To fix this, navigate to the labeled bar in the workspace above the table preview, click the bar to reveal a dropdown menu, and select `Field names are in first row`.
 
-![Fix Field Names](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/17_Fix_Field_Names.png)
+![Fix Field Names](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/37_Fix_Field_Names.png)
 
 * Even though our data is now properly detected, we still want to solve the multiple-date-columns problem. In their current format, they do not make even creating a line chart over time easy, since each date value is considered a separate field. If we navigate to `Sheet 1` into Tableau's visual workspace, we can see that the current data format is not amenable to visualizing very much:
 
-![Needs Pivoting](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/18_Needs_Pivoting.png)
+![Needs Pivoting](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/38_Needs_Pivoting.png)
 
 * In this preview area, select all three columns.
 * Right-click the columns to bring up a menu.
 
-![Pivot Menu](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/19_Pivot_Menu.png)
+![Pivot Menu](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/39_Pivot_Menu.png)
 
 * Select `Pivot`. 
 
-![Pivoted](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/20_Pivoted.png)
+![Pivoted](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/40_Pivoted.png)
 
 * We can now see that the data from the three columns has now been "stacked" into two new columns: `Pivot Field Names` and `Pivot Field Values`. Rename these columns to `Year` and `Num_Sales`.
 * Now, if we navigate to `Sheet 1`, we can easily drag and drop the new variables to form a chart that displays this data over time.
 
-![Pivot Visualized](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/21_Pivot_Visualized.png)
+![Pivot Visualized](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/41_Pivot_Visualized.png)
