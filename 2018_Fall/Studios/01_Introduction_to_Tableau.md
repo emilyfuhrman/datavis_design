@@ -23,62 +23,65 @@ We will be using one dataset for this studio:
 * Click on the second result, `2015 Tree Census - Tree Data`.
 
 ![Selection](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/03_Selection.png)
-![Data Preview](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/04_Data_Preview.png)
 
 * [Here](https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/uvpi-gqnh), you can see a great deal of information about this dataset: its attributes, its size, the frequency with which it is updated, its format. Scroll down to the `Table Preview` section to get a picture of what the data looks like in tabular format.
-* Click `View Data`. Here, you can see the dataset in its entirety. You can also apply filters to the data to prepare it for download.
+
+![Data Preview](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/04_Data_Preview.png)
+
+* Now, click `View Data`. Here, you can see the dataset in its entirety. You can also apply filters to the data to prepare it for download.
 
 ![Dataset](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/05_Dataset.png)
 
 * On the right side of the page, you will see a `Filter` panel, with the `Filter` sub-section automatically selected. We will be using this section to isolate only complaints from the past week, to make the size of the dataset more manageable.
-* Click `Add a New Filter Condition`.
-* In the first dropdown, which opens a menu containing all of the column headers in the dataset, select the `created_at` field.
-* Click the `is` dropdown menu, and select `is between`. Two fields, one for a start value and one for an end value, should automatically appear below.
-* Click the first field to open a calendar picker. Navigate to and select the first day of June 2016, `06/01/2016`.
-* Click the second field to open a second calendar picker. Navigate to and select the last day of June 2016, `06/30/2016`.
+	* Click `Add a New Filter Condition`.
+	* In the first dropdown, which opens a menu containing all of the column headers in the dataset, select the `created_at` field.
+	* Click the `is` dropdown menu, and select `is between`. Two fields, one for a start value and one for an end value, should automatically appear below.
+	* Click the first field to open a calendar picker. Navigate to and select the first day of June 2016, `06/01/2016`.
+	* Click the second field to open a second calendar picker. Navigate to and select the last day of June 2016, `06/30/2016`.
 * Once you click out of this view, the dataset on the left should update to contain only the rows to which the filters apply.
 
 ![Filter](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/06_Filter.png)
 
 * Now, click the blue `Export` button from the set of colorful buttons on the top right side of the table. Click `Download > CSV`. This will download the filtered dataset in CSV format.
 * Open up the downloaded CSV in Excel or Google Sheets. Before creating our visualization, we'll want to trim down the size of the dataset by deleting unnecessary columns.
-
-
-
-
-
-
--
-
 * Keep the raw data in its current tab. In Excel, right-click the tab, select `Move or Copy...`, select `Create a copy`, and `(move to end)`. Name the tab `Trimmed`, or something similar. In this new copied tab, we will edit down the original raw data into a cleaner working version.
 * Delete all columns except the following:
-	* `Unique Key`
-	* `Created Date`
-	* `Agency`
-	* `Agency Name`
-	* `Complaint Type`
-	* `Descriptor`
-	* `Incident Zip`
-	* `Status`
-	* `Borough`
-	* `Latitude`
-	* `Longitude`
+	* `tree_id`
+	* `block_id`
+	* `created_at`
+	* `stump_diam`
+	* `curb_loc`
+	* `status`
+	* `postcode`
+	* `zip_city`
+	* `borocode`
+	* `borough`
+	* `state`
+	* `latitude`
+	* `longitude`
 * Your dataset should now look something like this:
 
-![Excel](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/06_Excel_Working.png)
+![Excel Trimmed](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/09_Excel_Trimmed.png)
 
 #### Importing data into Tableau
 
 * If you have not already done so, download and install [Tableau Public](https://public.tableau.com/s/).
 * Open Tableau Public.
 
-![Tableau Landing Screen](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/07_Tableau_Landing_Screen.png)
+![Tableau Landing Screen](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/10_Tableau_Landing_Screen.png)
 
 * The first thing you see when you open Tableau is a screen with three sections: "Connect," "Open," and "Discover."
 	* The "Connect" section enables us to connect different types of data into the workspace.
 	* Since we have not saved any workbooks yet, the "Open" section is blank. 
 	* "Discover" points us to a series of Tableau-provided resources.
 * In the left "Connect" panel, under `To a File`, select `Excel`. 
+
+
+
+x
+
+
+
 
 ![Tableau Open File](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/01/08_Tableau_Open.png)
 
