@@ -31,6 +31,8 @@ We will be using two datasets for this studio:
 
 ![Date Changed](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/04_Date_Changed.png)
 
+#### Plotting the popularity of names over time
+
 * Let's start by plotting the popularity of the name `Otto` over time. From the `Dimensions` panel on the left, drag `Year` to the `Columns` bar.
 * Drag `Prop` to the `Rows` bar.
 
@@ -55,7 +57,7 @@ We will be using two datasets for this studio:
 ![Otto Plot](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/08_Otto_Plot.png)
 
 * The line chart will update to only include data associated with the name `Otto`. 
-* In the top bar, set the `YEAR` value to be a `Dimension`. This will avoid any default aggregation Tableau is inclined to perform.
+* In the top bar, set the `Year` value to be a `Dimension`. This will avoid any default aggregation Tableau is inclined to perform.
 
 ![Set to Dimensions](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/09_Set_to_Dimension.png)
 
@@ -81,46 +83,53 @@ Interesting! And more readable. This plot makes it clear that there are two clus
 
 * Nice. We can now clearly see that Michelle as a female name peaked around 1970, around the same period it surfaced as a male name.
 
+![Polished Chart](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/15_Polished_Chart.png)
+
+#### Plotting the popularity of names that sound like a name over time
+
+* Now, let's try to use the `Soundex` variable to plot the popularity over time of names that sound like Otto. Return to your `Otto` plot (or create it again).
+* Drag the `Soundex` dimension from the left panel to the `Detail` tile in the `Marks` panel.
+* In the top right `Show Me` menu, select the top left option to display a table.
+
+![Otto Table](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/16_Otto_Table.png)
+
+* From here, we can see that the value for `Soundex` is `O300`.
+* Remove both `Soundex` and the `Name` dimensions from your display, so that only `Year` and `Prop` are visible. 
+* Drag the `Soundex` dimension to the `Color` tile in the `Marks` panel.
+* When prompted to filter the data, again choose `Select from list`.
+* Click the `None` button to deselect all options.
+* In the search field, enter `O300`. Note that the first character is an `O`, not a `0`!
+
+![Otto Soundex](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/17_Otto_Soundex.png)
+
+* In the resultant plot, change your `Mark` type to `Shape`, and reduce the size.
+* Drag the `Name` dimension to the `Detail` tile.
+
+![Otto Soundex Plot](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/18_Otto_Soundex_Plot.png)
+
+And we can see a pattern similar to the one we saw to our original "Otto" line plot. 
+
+___
+**_PAUSE:_** Clear your workspace, or open a new tab. Now, run through the same process on a different name, and see if you can uncover any interesting patterns.
+___
+
+#### Joining another dataset
+
+![Add More Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/19_Add_More_Data.png)
+![Join Datasets](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/20_Join_Datasets.png)
 
 
 
 
 
 
-* Now, let's try to use the `soundex` variable to plot the popularity over time of names that sound like Otto. Let's first access our subset, `otto_records`, to write the value of the `soundex` variable in the first record to a new variable, `otto_soundex`:
 
-```
-> otto_soundex <- otto_records$soundex[1]
-```
 
-* Next, let's create a new dataset of names that share the same `soundex` value (i.e. names that sound similar to Otto):
 
-```
-> otto_like <- subset (bnames2, soundex == otto_soundex)
-```
 
-* Finally, plot the new dataset using `point` geometry:
 
-```
-> qplot(x = year, y = prop, data = otto_like, geom = 'point')
-```
 
-![Like Otto Plot](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/07_Like_Otto_Plot.png)
 
-And we can see a pattern similar to the one we saw to our original "Otto" line plot.
-* Now, run through the same process on a different name, and see if you can uncover any interesting patterns.
-
-#### A note on R base graphics
-
-When working with simple charts like the ones above, it can be suitable to use the native plotting functions in base R. These functions do not require the installation of an additional package. When looking to create anything other than a simple plot, however, move on to `ggplot2`. The package surfaces extensive aesthetic control over your graphics, and provides more options for customization. 
-
-As an example, the syntax below (which takes into account the subsets we created above), which is written in base R, produces a simple scatterplot about equivalent to the `qplot` we created for Otto:
-
-```
-> plot(otto_records$year,otto_records$prop)
-```
-
-![Otto Base](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/08_Otto_Base.png)
 
 #### Births
 
