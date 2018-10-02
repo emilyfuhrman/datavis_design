@@ -115,250 +115,49 @@ ___
 
 #### Joining another dataset
 
+Now, suppose we would like to explore trends in the total number of people with specific names across all of the years. The `bnames2` dataset only contains proportions. To be able to explore this question further, we need total number of births by year. Enter the `births` dataset. We can combine this dataset with our `bnames2` dataset to give our analysis more granularity.
+
+* In the top left corner of the viewscreen, locate the icon that looks like a database with a `+` next to it.
+
 ![Add More Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/19_Add_More_Data.png)
+
+* Select the `births.csv` dataset.
+* In the preview screen, drag the `bnames2.csv` file to the same area.
+
 ![Join Datasets](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/20_Join_Datasets.png)
 
+* We can see the data was automatically joined, but it needs a bit of help. First, set the variable type for `Year` in both datasets to `Date`.
+* Next, click the join icon between the two datasets, and add an additional join clause that sets `Sex` in the data source equal to `Sex` in `bnames2.csv`.
 
+![Join Clause](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/21_Join_Clause.png)
 
+* Open up a new tab. To get a picture of what this dataset looks like, let's first plot the trends in total number of `births` across `sex` by `year`.
 
+![Plot Births](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/22_Plot_Births.png)
 
+#### Exploring name popularity in greater depth
 
+* Open up another new tab.
+* To delve more deeply into the popularity of the name Otto over time, let's compute an absolute count of the instances of `Otto` using the `prop` variable and the newly-joined `births` value. Since the `prop` variable represents the proportion of people of a given gender with a given name for a given year, multiplying `prop` by `births` for that year gives us an absolute number representative of the number of people with that name. In the top right corner of the `Dimensions` panel, select `Create Calculated Field...`.
 
+![Create Calculated Field](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/23_Create_Calculated_Field.png)
 
+* In the window that opens, name your new field (I called mine `tot`), and type `[births]*[Prop]` in the formula area below.
 
+![New Field](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/24_New_Field.png)
 
+* Now, let's plot the popularity of `Otto` as a line once again, though using `tot` on our y-axis instead of `prop`:
 
+![Otto Absolute](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/25_Otto_Absolute
 
+* Okay! This paints a different picture. Otto is still declining in absolute terms, but we can see a small peak around ~1915. Now, polish up your chart by giving it an informative title and axis labels. 
 
+![Otto Polish](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/26_Otto_Polish.png)
 
-#### Births
+* Add an annotation by right-clicking in your workspace, and selecting `Caption`.
 
-Now, suppose we would like to explore trends in the total number of people with specific names across all of the years. The `bnames2` dataset only contains proportions. To be able to explore this question further, we need total number of births by year. Enter the `births` dataset. After some initial exploration, we will combine this dataset with our `bnames2` dataset to give our analysis more granularity.
+![Otto Caption](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/27_Otto_Caption.png)
 
-* Download the `births` dataset above.
-* Add it to your working directory.
-* Read the dataset in using `read.csv()`, and assign it to the variable `births_data`.
-
-```
-> births_data <- read.csv("births.csv")
-```
-
-* To get a picture of what this dataset looks like, let's plot the trends in total number of `births` across `sex` by `year`.
-
-```
-> qplot(x = year, y = births, color = sex, data = births_data, geom = 'line')
-```
-
-![Plot Births](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/09_Plot_Births.png)
-
-Note that by specifying `color = sex`, we do not need to additionally specify `group = sex`. If we only specify `group = sex`, the two groups are not colored. If we specify neither, we get a jagged line as in our original exploration of "Michelle" in `bnames2`.
-
-#### Data manipulation
-
-Finally, we can combine these two datasets into a single, richer dataset, which opens up new analyses. Base R has a `merge` function that can achieve this. (Read more about the `merge` function and its parameters [here](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/merge).) However, we can also use the `plyr` package to `join` the datasets.
-
-* Install and load the `plyr` package:
-
-```
-> install.packages("plyr")
-> library(plyr)
-```
-
-* For our purposes, the following command is enough to join the `bnames2` dataset with the `births_data` dataset, by way of the matching `year` column:
-
-```
-> bnames2_b <- join(bnames2, births_data, by = c("sex", "year"))
-```
-
-* Now, test that the join was properly carried out by entering `head(bnames2_b)`:
-
-```
-> head(bnames2_b)
-  year    name     prop sex soundex births
-1 1880    John 0.081541 boy    J500 118405
-2 1880 William 0.080511 boy    W450 118405
-3 1880   James 0.050057 boy    J520 118405
-4 1880 Charles 0.045167 boy    C642 118405
-5 1880  George 0.043292 boy    G620 118405
-6 1880   Frank 0.027380 boy    F652 118405
-```
-
-Looks good. Note the addition of the `births` column on the far right. You can read up on `join` documentation by typing `?join` into the console. Let's continue on with the exploration we started.
-
-* To delve more deeply into the popularity of the name Otto over time, let's compute an absolute count of the instances of `Otto` using the `prop` variable and the newly-joined `births` value. Since the `prop` variable represents the proportion of people of a given gender with a given name for a given year, multiplying `prop` by `births` for that year gives us an absolute number representative of the number of people with that name. We will use the `mutate` function to create a new variable and plot it. As before, we start by subsetting out instances of `Otto`. Make sure to specify our new dataset:
-
-```
-> otto_records <- subset(bnames2_b, name == "Otto")
-```
-
-* Use the `mutate` function to create a new `tot` column, containing the value of `prop * births` (our absolute count):
-
-```
-> otto_records <- mutate(otto_records, tot = prop * births)
-```
-
-* Double check that this worked as expected:
-
-```
-> head(otto_records)
-     year name     prop sex soundex births      tot
-63   1880 Otto 0.002289 boy    O300 118405 271.0290
-1069 1881 Otto 0.002041 boy    O300 108290 221.0199
-2069 1882 Otto 0.002065 boy    O300 122034 252.0002
-3066 1883 Otto 0.002134 boy    O300 112487 240.0473
-4065 1884 Otto 0.002346 boy    O300 122745 287.9598
-5069 1885 Otto 0.002268 boy    O300 115948 262.9701
-```
-
-* And it did. Now, let's plot the popularity of `Otto` as a line once again, though using `tot` on our y-axis instead of `prop`:
-
-```
-> qplot(year, tot, data = otto_records, geom = 'line')
-```
-
-![Otto Absolute](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/15_Otto_Absolute.png)
-
-Okay! This paints a different picture. Otto is still declining in absolute terms, but we can see a small peak around ~1915.
-
-#### Basic chart types
-
-The `ggplot2` package contains a range of different graphs. We explore a few of them below. See [this gallery](http://www.r-graph-gallery.com/portfolio/ggplot2-package/) for more detail.
-
-##### Histogram
-
-A histogram provides a snapshot of the distribution of values for a given variable in a dataset. Remember, a histogram differs from a bar chart: it plots the distribution of records across a continuous variable, not a discrete variable. To test out this functionality, let's generate a histogram from the `bnames2` dataset that visualizes the distribution of the `prop` value.
-
-* Instead of `qplot`, this time we will call `ggplot`. 
-	* The first argument in the `ggplot` function specifies the dataset we are using. We specify `bnames2`.
-	* The second argument in the `ggplot` function, `aes()`, contains aesthetic guidelines for the output chart. We specify the variable we would like to use along the x-axis: `prop`.
-	* `geom_histogram()` is a function native to `ggplot`, which automatically generates a histogram from the provided data.
-
-```
-> ggplot(bnames2, aes(x=prop)) + geom_histogram()
-```
-
-![ggplot Histogram](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/10_ggplot_Histogram.png)
-
-* R sends us the following message: 
-
-```
-> `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-```
-
-To act on this, let's specify our bins to be of width `0.0005`.
-
-```
-> ggplot(bnames2, aes(x=prop)) + geom_histogram(binwidth = 0.0005)
-```
-
-![ggplot Histogram Bins](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/11_ggplot_Histogram_Bins.png)
-
-Not the most interesting distribution, but the smaller bins add more granularity.
-* We can use the `geom_histogram()` function to specify additional guidelines for the output chart. We can try a uniform color for all of the bars:
-
-```
-> ggplot(bnames2, aes(x=prop)) + geom_histogram(binwidth = 0.0005, fill = "red")
-```
-
-![ggplot Histogram Red](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/12_ggplot_Histogram_Red.png)
-
-* We can also try coloring the bars based on the values they represent, using an `aes()` function internal to `geom_histogram()`:
-
-```
-ggplot(bnames2, aes(x=prop)) + geom_histogram(binwidth = 0.0005, aes(fill = ..count..))
-```
-
-![ggplot Histogram Proportional](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/13_ggplot_Histogram_Proportional.png)
-
-##### Bar chart
-
-Generating a bar chart is similar to generating a histogram. In this case, we use the native `geom_bar()` function, and specify a single discrete variable. 
-
-* Let's return to our previous exploration of the name Michelle. To plot the instances of each similar name, we first capture the `soundex` value of `Michelle` from our newly-joined `bnames2_b` dataset. Note how this time, we can chain our commands to both filter the dataset and capture the first `soundex` value in the returned records.
-
-```
-> michelle_soundex <- subset(bnames2_b, name == "Michelle")$soundex[1]
-```
-
-* We now filter the dataset for soundex values equivalent to `michelle_soundex`:
-
-```
-> like_michelle <- subset(bnames2_b, soundex == michelle_soundex)
-```
-
-* Check it, to make sure the operation produced expected results:
-
-```
-> head(like_michelle)
-     year    name     prop sex soundex births
-46   1880 Michael 0.002990 boy    M240 118405
-390  1880 Micheal 0.000169 boy    M240 118405
-551  1880  Miguel 0.000101 boy    M240 118405
-668  1880 Maxwell 0.000076 boy    M240 118405
-878  1880  Michel 0.000051 boy    M240 118405
-1054 1881 Michael 0.002761 boy    M240 108290
-```
-
-* Now, we create a bar plot with `name` along the x-axis.
-	* The first argument in `ggplot()` specifies our dataset. In this case, `like_michelle`.
-	* The second argument is our `aes()` function, containing aesthetic guidelines for the chart as a whole. Here, we tell it to treat the `name` variable as a factor (or a categorical, not continuous, variable).
-
-```
-> ggplot(like_michelle, aes(x=as.factor(name))) + geom_bar()
-```
-
-![ggplot Like Michelle Bar](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/16_ggplot_Like_Michelle_Bar.png)
-
-If nothing shows up in your generated chart, expand the window so the bars have enough room to render.
-
-##### Stacked bar chart
-
-* The simplest way to turn our previous bar chart into a stacked bar chart is to specify a `fill` condition in the `aes()` function. Let's color the bars by `sex`.
-
-```
-> ggplot(like_michelle, aes(x=as.factor(name), fill = sex)) + geom_bar()
-```
-
-![ggplot Michelle Stacked](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/17_ggplot_Michelle_Stacked.png)
-
-* Finally, let's rotate the labels so we can read what the similar names actually are. Adjusting the `theme` component here allows us to edit native style settings for the chart.
-
-```
-> ggplot(like_michelle, aes(x=as.factor(name), fill = sex)) + geom_bar() + theme(axis.text.x = element_text(angle = 90, hjust = 1))
-```
-
-![ggplot Rotate Labels](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/18_ggplot_Rotate_Labels.png)
-
-##### Stacked area chart
-
-In our case, working with yearly data in the `bnames2` and `births_data` datasets lends itself to both categorical and continuous visualization methods, due to the discrete (but linear, and reasonably granular) nature of time. We now explore the stacked area chart native to the library, which provides a breakdown of component categories over time, and return to the `births_data` dataset.
-
-* We define a new `ggplot`.
-	* The first argument is, as usual, our dataset: `births_data`.
-	* The second argument is the `aes()` function. In it, we define `year` to be along the x-axis, `births` to be along the y-axis, and `fill` to be determined by `sex`.
-	* The last element is `geom_area()`, the area chart function.
-
-```
-> ggplot(births_data, aes(x=year, y=births, fill=sex)) + geom_area()
-```
-
-![ggplot Sex Over Time](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/19_ggplot_Sex_Over_Time.png)
-
-* Nice. We see births as a total value, comprised of both specified genders.
-
-#### Saving
-
-The easiest way to quickly save a chart to either a PDF or a PNG is to use `ggsave()`.
-
-* Render a chart using `ggplot()`
-* Enter the following, supplying your own custom name and extension (`.pdf` or `.png`):
-
-```
-ggsave("my_chart.pdf")
-```
-
-* The chart will appear saved in your working directory. See [this](http://ggplot2.tidyverse.org/reference/ggsave.html) reference for more detail regarding sensible aesthetic defaults.
-
-### Participation
-
-* Generate two different visualizations from the original datasets exploring a name we did not mention in class.
+___
+**_PAUSE:_** Clear your workspace, or open a new tab. Now, run through the same process on a different name. Make sure to polish up your final chart with an informative title and subtitle. Email a screenshot of this chart to me as your participation for the day. 
+___
