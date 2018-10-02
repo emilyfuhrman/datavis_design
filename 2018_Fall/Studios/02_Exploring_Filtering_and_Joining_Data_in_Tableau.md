@@ -1,4 +1,4 @@
-## Studio 02 - Joining, Filtering, and Exploring Data in Tableau
+## Studio 02 - Exploring, Filtering, and Joining Data in Tableau
 
 This studio will explore the process of exploring and manipulating data in Tableau.
 
