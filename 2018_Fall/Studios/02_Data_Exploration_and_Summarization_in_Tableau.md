@@ -9,11 +9,77 @@ We will be using two datasets for this studio:
 * bnames2 - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Data/02/bnames2.csv.bz2). This dataset consists of the top 1000 male and female baby names in the U.S., from 1880 to 2008. It contains 258,000 records with five variables: `year`, `name`, `soundex`, `sex`, and `prop`. The `prop` variable refers to the proportions of people of that gender with that name born in that year. The `soundex` variable contains a phonetic code designed to index names based on sound similarity, irrespective of spelling variations.
 * births - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Data/02/births.csv). This dataset contains 261 records with three variables: `year`, `sex`, and `births`.
 
+### Tableau Public
+#### Importing your data
+
+* Open up Tableau Public.
+* Click `Connect > To a File > Text File`.
+* Select the `bnames2.csv` file.
+
 ![Import Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/01_Import_Data.png)
+
+* Ensure that the imported variables are as follows: `year`, `name`, `prop`, `sex`, and `soundex`. 
+
 ![Import Preview](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/02_Import_Preview.png)
+
+* Because `Year` has been imported as a string, we need to manually change it to a date. Click on the small `#`. 
+* Click `Date`.
+
 ![Change to Date](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/03_Change_to_Date.png)
+
+* The values in the column should update to be in date format. Even if the exact days are not necessarily accurate, this will facilitate any time-based visualizations we need to create.
+
 ![Date Changed](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/04_Date_Changed.png)
 
+* Let's start by plotting the popularity of the name `Otto` over time. From the `Dimensions` panel on the left, drag `Year` to the `Columns` bar.
+* Drag `Prop` to the `Rows` bar.
+
+![Prop Unfiltered](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/05_Prop_Unfiltered.png)
+
+* On its own, this variable does not make much sense. By default, Tableau sums up the various values across _all_ names for this measure. To get a closer look at a particular name, drag the `Name` dimension to the `Color` tile in the `Marks` panel.
+* This will prompt Tableau to ask us to filter down the names to a mangeable few, because the thousands of names the dataset includes will not produce a readable graph. 
+
+![Filter Prop](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/06_Filter_Prop.png)
+
+* Click `Filter and then add`.
+* To isolate only the records for the name `Otto`, select the `General` subtab in the next screen.
+* Choose `Select from list`.
+* Click the `None` button to start with a blank canvas.
+* In the top yellow search bar, type the name `Otto` (or, if you are interested in a different name, type that one).
+* Select the matching result.
+
+![Otto Filter](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/07_Otto_Filter.png)
+
+* Click `OK`.
+
+![Otto Plot](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/08_Otto_Plot.png)
+
+* The line chart will update to only include data associated with the name `Otto`. 
+* In the top bar, set the `YEAR` value to be a `Dimension`. This will avoid any default aggregation Tableau is inclined to perform.
+
+![Set to Dimensions](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/09_Set_to_Dimension.png)
+
+* The plotted points should now shift automatically to become `Shape` in the `Marks` panel. Open up the menu to change this back to line, if you like. 
+
+![Shapes to Line](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/10_Shape_to_Line.png)
+
+Right away, we can see that the name Otto peaked sometime in the 1890's, and has been on a steady decline in popularity since.
+
+![Otto over Time](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/11_Otto_Over_Time.png)
+
+* Let's try another name: this time, "Michelle". Follow the same procedure as before, only create a dataset for which the `Name` variable is equal to `Michelle`. Plot that dataset:
+
+![Michelle Plot](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/12_Michelle_Plot.png)
+
+* We see a very jagged line. If you manually changed the marks in this plot from `Shape` to `Line`, change back to `Shape`.
+
+![Michelle Dot](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/13_Michelle_Dot.png)
+
+Interesting! And more readable. This plot makes it clear that there are two clusters of data. The reason for this is that the name Michelle has been used in the past for both boys and girls. This accounts for the jagged sawtooth pattern on the original plot. Now, if we want to create a line plot visualizing this, we just need to grab the `Sex` dimension and drag it over to the `Color` tile on the `Marks` panel.
+
+![By Sex](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/14_By_Sex.png)
+
+* Nice. We can now clearly see that Michelle as a female name peaked around 1970, around the same period it surfaced as a male name.
 
 
 
@@ -21,101 +87,6 @@ We will be using two datasets for this studio:
 
 
 
-
-
-### R
-#### Setting up your environment
-
-* Download and install the latest version of [R](https://www.r-project.org/).
-* Open R. 
-* Your working directory surfaces the file structure within your current session is based. If you would like to change your working directory, either navigate to `Misc > Change Working Directory...`, or use the `setwd()` command. More information on the latter is available [here](https://support.rstudio.com/hc/en-us/articles/200711843-Working-Directories-and-Workspaces). (In my case, I decided to create a folder within my default Mac user folder: `setwd("/Users/emilyfuhrman/R_workspace")`). Make sure your working directory is accessible, as it is where we will be dropping our downloaded data.
-* We will be using `ggplot2` to generate visualizations in this studio. In your R console, type the following:
-
-```
-> install.packages("ggplot2")
-```
-
-Packages in R are bundled collections of functions that make it easy to extend the functionality of R on your machine. Packages are primarily distributed through CRAN (the Comprehensive R Archive Network). If prompted to set a download mirror at this point, choose the one closest to you. 
-
-* Once the package is finished installing, we need to load the package for our current session. Type the following:
-
-```
-> library(ggplot2)
-```
-
-You may only load `ggplot2` if its package is already installed on your machine.
-
-#### Loading a delimited text data file
-
-* Download the data above.
-* Drag the (zipped) file to your working directory. There is no need to unzip it.
-* R provides a number of different options for importing external data. Here, because our data is already in a simple-to-digest format, we will use one of the most common: `read.csv`. We will import the dataset we just downloaded, and store it under the variable name `bnames2`. To do this, type the following in your console:
-
-```
-> bnames2 <- read.csv("bnames2.csv.bz2")
-```
-
-* To test that this imported properly, type `bnames2` in your console, and hit `Enter`. A preview of the imported data should appear.
-
-![Data preview](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/01_Data_Preview.png)
-
-* Scroll to the top, and confirm that the column order is as follows: `year`, `name`, `prop`, `sex`, and `soundex`. 
-* To shortcut this process in the future, you can type `head(bnames2)` to get a truncated preview of the imported data.
-
-#### Exploring and summarizing with ggplot2
-
-* Let's start by tracking the popularity of a single name over the period of time represented by the dataset. I will track the name "Otto". To do this, we need to cut the portion of the dataset in which the `name` variable is equal to `Otto`, and assign it to a new variable:
-
-```
-> otto_records <- subset(bnames2, name == "Otto")
-```
-
-Here, we use the `subset()` function to select all records for which the `name` variable is equal to `Otto`. The `subset()` function takes as a first argument the name of the dataset to search, and as a second argument the condition under which a record is kept. 
-* Since it is easier to explore this data visually, let's start by leveraging `ggplot2` to give us a quick visual overview of the popularity of the name `Otto` over time. We will be using the `qplot` (or _quickplot_) function, and will ask it to draw us a `line` plot of `year` vs. `prop`. Both `year` and `prop` are to be looked up in the dataset we created above, `otto_records`.
-
-```
-> qplot(x = year, y = prop, data = otto_records, geom = 'line')
-```
-
-![Otto Plot](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/02_Otto_Plot.png)
-
-A new plot opens up in a separate window. Right away, we can see that the name Otto peaked sometime in the 1890's, and has been on a steady decline in popularity since.
-
-* Let's try another name: this time, "Michelle". Follow the same procedure as before, only create a dataset for which the `name` variable is equal to `Michelle`. Plot that dataset:
-
-```
-> michelle_records <- subset(bnames2, name == "Michelle")
-> qplot(x = year, y = prop, data = michelle_records, geom = 'line')
-```
-
-![Michelle Plot](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/03_Michelle_Plot.png)
-
-This plot includes an extremely jagged line. Any guesses as to why? 
-* To circumvent this jagged line for now, let's plot this data using points instead of a line:
-
-```
-> qplot(x = year, y = prop, data = michelle_records, geom = 'point')
-```
-
-![Michelle Plot Points](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/04_Michelle_Plot_Points.png)
-
-Interesting! And more readable. This plot makes it clear that there are two clusters of data. The reason for this is that the name Michelle has been used in the past for both boys and girls. This accounts for the jagged sawtooth pattern on the original plot. Now, if we want to create a line plot, we need to tell `qplot` to group the variables by sex.
-
-```
-> qplot(x = year, y = prop, data = michelle_records, geom = 'line', group = sex)
-```
-
-![Michelle Plot Grouped](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/05_Michelle_Plot_Grouped.png)
-
-* Nice. If we add one more argument to the `qplot` function, we can color the lines by sex to make it clearer which is which:
-
-```
-> qplot(x = year, y = prop, data = michelle_records, geom = 'line', group = sex, color = sex)
-```
-
-![Michelle Plot Colored](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Studios/Images/02/06_Michelle_Plot_Colored.png)
-
-* We can now clearly see that Michelle as a female name peaked around 1970, around the same period it surfaced as a male name.
 * Now, let's try to use the `soundex` variable to plot the popularity over time of names that sound like Otto. Let's first access our subset, `otto_records`, to write the value of the `soundex` variable in the first record to a new variable, `otto_soundex`:
 
 ```
