@@ -9,3 +9,4 @@
 
 ## Studios
 * [Introduction to Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/01_Introduction_to_Tableau.md)
+* [Joining, Filtering, and Exploring Data in Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/02_Joining_Filtering_and_Exploring_Data_in_Tableau.md)

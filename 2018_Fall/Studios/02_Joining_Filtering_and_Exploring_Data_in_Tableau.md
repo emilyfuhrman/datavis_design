@@ -1,13 +1,13 @@
-## Studio 02 - Data Exploration and Summarization in Tableau
+## Studio 02 - Joining, Filtering, and Exploring Data in Tableau
 
-This studio will explore--.
+This studio will explore the process of exploring and manipulating data in Tableau.
 
 ### Datasets
 
 We will be using two datasets for this studio:
 
-* bnames2 - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Data/02/bnames2.csv.bz2). This dataset consists of the top 1000 male and female baby names in the U.S., from 1880 to 2008. It contains 258,000 records with five variables: `year`, `name`, `soundex`, `sex`, and `prop`. The `prop` variable refers to the proportions of people of that gender with that name born in that year. The `soundex` variable contains a phonetic code designed to index names based on sound similarity, irrespective of spelling variations.
-* births - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2017_Fall/Data/02/births.csv). This dataset contains 261 records with three variables: `year`, `sex`, and `births`.
+* bnames2 - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Data/02/bnames2.csv.bz2). This dataset consists of the top 1000 male and female baby names in the U.S., from 1880 to 2008. It contains 258,000 records with five variables: `year`, `name`, `soundex`, `sex`, and `prop`. The `prop` variable refers to the proportions of people of that gender with that name born in that year. The `soundex` variable contains a phonetic code designed to index names based on sound similarity, irrespective of spelling variations.
+* births - Available [here](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Data/02/births.csv). This dataset contains 261 records with three variables: `year`, `sex`, and `births`.
 
 ### Tableau Public
 #### Importing your data
