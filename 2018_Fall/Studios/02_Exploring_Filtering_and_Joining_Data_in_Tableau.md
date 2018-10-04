@@ -148,7 +148,7 @@ Now, suppose we would like to explore trends in the total number of people with 
 
 * Now, let's plot the popularity of `Otto` as a line once again, though using `tot` on our y-axis instead of `prop`:
 
-![Otto Absolute](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/25_Otto_Absolute
+![Otto Absolute](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/02/25_Otto_Absolute.png)
 
 * Okay! This paints a different picture. Otto is still declining in absolute terms, but we can see a small peak around ~1915. Now, polish up your chart by giving it an informative title and axis labels. 
 
