@@ -9,4 +9,4 @@ We will be working in [Observable](https://beta.observablehq.com/). If you would
 * Our working template for the day is [here](https://beta.observablehq.com/@emilyfuhrman/d3-js-template). You may edit this as much as you want.
 * For reference only, a master copy is located [here](https://beta.observablehq.com/@emilyfuhrman/d3-js-master).
 
-All guidelines for this studio may be found in [this](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Summer/Decks/Week_07.pdf) deck. 
+All guidelines for this studio may be found in [this](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Decks/Week_06.pdf) deck. 
