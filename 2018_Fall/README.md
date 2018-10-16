@@ -13,3 +13,4 @@
 * [Introduction to Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/01_Introduction_to_Tableau.md)
 * [Exploring, Filtering, and Joining Data in Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/02_Exploring_Filtering_and_Joining_Data_in_Tableau.md)
 * [Introduction to D3.js](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/03_Introduction_to_D3.md)
+* [Visualizing Time in Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/04_Visualizing_Time_in_Tableau.md)
