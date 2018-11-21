@@ -36,9 +36,13 @@ The website limits to one month of data and generally times out with >1-2 weeks 
 
 Select ‘.csv’ for your file type and click submit.
 
-It may take a minute to download your dataset, but once completed move that file to your desired working directory. There is one quick edit to the dataset needed before reading it in. The second line of data contains the field’s units, so we want to quickly open up the .csv and delete that line of data.
+It may take a minute to download your dataset, but once completed move that file to your desired working directory. There is one quick edit to the dataset needed before reading it in. The second line of data contains the field’s units, so we want to quickly open up the .csv and delete that line of data. Open up the CSV in R, and select the second row.
 
-Finally, we’re going to read in two data frames: the .csv downloaded from the NOAA and a map of the US, which is built into ggplot.
+![Delete Row](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/05/03_Delete_Row.png)
+
+Delete this row, and save the file under a new name.
+
+Finally, back in the R console, we’re going to read in two data frames: the .csv downloaded from the NOAA and a map of the US, which is built into ggplot.
 
 ```
 setwd('~/Downloads/')
