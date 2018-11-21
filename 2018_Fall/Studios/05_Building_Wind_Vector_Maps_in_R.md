@@ -2,7 +2,7 @@
 
 **_Based on a studio originally created by Ryan Lakritz_**
 
-This studio walks through the steps to create wind vector maps in R, using `ggplot2` and `plotly`.
+This studio walks through the steps to create wind vector maps in R, using `ggplot2` and `plotly`. ggplot2 is a data visualization package based on Leland Wilkinson's _The Grammar of Graphics_, which describes a way of understanding the components of data-driven representations. Plotly is a library that enables the publication of interactive, web-based graphics. 
 
 ### Installing libraries
 
@@ -26,7 +26,15 @@ library(maps)
 
 ### Downloading data
 
-Download data from [http://coastwatch.pfeg.noaa.gov/erddap/tabledap/ndbcSosWind.html](http://coastwatch.pfeg.noaa.gov/erddap/tabledap/ndbcSosWind.html) (you may also access it [here](https://github.com/emilyfuhrman/datavis_design/tree/master/2018_Fall/Data/05)). For this we will need at least Longitude, Latitude, station_id, time, wind_from_direction, and wind_speed. The website limits to one month of data and generally times out with >1-2 weeks of data so it’s best to stick to the presets. Finally, select ‘.csv’ for your file type and click submit.
+Download data from [http://coastwatch.pfeg.noaa.gov/erddap/tabledap/ndbcSosWind.html](http://coastwatch.pfeg.noaa.gov/erddap/tabledap/ndbcSosWind.html) (you may also access it [here](https://github.com/emilyfuhrman/datavis_design/tree/master/2018_Fall/Data/05)). For this we will need at least `longitude`, `latitude`, `station_id`, `time`, `wind_from_direction`, and `wind_speed`. 
+
+![Download Fields](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/05/01_Download_Fields.png)
+
+The website limits to one month of data and generally times out with >1-2 weeks of data so it’s best to stick to the presets. 
+
+![CSV Format](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/05/02_CSV_Format.png)
+
+Finally, select ‘.csv’ for your file type and click submit.
 
 It may take a minute to download your dataset, but once completed move that file to your desired working directory. There is one quick edit to the dataset needed before reading it in. The second line of data contains the field’s units, so we want to quickly open up the .csv and delete that line of data.
 
@@ -36,7 +44,7 @@ Finally, we’re going to read in two data frames: the .csv downloaded from the 
 setwd('~/Downloads/')
 
 # read in dataset
-df <- read.csv('ndbcSosWind_2297_fd0d_1e71.csv')
+df <- read.csv('ndbcSosWind_b853_380a_406b.csv')
 # set up usa map df
 usa <- map_data('state')
 ```
