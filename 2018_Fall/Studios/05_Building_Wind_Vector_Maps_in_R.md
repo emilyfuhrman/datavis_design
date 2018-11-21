@@ -230,7 +230,7 @@ Finally, setting up the visualization code will be almost identical to the origi
 
 Unfortunately plotly does not handle dates that well, so as a workaround we will convert the dates to a numeric class. To do that we first convert it to a timestamp and then to a numeric. A second caveat with plotly is that the arrows unfortunately do not work, so this will appear as a spoke graph.
 
-The result will be a plot that looks almost identical to the original, but can shift between days and animate the full data frame with `Play’.
+The result will be a plot that looks almost identical to the original, but can shift between days and animate the full data frame with `Play`.
 
 ```
 animated_vectors<- lakes_plot+
