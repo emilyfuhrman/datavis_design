@@ -1,4 +1,4 @@
-## Studio 06 - Building Wind Vector Maps in R
+## Studio 05 - Building Wind Vector Maps in R
 
 **_Based on a studio originally created by Ryan Lakritz_**
 
