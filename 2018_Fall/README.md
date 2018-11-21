@@ -12,8 +12,8 @@
 * [*Week 10:* Scientific Visualization Scalar, Vecctor, and Tensor Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Decks/Week_10.pdf)
 
 ## Studios
-* [Introduction to Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/01_Introduction_to_Tableau.md)
-* [Exploring, Filtering, and Joining Data in Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/02_Exploring_Filtering_and_Joining_Data_in_Tableau.md)
-* [Introduction to D3.js](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/03_Introduction_to_D3.md)
-* [Visualizing Time in Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/04_Visualizing_Time_in_Tableau.md)
-* [Building Wind Vector Maps in R](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/05_Building_Wind_Vector_Maps_in_R.md)
+* (Tableau) [Introduction to Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/01_Introduction_to_Tableau.md)
+* (Tableau) [Exploring, Filtering, and Joining Data in Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/02_Exploring_Filtering_and_Joining_Data_in_Tableau.md)
+* (D3.js) [Introduction to D3.js](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/03_Introduction_to_D3.md)
+* (Tableau) [Visualizing Time in Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/04_Visualizing_Time_in_Tableau.md)
+* (R) [Building Wind Vector Maps in R](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/05_Building_Wind_Vector_Maps_in_R.md)
