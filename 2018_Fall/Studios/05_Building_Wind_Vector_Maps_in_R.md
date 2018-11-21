@@ -34,7 +34,7 @@ The website limits to one month of data and generally times out with >1-2 weeks 
 
 ![CSV Format](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/05/02_CSV_Format.png)
 
-Select ‘.csv’ for your file type and click submit.
+Select `.csv` for your file type and click submit.
 
 It may take a minute to download your dataset, but once completed move that file to your desired working directory. There is one quick edit to the dataset needed before reading it in. The second line of data contains the field’s units, so we want to quickly open up the .csv and delete that line of data. Open up the CSV in R, and select the second row.
 
@@ -192,7 +192,7 @@ Instead of looking at the average wind speed and velocity over the entire time p
 
 We’re going to use the plotly package in conjunction with ggplot, so it will work almost identically to the previous code with only 1-2 additions.
 
-A couple quick things to set up in the data: 1. We now want to group by the date as well so we need to extract that value from the ‘time’ field. 2. Again, creating a daily aggregated data frame using almost the same code as above. 3. Plotly has limitations when working with missing data, so we’re going to filter the data frame so that only stations with complete data (here we have 8 days of data).
+A couple quick things to set up in the data: 1. We now want to group by the date as well so we need to extract that value from the `time` field. 2. Again, creating a daily aggregated data frame using almost the same code as above. 3. Plotly has limitations when working with missing data, so we’re going to filter the data frame so that only stations with complete data (here we have 8 days of data).
 
 ```
 df$date <- as.Date(df$time, format='%Y-%m-%d')
@@ -230,7 +230,7 @@ Finally, setting up the visualization code will be almost identical to the origi
 
 Unfortunately plotly does not handle dates that well, so as a workaround we will convert the dates to a numeric class. To do that we first convert it to a timestamp and then to a numeric. A second caveat with plotly is that the arrows unfortunately do not work, so this will appear as a spoke graph.
 
-The result will be a plot that looks almost identical to the original, but can shift between days and animate the full data frame with ‘Play’.
+The result will be a plot that looks almost identical to the original, but can shift between days and animate the full data frame with `Play’.
 
 ```
 animated_vectors<- lakes_plot+
