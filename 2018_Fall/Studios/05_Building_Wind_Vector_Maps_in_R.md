@@ -2,7 +2,7 @@
 
 **_Based on a studio originally created by Ryan Lakritz_**
 
-This studio walks through the steps to create wind vector maps in R, using `ggplot2` and `plotly`. ggplot2 is a data visualization package based on Leland Wilkinson's _The Grammar of Graphics_, which describes a way of understanding the components of data-driven representations. Plotly is a library that enables the publication of interactive, web-based graphics. 
+This studio walks through the steps to create wind vector maps in R, using `ggplot2` and `plotly`. ggplot2 is a data visualization package based on Leland Wilkinson's _The Grammar of Graphics_, which describes a way of understanding the components of data-driven representations. Plotly is a library that enables the publication of interactive, web-based graphics. Install the latest version of R [here](https://mirror.aarnet.edu.au/pub/CRAN/).
 
 ### Installing libraries
 
@@ -34,7 +34,7 @@ The website limits to one month of data and generally times out with >1-2 weeks 
 
 ![CSV Format](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/05/02_CSV_Format.png)
 
-Finally, select ‘.csv’ for your file type and click submit.
+Select ‘.csv’ for your file type and click submit.
 
 It may take a minute to download your dataset, but once completed move that file to your desired working directory. There is one quick edit to the dataset needed before reading it in. The second line of data contains the field’s units, so we want to quickly open up the .csv and delete that line of data.
 
