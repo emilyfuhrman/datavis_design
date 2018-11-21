@@ -36,7 +36,7 @@ The website limits to one month of data and generally times out with >1-2 weeks 
 
 Select `.csv` for your file type and click submit.
 
-It may take a minute to download your dataset, but once completed move that file to your desired working directory. There is one quick edit to the dataset needed before reading it in. The second line of data contains the field’s units, so we want to quickly open up the .csv and delete that line of data. Open up the CSV in R, and select the second row.
+It may take a minute to download your dataset, but once completed move that file to your desired working directory. There is one quick edit to the dataset needed before reading it in. The second line of data contains the field’s units, so we want to quickly open up the .csv and delete that line of data. Open up the CSV in Excel, and select the second row.
 
 ![Delete Row](https://github.com/emilyfuhrman/datavis_design/blob/master/2018_Fall/Studios/Images/05/03_Delete_Row.png)
 
