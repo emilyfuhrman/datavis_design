@@ -3,5 +3,6 @@
 
 ## Decks
 * [*Week 1:* Introduction to Visualization: From Small Data Sets to Big Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Decks/Week_01.pdf)
+* [*Week 2:* Foundations of Visual Design and Perceptual Psychology: Gestalt Principles and Visual Coding](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Decks/Week_02.pdf)
 
 ## Studios
