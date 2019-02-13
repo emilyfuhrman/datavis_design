@@ -7,3 +7,4 @@
 * [*Week 3:* Foundations of Visual Design and Perceptual Psychology: Color and Visual Attention](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Decks/Week_03.pdf)
 
 ## Studios
+* (Tableau) [Introduction to Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/01_Introduction_to_Tableau.md)
