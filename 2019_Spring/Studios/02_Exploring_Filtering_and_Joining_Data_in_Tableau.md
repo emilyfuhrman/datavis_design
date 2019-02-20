@@ -159,5 +159,5 @@ Now, suppose we would like to explore trends in the total number of people with 
 ![Otto Caption](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/02/27_Otto_Caption.png)
 
 ___
-**_PAUSE:_** Clear your workspace, or open a new tab. Now, run through the same process on a different name. Make sure to polish up your final chart with an informative title and subtitle. Email a screenshot of this chart to me as your participation for the day. 
+**_PAUSE:_** Clear your workspace, or open a new tab. Now, run through the same process on a different name. Make sure to polish up your final chart with an informative title and subtitle.
 ___
