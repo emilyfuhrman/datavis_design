@@ -7,6 +7,7 @@
 * [*Week 3:* Foundations of Visual Design and Perceptual Psychology: Color and Visual Attention](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Decks/Week_03.pdf)
 * [*Week 4:* Visual Methods: Which Charts and Graphs for Which Tasks?](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Decks/Week_04.pdf)
 * [*Week 5:* Digital Storytelling and Ethics: How to Tell a Story and How to Avoid Lying with Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Decks/Week_05.pdf)
+* [*Week 6:* Tasks and Visual Geometry](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Decks/Week_06.pdf) 
 
 ## Studios
 * (Tableau) [Introduction to Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/01_Introduction_to_Tableau.md)
