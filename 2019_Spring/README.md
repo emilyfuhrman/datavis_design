@@ -11,3 +11,4 @@
 ## Studios
 * (Tableau) [Introduction to Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/01_Introduction_to_Tableau.md)
 * (Tableau) [Exploring, Filtering, and Joining Data in Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/02_Exploring_Filtering_and_Joining_Data_in_Tableau.md)
+* (D3.js) [Introduction to D3.js](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/03_Introduction_to_D3.md)
