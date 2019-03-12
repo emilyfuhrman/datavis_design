@@ -15,4 +15,4 @@
 * (Tableau) [Exploring, Filtering, and Joining Data in Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/02_Exploring_Filtering_and_Joining_Data_in_Tableau.md)
 * (D3.js) [Introduction to D3.js](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/03_Introduction_to_D3.md)
 * (Tableau) [Visualizing Time in Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/04_Visualizing_Time_in_Tableau.md)
-* (D3.js) [Introduction to D3.js](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/05_Interaction_in_D3.md)
+* (D3.js) [Interaction in D3.js](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/05_Interaction_in_D3.md)
