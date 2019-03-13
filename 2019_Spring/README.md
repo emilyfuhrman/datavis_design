@@ -9,6 +9,7 @@
 * [*Week 5:* Digital Storytelling and Ethics: How to Tell a Story and How to Avoid Lying with Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Decks/Week_05.pdf)
 * [*Week 6:* Tasks and Visual Geometry](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Decks/Week_06.pdf)
 * [*Week 7:* Visualizing Time-Varying Data: Time Series, Correlations, and Interaction Effects](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Decks/Week_07.pdf)
+* [*Week 8:* Interactive Data Analysis and Discovering Features](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Decks/Week_08.pdf)
 
 ## Studios
 * (Tableau) [Introduction to Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/01_Introduction_to_Tableau.md)
