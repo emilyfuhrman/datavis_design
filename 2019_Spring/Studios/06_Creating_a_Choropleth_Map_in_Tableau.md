@@ -22,12 +22,15 @@ ACS Teenage Poverty 1999/2016 - Available [here](https://github.com/emilyfuhrman
 * Now, open up your Sheet 1.
 * You will see in the measure panel that Tableau has automatically generated a `Longitude` and a `Latitude`.
 * Place the `Longitude` under `Columns` and the `Latitude` under rows.
-* Under `Filters` place the `State Postal Code` Hawaii (HI).
+* Drag `State Postal Code` to the `Filters` panel. In the window that pops up, select all state names _except_ for `HI`.
+
+![Country Name](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/02_setFilter.png)
+
 * Take the `1999 Poverty Percentage, Age 5-17` and drop it on the `Color` Mark
 * Take the `State Postal Code` dimension and drop it on `Detail`.
-* Take the `Country Name` dimension and drop it on `Detail`. 
+* Take the `County Name` dimension and drop it on `Detail`. 
 
-![Country Name](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/02_countryName.png)
+![County Name](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/03_countyName.png)
 
 * On the Marks card, right-click the `1999 Poverty Percentage, Age 5-17` field and select Attribute.
 * On the Marks card, click `Color` and select `Edit Colors`.
@@ -53,6 +56,7 @@ ACS Teenage Poverty 1999/2016 - Available [here](https://github.com/emilyfuhrman
 ![Compare Again](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/07_compareAgain.png)
 
 * Try playing around with different color variations/and or the `Advanced` features under `Edit Colors`.
+* Finally, manually set each color scale to have the same min and max, to enable a valid visual comparison.
 
 
 
