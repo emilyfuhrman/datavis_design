@@ -36,27 +36,29 @@ ACS Teenage Poverty 1999/2016 - Available [here](https://github.com/emilyfuhrman
 * On the Marks card, click `Color` and select `Edit Colors`.
 * In the Edit Color dialog box, click the color drop-down, select a color range, and then click OK. 
 
-![Edit Colors](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/03_editColors.png)
+![Edit Colors](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/04_editColors.png)
 
 * On the Marks card, click `Color` and then, under Effects, click the Border drop-down and select None. 
 
-![No Border](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/04_noBorder.png)
+![No Border](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/05_noBorder.png)
 
 * Now repeat the same steps in another sheet for the `2016 Poverty Percentage, Age 5-17` and compare the two in a dashboard.
 * You will see that it is a bit difficult to compare both maps due to the variation in poverty percentages. 
 
-![Compare](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/05_compare.png)
+![Compare](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/07_compare.png)
 
 * Try visualizing the `Color` on your maps by checking the `Stepped Color` box on your color editor for both maps. 
 
-![Stepped Color](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/06_steppedColor.png)
+![Stepped Color](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/07_steppedColor.png)
 
 * Compare the maps again and try to interpret what the over all change in teenage poverty has been since 1999. 
 
-![Compare Again](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/07_compareAgain.png)
+![Compare Again](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/08_compareAgain.png)
 
 * Try playing around with different color variations/and or the `Advanced` features under `Edit Colors`.
-* Finally, manually set each color scale to have the same min and max, to enable a valid visual comparison.
+* Finally, manually set each color scale to have the same min and max, to enable a valid visual comparison. You can do this either in the original sheets, or by double clicking each legend and modifying the `Advanced>>>` settings in the resultant modal.
+
+![Edit Colors](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/09_editColors.png)
 
 
 
