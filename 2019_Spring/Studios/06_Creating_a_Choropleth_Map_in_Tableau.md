@@ -13,7 +13,7 @@ ACS Teenage Poverty 1999/2016 - Available [here](https://github.com/emilyfuhrman
 
 ### Importing data
 
-* Open Tableau and connect your data set `ACS_Teenage_Poverty_US_2016_1999` using the Microsoft Excel option:
+* Open Tableau and connect your data set `ACS_Teenage_Poverty_US_2016_1999` using the Microsoft Excel option.
 * You will see that the data columns were interpreted correctly in all columns except one. `Name` was interpreted as a string and not the County Names:
 
 ![Landing](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/01_Import.png)
