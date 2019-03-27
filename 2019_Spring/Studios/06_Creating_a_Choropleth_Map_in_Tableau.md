@@ -45,7 +45,7 @@ ACS Teenage Poverty 1999/2016 - Available [here](https://github.com/emilyfuhrman
 * Now repeat the same steps in another sheet for the `2016 Poverty Percentage, Age 5-17` and compare the two in a dashboard.
 * You will see that it is a bit difficult to compare both maps due to the variation in poverty percentages. 
 
-![Compare](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/07_compare.png)
+![Compare](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/06_compare.png)
 
 * Try visualizing the `Color` on your maps by checking the `Stepped Color` box on your color editor for both maps. 
 
