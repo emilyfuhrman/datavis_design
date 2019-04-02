@@ -19,3 +19,4 @@
 * (Tableau) [Visualizing Time in Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/04_Visualizing_Time_in_Tableau.md)
 * (D3.js) [Interaction in D3.js](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/05_Interaction_in_D3.md)
 * (Tableau) [Creating a Choropleth Map in Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/06_Creating_a_Choropleth_Map_in_Tableau.md)
+* (R) [Building Wind Vector Maps in R](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/07_Building_Wind_Vector_Maps_in_R.md)
