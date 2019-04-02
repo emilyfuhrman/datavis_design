@@ -28,17 +28,17 @@ library(maps)
 
 Download data from [http://coastwatch.pfeg.noaa.gov/erddap/tabledap/ndbcSosWind.html](http://coastwatch.pfeg.noaa.gov/erddap/tabledap/ndbcSosWind.html) (you may also access it [here](https://github.com/emilyfuhrman/datavis_design/tree/master/2019_Spring/Data/05)). For this we will need at least `longitude`, `latitude`, `station_id`, `time`, `wind_from_direction`, and `wind_speed`. 
 
-![Download Fields](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_9_Spring/Studios/Images/07/01_Download_Fields.png)
+![Download Fields](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/07/01_Download_Fields.png)
 
 The website limits to one month of data and generally times out with >1-2 weeks of data so it’s best to stick to the presets. 
 
-![CSV Format](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_9_Spring/Studios/Images/07/02_CSV_Format.png)
+![CSV Format](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/07/02_CSV_Format.png)
 
 Select `.csv` for your file type and click submit.
 
 It may take a minute to download your dataset, but once completed move that file to your desired working directory. There is one quick edit to the dataset needed before reading it in. The second line of data contains the field’s units, so we want to quickly open up the .csv and delete that line of data. Open up the CSV in Excel, and select the second row.
 
-![Delete Row](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_9_Spring/Studios/Images/07/03_Delete_Row.png)
+![Delete Row](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/07/03_Delete_Row.png)
 
 Delete this row, and save the file under a new name.
 
@@ -117,7 +117,7 @@ usa_plot <- ggplot() +
 usa_plot
 ```
 
-![USA Map](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_9_Spring/Studios/Images/07/04_USA_Map.png)
+![USA Map](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/07/04_USA_Map.png)
 
 Once the map is set up, we’re going to add the wind speed data as a scalar quantity onto the map. We’re simply going to add a point at each station with the color representing the average wind speed at that location. The color represents the scalar quantity of wind speed as it contains no directional data.
 
