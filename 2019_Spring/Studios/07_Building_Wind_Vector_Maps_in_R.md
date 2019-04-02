@@ -137,8 +137,6 @@ Onto vectors, we’re going plot the wind vectors. We will represent the wind ve
 usa_plot +
   geom_segment(data = df_usa, aes(x=longitude, y=latitude, xend=longitude+u_wnd/10, yend=latitude+v_wnd/10),
                arrow = arrow(length = unit(0.1, 'cm')), size=0.3)
-
-## Warning: Removed 5 rows containing missing values (geom_segment).
 ```
 
 ![Vector Map](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/07/06_Vector_Map.png)
@@ -173,6 +171,8 @@ lakes_plot
 lakes_plot_scalar <- lakes_plot +
   geom_point(data=df_lakes, aes(x=longitude, y=latitude, color=speed_mean)) +
   scale_color_gradient(low="light blue", high="dark blue")
+
+lakes_plot_scalar
 ```
 
 ![Lakes Scalar](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/07/08_Lakes_Scalar.png)
@@ -182,6 +182,8 @@ lakes_plot_scalar <- lakes_plot +
 lakes_plot_vector <- lakes_plot +
   geom_segment(data = df_lakes, aes(x=longitude, y=latitude, xend=longitude+u_wnd/10, yend=latitude+v_wnd/10),
                arrow = arrow(length = unit(0.1, 'cm')), size=0.3)
+
+lakes_plot_vector
 ```
 
 ![Lakes Vector](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/07/09_Lakes_Vector.png)
@@ -238,6 +240,5 @@ animated_vectors<- lakes_plot+
                                             yend=latitude+v_wnd/10, frame=as.numeric(as.POSIXct(date))),
                arrow = arrow(length = unit(0.1, 'cm')), size=0.3)
 
-## Warning: Ignoring unknown aesthetics: frame
 ggplotly(animated_vectors)
 ```
