@@ -40,7 +40,7 @@ It may take a minute to download your dataset, but once completed move that file
 
 ![Delete Row](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/07/03_Delete_Row.png)
 
-Delete this row, and save the file under a new name.
+Delete this row, and save the file under a new name, such as `windData.csv`.
 
 Finally, back in the R console, we’re going to read in two data frames: the .csv downloaded from the NOAA and a map of the US, which is built into ggplot.
 
@@ -48,7 +48,7 @@ Finally, back in the R console, we’re going to read in two data frames: the .c
 setwd('~/Downloads/')
 
 # read in dataset
-df <- read.csv('ndbcSosWind_b853_380a_406b.csv')
+df <- read.csv('windData.csv')
 # set up usa map df
 usa <- map_data('state')
 ```
