@@ -26,7 +26,7 @@ library(maps)
 
 ### Downloading data
 
-Download data from [http://coastwatch.pfeg.noaa.gov/erddap/tabledap/ndbcSosWind.html](http://coastwatch.pfeg.noaa.gov/erddap/tabledap/ndbcSosWind.html) (you may also access it [here](https://github.com/emilyfuhrman/datavis_design/tree/master/2019_Spring/Data/05)). For this we will need at least `longitude`, `latitude`, `station_id`, `time`, `wind_from_direction`, and `wind_speed`. 
+Download data from [http://coastwatch.pfeg.noaa.gov/erddap/tabledap/ndbcSosWind.html](http://coastwatch.pfeg.noaa.gov/erddap/tabledap/ndbcSosWind.html) (you may also access it [here](https://github.com/emilyfuhrman/datavis_design/tree/master/2019_Spring/Data/07)). For this we will need at least `longitude`, `latitude`, `station_id`, `time`, `wind_from_direction`, and `wind_speed`. 
 
 ![Download Fields](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/07/01_Download_Fields.png)
 
