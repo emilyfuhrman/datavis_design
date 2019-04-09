@@ -42,7 +42,7 @@ If you have chosen to use your mobile phone in conjunction with Google Cardboard
 * Here, you can see all of the logic that goes into creating the shapes visible in the previous screen.
 	* An `<a-scene>` container bounds a series of shapes. 
 	* Inside the `<a-scene>` container, there are four declarations: an `<a-box>`, an `<a-sphere>`, an `<a-cylinder>`, and an `<a-plane>`.
-	* Each of these declarations contains different parameters. The first four shapes contain `position`, `rotation`, and `color` properties. The `<a-circle>` and `<a-cylinder>` declarations contain a `radius` property. The last `<a-sky>` declaration contains only a `color` property.
+	* Each of these declarations contains different parameters. The first four shapes contain `position`, `rotation`, and `color` properties. The `<a-circle>` and `<a-cylinder>` declarations contain a `radius` property. 
 	* The `position` property places objects in 3-D space. (Read more [here](https://aframe.io/docs/0.6.0/components/position.html).) It is defined by three space-delimited numbers: `x`, `y`, and `z`. 
 	* The `rotation` property rotates objects in 3-D space. (Read more [here](https://aframe.io/docs/0.6.0/components/rotation.html).) It is also defined by three space delimited numbers: rotation about the x-axis, rotation about the y-axis, and rotation about the z-axis (also known as `roll`, `pitch`, and `yaw`).
 	* The `color` property takes a string, a hex code, or an RGB value.
@@ -63,12 +63,10 @@ If you have chosen to use your mobile phone in conjunction with Google Cardboard
 
 `<a-torus position="1 0.75 -6"  color="#43A367" arc="270" radius="5" radius-tubular="0.1"></a-torus>`
 
-![New Torus Code](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/08/06_New_Torus_Code.png)
-
 * If we navigate to the `Show [Live]` tab, something new should appear:
 
 ![New Torus Scene](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/08/07_New_Torus_Scene.png)
 
 ### (Advanced) D3.js and A-FRAME
 
-Navigate to the working copy of the [advanced](https://observablehq.com/@emilyfuhrman/studio-introduction-to-vr-with-d3-js-and-a-frame-advanced) portion of today's studio.
+Navigate to the working copy of the [advanced](https://observablehq.com/@emilyfuhrman/studio-introduction-to-vr-with-d3-js-and-a-frame-advanced) portion of today's studio, where we will revisit some familiar D3.js syntax to visualize a simple array using these shapes.
