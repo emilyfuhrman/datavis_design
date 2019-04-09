@@ -14,7 +14,7 @@ We will be working in [Observable](https://beta.observablehq.com/). If you would
 ** [(Advanced)](https://observablehq.com/@emilyfuhrman/studio-introduction-to-vr-with-d3-js-and-a-frame)
 
 #### Mobile device
-If you have chosen to use your mobile phone in conjunction with Google Cardboard, make sure that you enable motion detection in Safari: `Settings > Safari > Motion & Orientation Access`.
+If you have chosen to use your mobile phone in conjunction with Google Cardboard, make sure that you enable motion detection in Safari: `Settings > Safari > Motion & Orientation Access`. iPhone is notably finicky with VR mode through Observable, but it is worth checking to see if your device will handle it properly.
 
 ### A-Frame basics
 
