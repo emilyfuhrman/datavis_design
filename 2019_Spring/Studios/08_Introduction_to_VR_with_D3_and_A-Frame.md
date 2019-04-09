@@ -7,11 +7,11 @@ In this studio, we will be exploring the world of data-driven, VR-ready shapes u
 We will be working in [Observable](https://beta.observablehq.com/). If you would like to save your work, you must create an Observable account (which requires creating a [Github](https://github.com/) account first).
 
 * Working templates:
-** [(Basic)](https://observablehq.com/@emilyfuhrman/master-studio-introduction-to-vr-with-d3-js-and-a-frame-basic)
-** [(Advanced)](https://observablehq.com/@emilyfuhrman/studio-introduction-to-vr-with-d3-js-and-a-frame-advanced)
+  * [(Basic)](https://observablehq.com/@emilyfuhrman/master-studio-introduction-to-vr-with-d3-js-and-a-frame-basic)
+	* [(Advanced)](https://observablehq.com/@emilyfuhrman/studio-introduction-to-vr-with-d3-js-and-a-frame-advanced)
 * Master copies:
-** [(Basic)](https://observablehq.com/@emilyfuhrman/master-studio-introduction-to-vr-with-d3-js-and-a-frame-basic)
-** [(Advanced)](https://observablehq.com/@emilyfuhrman/studio-introduction-to-vr-with-d3-js-and-a-frame)
+	* [(Basic)](https://observablehq.com/@emilyfuhrman/master-studio-introduction-to-vr-with-d3-js-and-a-frame-basic)
+	* [(Advanced)](https://observablehq.com/@emilyfuhrman/studio-introduction-to-vr-with-d3-js-and-a-frame)
 
 #### Mobile device
 If you have chosen to use your mobile phone in conjunction with Google Cardboard, make sure that you enable motion detection in Safari: `Settings > Safari > Motion & Orientation Access`. iPhone is notably finicky with VR mode through Observable, but it is worth checking to see if your device will handle it properly.
