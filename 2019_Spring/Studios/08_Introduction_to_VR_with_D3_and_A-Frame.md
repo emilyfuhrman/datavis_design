@@ -55,7 +55,7 @@ If you have chosen to use your mobile phone in conjunction with Google Cardboard
 
 ![Editing Shapes](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/08/04_Editing_Shapes.png)
 
-* As a test, try setting the z-value of the `box`, `sphere`, and `cylinder` to `-10`, `-15`, and `-12`, respectively. Click on the `Show [Live]` tab to see what happens.
+* As a test, try setting the z-value of the `box`, `sphere`, and `cylinder` to `-10`, `-15`, and `-12`, respectively. 
 
 ![Far Away](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/08/05_Far_Away.png)
 

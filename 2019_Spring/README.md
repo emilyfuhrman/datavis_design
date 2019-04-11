@@ -12,6 +12,7 @@
 * [*Week 8:* Interactive Data Analysis and Discovering Features](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Decks/Week_08.pdf)
 * [*Week 9:* Maps, Trees, and Networks](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Decks/Week_09.pdf)
 * [*Week 10:* Scientific Data Visualization: Scalar, Vector, and Tensor Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Decks/Week_10.pdf)
+* [*Week 11:* 3-D, Virtual Reality, and Augmented Reality](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Decks/Week_11.pdf)
 
 ## Studios
 * (Tableau) [Introduction to Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/01_Introduction_to_Tableau.md)
