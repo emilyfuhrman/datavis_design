@@ -20,7 +20,7 @@ Hexmap Plot - Available [here](https://github.com/emilyfuhrman/datavis_design/bl
 
 * Choose a `Left` join from the window that pops up. Here, we specify the columns we want to use to perform a join between these two datasets.
 	* In the `Data Source` column, select `State Postal Code`.
-	* In the `Sheet11` column, select `Abbreviation. This will join the two datasets on the columns in each containing abbreviations for each state (for example, `NY`).
+	* In the `Sheet11` column, select `Abbreviation`. This will join the two datasets on the columns in each containing abbreviations for each state (for example, `NY`).
 
 ![Left Join](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/09/01_Left_Join.png)
 
