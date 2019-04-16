@@ -112,6 +112,7 @@ ___
 * Choose dimensions that make sense. `1200` width and `800` height work pretty well on a 15-inch Macbook.
 * Bring your first sheet into the new dashboard. You will notice that the dimensions of the hexagons look different than they do in your sheet. Do not adjust the sizes yet; just drag the legend to the bottom of the map.
 * Bring your second sheet into the dashboard as well, and do the same.
+* Change the color scale of each to a `Stepped` scale with 9 buckets.
 * Adjust the dimensions of each map, and the sizes of the hexagons in each sheet as needed, to produce a display like the one below. 
 
 ![Side by Side](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/13_Side_by_Side.png)
