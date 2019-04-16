@@ -23,3 +23,4 @@
 * (Tableau) [Creating a Choropleth Map in Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/06_Creating_a_Choropleth_Map_in_Tableau.md)
 * (R) [Building Wind Vector Maps in R](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/07_Building_Wind_Vector_Maps_in_R.md)
 * (D3.js) [Introduction to VR with D3.js and A-FRAME](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/08_Introduction_to_VR_with_D3_and_A-Frame.md)
+* (Tableau) [Custom Marks: Creating a Hexmap in Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/09_Custom_Marks_Creating_a_Hexmap_in_Tableau.md)
