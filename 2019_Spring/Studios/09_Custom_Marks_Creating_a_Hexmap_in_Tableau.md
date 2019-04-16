@@ -102,7 +102,7 @@ At this stage, we would like to replace the default circles plotted on this grid
 	* Unshow headers
 
 ___
-**Map #2:_** Repeat the above steps for the 2016 data.
+**_Map #2:_** Repeat the above steps for the 2016 data.
 ___
 
 ### Create a new dashboard
@@ -115,6 +115,6 @@ ___
 * Change the color scale of each to a `Stepped` scale with 9 buckets.
 * Adjust the dimensions of each map, and the sizes of the hexagons in each sheet as needed, to produce a display like the one below. 
 
-![Side by Side](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/06/13_Side_by_Side.png)
+![Side by Side](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/Images/09/13_Side_by_Side.png)
 
 How do these maps compare in readability to those we created in [Studio 6](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/06_Creating_a_Choropleth_Map_in_Tableau.md)? What might their strengths and weaknesses be?
