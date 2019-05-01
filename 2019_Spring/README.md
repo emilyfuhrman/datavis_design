@@ -14,6 +14,7 @@
 * [*Week 10:* Scientific Data Visualization: Scalar, Vector, and Tensor Data](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Decks/Week_10.pdf)
 * [*Week 11:* 3-D, Virtual Reality, and Augmented Reality](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Decks/Week_11.pdf)
 * [*Week 12:* Visualization Applications: Integrating Analysis and Visualization](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Decks/Week_11.pdf)
+* [*Week 14:* Synthesis: Part II](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Decks/Week_14.pdf)
 
 ## Studios
 * (Tableau) [Introduction to Tableau](https://github.com/emilyfuhrman/datavis_design/blob/master/2019_Spring/Studios/01_Introduction_to_Tableau.md)
